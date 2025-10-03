@@ -10,7 +10,6 @@ export default [
     ignores: ['.next/**', 'node_modules/**', 'dist/**', 'coverage/**', 'scripts/**'],
   },
   // Security
-  //@ts-expect-error eslint-plugin-security has no types // not the "correct" ones at least
   securityPlugin.configs.recommended,
   {
     files: ['**/*.ts'],

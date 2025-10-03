@@ -1,0 +1,1410 @@
+{
+  "data": [
+    {
+      "id": "1551901062",
+      "type": "albums",
+      "href": "/v1/catalog/us/albums/1551901062",
+      "attributes": {
+        "artistName": "The Weeknd",
+        "artwork": {
+          "bgColor": "621a04",
+          "hasP3": false,
+          "height": 3000,
+          "textColor1": "efeff1",
+          "textColor2": "f2c6bf",
+          "textColor3": "d3c5c2",
+          "textColor4": "d5a39a",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e2/dd/01/e2dd01f0-35b6-5327-1f64-dc23c282ae60/20UMGIM21166.rgb.jpg/{w}x{h}bb.jpg",
+          "width": 3000
+        },
+        "audioTraits": [
+          "atmos",
+          "lossless",
+          "lossy-stereo",
+          "spatial"
+        ],
+        "contentRating": "explicit",
+        "copyright": "℗ 2021 The Weeknd XO, Inc., marketed by Republic Records, a division of UMG Recordings, Inc.",
+        "editorialNotes": {
+          "short": "Clever production illuminates the singer’s dark and absorbing fourth LP.",
+          "standard": "<i>“You can find love, fear, friends, enemies, violence, dancing, sex, demons, angels, loneliness, and togetherness all in the After Hours of the night.” —The Weeknd</i>\n\nEver since The Weeknd emerged in 2011 with the mysterious and mesmerizing <i>House of Balloons</i>, the Toronto native has kept us on our toes: There was a trio of druggy, lo-fi R&B mixtapes, the Top 40 cake-topper “Can’t Feel My Face,” and the glossy, Daft Punk-assisted rebirth that came with 2016’s <i>Starboy</i>. On <i>After Hours</i>, his fourth studio album, the singer returns to early-era Abel Tesfaye—the fragile falsetto, the smoky atmospheres, the whispered confessions. But here, they’re bolstered by some seriously brilliant beatmaking: muted, shuffling drum ’n’ bass (“Hardest to Love”), whistling sirens and staccato trap textures (“Escape From LA\"), and flickers of French touch, warped dubstep, and Chicago drill that have been stretched and bent into abstractions. It’s as if Tesfaye spent the past four years scouring underground warehouse parties for rhythms that could make his low-lit R&B balladry feel hedonistic, thrilling, and alive (and the above statement he sent Apple Music about the album seems to confirm that). When the album does lift into moments of brightness, they’re downright radiant: “Scared to Live” is sweeping and sentimental, fit for the final scene in a romantic comedy, and “Blinding Lights”—a Max Martin-produced megahit boosted by a Mercedes-Benz commercial—is about as glitzy, glamorous, and gloriously ’80s as it gets."
+        },
+        "genreNames": [
+          "R&B/Soul",
+          "Music",
+          "Contemporary R&B"
+        ],
+        "isCompilation": false,
+        "isComplete": false,
+        "isMasteredForItunes": true,
+        "isPrerelease": false,
+        "isSingle": false,
+        "name": "After Hours (Deluxe Video Album)",
+        "playParams": {
+          "id": "1551901062",
+          "kind": "album"
+        },
+        "recordLabel": "Republic Records",
+        "releaseDate": "2020-03-20",
+        "trackCount": 23,
+        "upc": "00602435810447",
+        "url": "https://music.apple.com/us/album/after-hours-deluxe-video-album/1551901062"
+      },
+      "relationships": {
+        "artists": {
+          "href": "/v1/catalog/us/albums/1551901062/artists",
+          "data": [
+            {
+              "id": "479756766",
+              "type": "artists",
+              "href": "/v1/catalog/us/artists/479756766"
+            }
+          ]
+        },
+        "tracks": {
+          "href": "/v1/catalog/us/albums/1551901062/tracks",
+          "data": [
+            {
+              "id": "1551901063",
+              "type": "songs",
+              "href": "/v1/catalog/us/songs/1551901063",
+              "attributes": {
+                "albumName": "After Hours (Deluxe Video Album)",
+                "artistName": "The Weeknd",
+                "artwork": {
+                  "bgColor": "621a04",
+                  "hasP3": false,
+                  "height": 3000,
+                  "textColor1": "efeff1",
+                  "textColor2": "f2c6bf",
+                  "textColor3": "d3c5c2",
+                  "textColor4": "d5a39a",
+                  "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e2/dd/01/e2dd01f0-35b6-5327-1f64-dc23c282ae60/20UMGIM21166.rgb.jpg/{w}x{h}bb.jpg",
+                  "width": 3000
+                },
+                "audioLocale": "en-US",
+                "audioTraits": [
+                  "atmos",
+                  "lossless",
+                  "lossy-stereo",
+                  "spatial"
+                ],
+                "composerName": "Abel Tesfaye, Jason 'Daheala' Quenneville, Carlo \"Illangelo\" Montagnese & Adam Feeney",
+                "contentRating": "explicit",
+                "discNumber": 1,
+                "durationInMillis": 250057,
+                "genreNames": [
+                  "R&B/Soul",
+                  "Music"
+                ],
+                "hasLyrics": true,
+                "hasTimeSyncedLyrics": true,
+                "isAppleDigitalMaster": true,
+                "isMasteredForItunes": true,
+                "isVocalAttenuationAllowed": true,
+                "isrc": "USUG12000650",
+                "name": "Alone Again",
+                "playParams": {
+                  "id": "1551901063",
+                  "kind": "song"
+                },
+                "previews": [
+                  {
+                    "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6e/4a/1f/6e4a1ff6-0ef3-cdcf-7d83-23ff9148797c/mzaf_6022186501834243111.plus.aac.ep.m4a"
+                  }
+                ],
+                "releaseDate": "2020-03-20",
+                "trackNumber": 1,
+                "url": "https://music.apple.com/us/album/alone-again/1551901062?i=1551901063"
+              },
+              "meta": {
+                "contentVersion": {
+                  "MZ_INDEXER": 1758320323170,
+                  "RTCI": 1758281671030
+                }
+              }
+            },
+            {
+              "id": "1551901064",
+              "type": "songs",
+              "href": "/v1/catalog/us/songs/1551901064",
+              "attributes": {
+                "albumName": "After Hours (Deluxe Video Album)",
+                "artistName": "The Weeknd",
+                "artwork": {
+                  "bgColor": "621a04",
+                  "hasP3": false,
+                  "height": 3000,
+                  "textColor1": "efeff1",
+                  "textColor2": "f2c6bf",
+                  "textColor3": "d3c5c2",
+                  "textColor4": "d5a39a",
+                  "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e2/dd/01/e2dd01f0-35b6-5327-1f64-dc23c282ae60/20UMGIM21166.rgb.jpg/{w}x{h}bb.jpg",
+                  "width": 3000
+                },
+                "audioLocale": "en-US",
+                "audioTraits": [
+                  "atmos",
+                  "lossless",
+                  "lossy-stereo",
+                  "spatial"
+                ],
+                "composerName": "Abel Tesfaye, Jason 'Daheala' Quenneville, Carlo \"Illangelo\" Montagnese & Eric Burton Frederic",
+                "contentRating": "explicit",
+                "discNumber": 1,
+                "durationInMillis": 239980,
+                "genreNames": [
+                  "R&B/Soul",
+                  "Music"
+                ],
+                "hasLyrics": true,
+                "hasTimeSyncedLyrics": true,
+                "isAppleDigitalMaster": true,
+                "isMasteredForItunes": true,
+                "isVocalAttenuationAllowed": true,
+                "isrc": "USUG12000651",
+                "name": "Too Late",
+                "playParams": {
+                  "id": "1551901064",
+                  "kind": "song"
+                },
+                "previews": [
+                  {
+                    "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/50/03/6c/50036c9e-2d3c-f5dc-6468-ee4fbf8c3cbb/mzaf_9734749340284579522.plus.aac.ep.m4a"
+                  }
+                ],
+                "releaseDate": "2020-03-20",
+                "trackNumber": 2,
+                "url": "https://music.apple.com/us/album/too-late/1551901062?i=1551901064"
+              },
+              "meta": {
+                "contentVersion": {
+                  "MZ_INDEXER": 1758890599777,
+                  "RTCI": 1759202705389
+                }
+              }
+            },
+            {
+              "id": "1551901065",
+              "type": "songs",
+              "href": "/v1/catalog/us/songs/1551901065",
+              "attributes": {
+                "albumName": "After Hours (Deluxe Video Album)",
+                "artistName": "The Weeknd",
+                "artwork": {
+                  "bgColor": "621a04",
+                  "hasP3": false,
+                  "height": 3000,
+                  "textColor1": "efeff1",
+                  "textColor2": "f2c6bf",
+                  "textColor3": "d3c5c2",
+                  "textColor4": "d5a39a",
+                  "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e2/dd/01/e2dd01f0-35b6-5327-1f64-dc23c282ae60/20UMGIM21166.rgb.jpg/{w}x{h}bb.jpg",
+                  "width": 3000
+                },
+                "audioLocale": "en-US",
+                "audioTraits": [
+                  "atmos",
+                  "lossless",
+                  "lossy-stereo",
+                  "spatial"
+                ],
+                "composerName": "Abel Tesfaye, Max Martin & Oscar Holter",
+                "contentRating": "explicit",
+                "discNumber": 1,
+                "durationInMillis": 211402,
+                "genreNames": [
+                  "R&B/Soul",
+                  "Music"
+                ],
+                "hasLyrics": true,
+                "hasTimeSyncedLyrics": true,
+                "isAppleDigitalMaster": true,
+                "isMasteredForItunes": true,
+                "isVocalAttenuationAllowed": true,
+                "isrc": "USUG12000652",
+                "name": "Hardest To Love",
+                "playParams": {
+                  "id": "1551901065",
+                  "kind": "song"
+                },
+                "previews": [
+                  {
+                    "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a7/d4/ed/a7d4edc2-9b9f-431e-3675-7326cf1f5f21/mzaf_15409151491149612596.plus.aac.ep.m4a"
+                  }
+                ],
+                "releaseDate": "2020-03-20",
+                "trackNumber": 3,
+                "url": "https://music.apple.com/us/album/hardest-to-love/1551901062?i=1551901065"
+              },
+              "meta": {
+                "contentVersion": {
+                  "MZ_INDEXER": 1758608015328,
+                  "RTCI": 1758032776904
+                }
+              }
+            },
+            {
+              "id": "1551901068",
+              "type": "songs",
+              "href": "/v1/catalog/us/songs/1551901068",
+              "attributes": {
+                "albumName": "After Hours (Deluxe Video Album)",
+                "artistName": "The Weeknd",
+                "artwork": {
+                  "bgColor": "0d240e",
+                  "hasP3": false,
+                  "height": 3000,
+                  "textColor1": "fdfdfd",
+                  "textColor2": "f63000",
+                  "textColor3": "cdd1cd",
+                  "textColor4": "c72d03",
+                  "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e2/dd/01/e2dd01f0-35b6-5327-1f64-dc23c282ae60/20UMGIM21166.rgb.jpg/{w}x{h}bb.jpg",
+                  "width": 3000
+                },
+                "audioLocale": "en-US",
+                "audioTraits": [
+                  "atmos",
+                  "lossless",
+                  "lossy-stereo",
+                  "spatial"
+                ],
+                "composerName": "Abel Tesfaye, Ahmad Balshe, Max Martin, Oscar Holter, Daniel Lopatin, Elton John & Bernard Jp Taupin",
+                "contentRating": "explicit",
+                "discNumber": 1,
+                "durationInMillis": 191299,
+                "genreNames": [
+                  "R&B/Soul",
+                  "Music"
+                ],
+                "hasLyrics": true,
+                "hasTimeSyncedLyrics": true,
+                "isAppleDigitalMaster": true,
+                "isMasteredForItunes": true,
+                "isVocalAttenuationAllowed": true,
+                "isrc": "USUG12000653",
+                "name": "Scared To Live",
+                "playParams": {
+                  "id": "1551901068",
+                  "kind": "song"
+                },
+                "previews": [
+                  {
+                    "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/25/c3/b3/25c3b31b-7f4a-8dfe-90ba-787f6fb087f4/mzaf_15158388540298966845.plus.aac.ep.m4a"
+                  }
+                ],
+                "releaseDate": "2020-03-20",
+                "trackNumber": 4,
+                "url": "https://music.apple.com/us/album/scared-to-live/1551901062?i=1551901068"
+              },
+              "meta": {
+                "contentVersion": {
+                  "MZ_INDEXER": 1752871191422,
+                  "RTCI": 1755832869599
+                }
+              }
+            },
+            {
+              "id": "1551901071",
+              "type": "songs",
+              "href": "/v1/catalog/us/songs/1551901071",
+              "attributes": {
+                "albumName": "After Hours (Deluxe Video Album)",
+                "artistName": "The Weeknd",
+                "artwork": {
+                  "bgColor": "0d240e",
+                  "hasP3": false,
+                  "height": 3000,
+                  "textColor1": "fdfdfd",
+                  "textColor2": "f63000",
+                  "textColor3": "cdd1cd",
+                  "textColor4": "c72d03",
+                  "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e2/dd/01/e2dd01f0-35b6-5327-1f64-dc23c282ae60/20UMGIM21166.rgb.jpg/{w}x{h}bb.jpg",
+                  "width": 3000
+                },
+                "audioLocale": "en-US",
+                "audioTraits": [
+                  "atmos",
+                  "lossless",
+                  "lossy-stereo",
+                  "spatial"
+                ],
+                "composerName": "Abel Tesfaye, Jason 'Daheala' Quenneville, Ahmad Balshe & Carlo \"Illangelo\" Montagnese",
+                "contentRating": "explicit",
+                "discNumber": 1,
+                "durationInMillis": 247192,
+                "genreNames": [
+                  "R&B/Soul",
+                  "Music"
+                ],
+                "hasLyrics": true,
+                "hasTimeSyncedLyrics": true,
+                "isAppleDigitalMaster": true,
+                "isMasteredForItunes": true,
+                "isVocalAttenuationAllowed": true,
+                "isrc": "USUG12000654",
+                "name": "Snowchild",
+                "playParams": {
+                  "id": "1551901071",
+                  "kind": "song"
+                },
+                "previews": [
+                  {
+                    "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/de/b8/b6/deb8b662-32e7-927c-ed31-abd9fcf869e9/mzaf_15522204226641678533.plus.aac.ep.m4a"
+                  }
+                ],
+                "releaseDate": "2020-03-20",
+                "trackNumber": 5,
+                "url": "https://music.apple.com/us/album/snowchild/1551901062?i=1551901071"
+              },
+              "meta": {
+                "contentVersion": {
+                  "MZ_INDEXER": 1752871191337,
+                  "RTCI": 1755185686523
+                }
+              }
+            },
+            {
+              "id": "1551901072",
+              "type": "songs",
+              "href": "/v1/catalog/us/songs/1551901072",
+              "attributes": {
+                "albumName": "After Hours (Deluxe Video Album)",
+                "artistName": "The Weeknd",
+                "artwork": {
+                  "bgColor": "0d240e",
+                  "hasP3": false,
+                  "height": 3000,
+                  "textColor1": "fdfdfd",
+                  "textColor2": "f63000",
+                  "textColor3": "cdd1cd",
+                  "textColor4": "c72d03",
+                  "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e2/dd/01/e2dd01f0-35b6-5327-1f64-dc23c282ae60/20UMGIM21166.rgb.jpg/{w}x{h}bb.jpg",
+                  "width": 3000
+                },
+                "audioLocale": "en-US",
+                "audioTraits": [
+                  "atmos",
+                  "lossless",
+                  "lossy-stereo",
+                  "spatial"
+                ],
+                "composerName": "Abel Tesfaye, Carlo \"Illangelo\" Montagnese, Leland Wayne & Mike McTaggart",
+                "contentRating": "explicit",
+                "discNumber": 1,
+                "durationInMillis": 355960,
+                "genreNames": [
+                  "R&B/Soul",
+                  "Music"
+                ],
+                "hasLyrics": true,
+                "hasTimeSyncedLyrics": true,
+                "isAppleDigitalMaster": true,
+                "isMasteredForItunes": true,
+                "isVocalAttenuationAllowed": true,
+                "isrc": "USUG12000655",
+                "name": "Escape From LA",
+                "playParams": {
+                  "id": "1551901072",
+                  "kind": "song"
+                },
+                "previews": [
+                  {
+                    "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f4/da/47/f4da47c0-07cc-ec22-c8f1-9918af16df11/mzaf_6104309246443332638.plus.aac.ep.m4a"
+                  }
+                ],
+                "releaseDate": "2020-03-20",
+                "trackNumber": 6,
+                "url": "https://music.apple.com/us/album/escape-from-la/1551901062?i=1551901072"
+              },
+              "meta": {
+                "contentVersion": {
+                  "MZ_INDEXER": 1757503275807,
+                  "RTCI": 1755700445652
+                }
+              }
+            },
+            {
+              "id": "1551901073",
+              "type": "songs",
+              "href": "/v1/catalog/us/songs/1551901073",
+              "attributes": {
+                "albumName": "After Hours (Deluxe Video Album)",
+                "artistName": "The Weeknd",
+                "artwork": {
+                  "bgColor": "621a04",
+                  "hasP3": false,
+                  "height": 3000,
+                  "textColor1": "efeff1",
+                  "textColor2": "f2c6bf",
+                  "textColor3": "d3c5c2",
+                  "textColor4": "d5a39a",
+                  "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e2/dd/01/e2dd01f0-35b6-5327-1f64-dc23c282ae60/20UMGIM21166.rgb.jpg/{w}x{h}bb.jpg",
+                  "width": 3000
+                },
+                "audioLocale": "en-US",
+                "audioTraits": [
+                  "atmos",
+                  "lossless",
+                  "lossy-stereo",
+                  "spatial"
+                ],
+                "composerName": "Abel Tesfaye, Leland Wayne, Carlo \"Illangelo\" Montagnese & Andre Eric Proctor",
+                "contentRating": "explicit",
+                "discNumber": 1,
+                "durationInMillis": 198267,
+                "genreNames": [
+                  "R&B/Soul",
+                  "Music"
+                ],
+                "hasLyrics": true,
+                "hasTimeSyncedLyrics": true,
+                "isAppleDigitalMaster": true,
+                "isMasteredForItunes": true,
+                "isVocalAttenuationAllowed": true,
+                "isrc": "USUG11904007",
+                "name": "Heartless",
+                "playParams": {
+                  "id": "1551901073",
+                  "kind": "song"
+                },
+                "previews": [
+                  {
+                    "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/48/99/8e/48998e33-875e-94a6-c099-814b416e6c6c/mzaf_2879130939553074792.plus.aac.ep.m4a"
+                  }
+                ],
+                "releaseDate": "2019-11-27",
+                "trackNumber": 7,
+                "url": "https://music.apple.com/us/album/heartless/1551901062?i=1551901073"
+              },
+              "meta": {
+                "contentVersion": {
+                  "MZ_INDEXER": 1759201739290,
+                  "RTCI": 1755472850665
+                }
+              }
+            },
+            {
+              "id": "1551901074",
+              "type": "songs",
+              "href": "/v1/catalog/us/songs/1551901074",
+              "attributes": {
+                "albumName": "After Hours (Deluxe Video Album)",
+                "artistName": "The Weeknd",
+                "artwork": {
+                  "bgColor": "0d240e",
+                  "hasP3": false,
+                  "height": 3000,
+                  "textColor1": "fdfdfd",
+                  "textColor2": "f63000",
+                  "textColor3": "cdd1cd",
+                  "textColor4": "c72d03",
+                  "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e2/dd/01/e2dd01f0-35b6-5327-1f64-dc23c282ae60/20UMGIM21166.rgb.jpg/{w}x{h}bb.jpg",
+                  "width": 3000
+                },
+                "audioLocale": "en-US",
+                "audioTraits": [
+                  "atmos",
+                  "lossless",
+                  "lossy-stereo",
+                  "spatial"
+                ],
+                "composerName": "Abel Tesfaye, Ahmad Balshe, Carlo \"Illangelo\" Montagnese & Leland Wayne",
+                "contentRating": "explicit",
+                "discNumber": 1,
+                "durationInMillis": 283217,
+                "genreNames": [
+                  "R&B/Soul",
+                  "Music"
+                ],
+                "hasLyrics": true,
+                "hasTimeSyncedLyrics": true,
+                "isAppleDigitalMaster": true,
+                "isMasteredForItunes": true,
+                "isVocalAttenuationAllowed": true,
+                "isrc": "USUG12000656",
+                "name": "Faith",
+                "playParams": {
+                  "id": "1551901074",
+                  "kind": "song"
+                },
+                "previews": [
+                  {
+                    "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5a/03/33/5a0333f3-faca-e725-c80c-e134cd606121/mzaf_17322273466225419876.plus.aac.ep.m4a"
+                  }
+                ],
+                "releaseDate": "2020-03-20",
+                "trackNumber": 8,
+                "url": "https://music.apple.com/us/album/faith/1551901062?i=1551901074"
+              },
+              "meta": {
+                "contentVersion": {
+                  "MZ_INDEXER": 1757502945217,
+                  "RTCI": 1754874762806
+                }
+              }
+            },
+            {
+              "id": "1551901075",
+              "type": "songs",
+              "href": "/v1/catalog/us/songs/1551901075",
+              "attributes": {
+                "albumName": "After Hours (Deluxe Video Album)",
+                "artistName": "The Weeknd",
+                "artwork": {
+                  "bgColor": "621a04",
+                  "hasP3": false,
+                  "height": 3000,
+                  "textColor1": "efeff1",
+                  "textColor2": "f2c6bf",
+                  "textColor3": "d3c5c2",
+                  "textColor4": "d5a39a",
+                  "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e2/dd/01/e2dd01f0-35b6-5327-1f64-dc23c282ae60/20UMGIM21166.rgb.jpg/{w}x{h}bb.jpg",
+                  "width": 3000
+                },
+                "audioLocale": "en-US",
+                "audioTraits": [
+                  "atmos",
+                  "lossless",
+                  "lossy-stereo",
+                  "spatial"
+                ],
+                "composerName": "Max Martin, Oscar Holter, Abel Tesfaye, Ahmad Balshe & Jason 'Daheala' Quenneville",
+                "discNumber": 1,
+                "durationInMillis": 200046,
+                "genreNames": [
+                  "R&B/Soul",
+                  "Music"
+                ],
+                "hasLyrics": true,
+                "hasTimeSyncedLyrics": true,
+                "isAppleDigitalMaster": true,
+                "isMasteredForItunes": true,
+                "isVocalAttenuationAllowed": true,
+                "isrc": "USUG11904206",
+                "name": "Blinding Lights",
+                "playParams": {
+                  "id": "1551901075",
+                  "kind": "song"
+                },
+                "previews": [
+                  {
+                    "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/17/72/cb/1772cbe5-8317-4f68-6d1f-86e047e112c3/mzaf_17705610100254713710.plus.aac.ep.m4a"
+                  }
+                ],
+                "releaseDate": "2019-11-29",
+                "trackNumber": 9,
+                "url": "https://music.apple.com/us/album/blinding-lights/1551901062?i=1551901075"
+              },
+              "meta": {
+                "contentVersion": {
+                  "MZ_INDEXER": 1759238778065,
+                  "RTCI": 1756641934448
+                }
+              }
+            },
+            {
+              "id": "1551901076",
+              "type": "songs",
+              "href": "/v1/catalog/us/songs/1551901076",
+              "attributes": {
+                "albumName": "After Hours (Deluxe Video Album)",
+                "artistName": "The Weeknd",
+                "artwork": {
+                  "bgColor": "621a04",
+                  "hasP3": false,
+                  "height": 3000,
+                  "textColor1": "efeff1",
+                  "textColor2": "f2c6bf",
+                  "textColor3": "d3c5c2",
+                  "textColor4": "d5a39a",
+                  "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e2/dd/01/e2dd01f0-35b6-5327-1f64-dc23c282ae60/20UMGIM21166.rgb.jpg/{w}x{h}bb.jpg",
+                  "width": 3000
+                },
+                "audioLocale": "en-US",
+                "audioTraits": [
+                  "atmos",
+                  "lossless",
+                  "lossy-stereo",
+                  "spatial"
+                ],
+                "composerName": "Abel Tesfaye, Ahmad Balshe, Max Martin & Oscar Holter",
+                "contentRating": "explicit",
+                "discNumber": 1,
+                "durationInMillis": 237522,
+                "genreNames": [
+                  "R&B/Soul",
+                  "Music"
+                ],
+                "hasLyrics": true,
+                "hasTimeSyncedLyrics": true,
+                "isAppleDigitalMaster": true,
+                "isMasteredForItunes": true,
+                "isVocalAttenuationAllowed": true,
+                "isrc": "USUG12000657",
+                "name": "In Your Eyes",
+                "playParams": {
+                  "id": "1551901076",
+                  "kind": "song"
+                },
+                "previews": [
+                  {
+                    "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/60/bd/7c/60bd7c24-671c-ab99-9179-09fc9ffc618e/mzaf_15787511464814066551.plus.aac.ep.m4a"
+                  }
+                ],
+                "releaseDate": "2020-03-20",
+                "trackNumber": 10,
+                "url": "https://music.apple.com/us/album/in-your-eyes/1551901062?i=1551901076"
+              },
+              "meta": {
+                "contentVersion": {
+                  "MZ_INDEXER": 1758850125406,
+                  "RTCI": 1755832839182
+                }
+              }
+            },
+            {
+              "id": "1551901077",
+              "type": "songs",
+              "href": "/v1/catalog/us/songs/1551901077",
+              "attributes": {
+                "albumName": "After Hours (Deluxe Video Album)",
+                "artistName": "The Weeknd",
+                "artwork": {
+                  "bgColor": "621a04",
+                  "hasP3": false,
+                  "height": 3000,
+                  "textColor1": "efeff1",
+                  "textColor2": "f2c6bf",
+                  "textColor3": "d3c5c2",
+                  "textColor4": "d5a39a",
+                  "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e2/dd/01/e2dd01f0-35b6-5327-1f64-dc23c282ae60/20UMGIM21166.rgb.jpg/{w}x{h}bb.jpg",
+                  "width": 3000
+                },
+                "audioLocale": "en-US",
+                "audioTraits": [
+                  "atmos",
+                  "lossless",
+                  "lossy-stereo",
+                  "spatial"
+                ],
+                "composerName": "Abel Tesfaye, Ahmad Balshe, Jason 'Daheala' Quenneville, Max Martin & Oscar Holter",
+                "contentRating": "explicit",
+                "discNumber": 1,
+                "durationInMillis": 215627,
+                "genreNames": [
+                  "R&B/Soul",
+                  "Music"
+                ],
+                "hasLyrics": true,
+                "hasTimeSyncedLyrics": true,
+                "isAppleDigitalMaster": true,
+                "isMasteredForItunes": true,
+                "isVocalAttenuationAllowed": true,
+                "isrc": "USUG12000658",
+                "name": "Save Your Tears",
+                "playParams": {
+                  "id": "1551901077",
+                  "kind": "song"
+                },
+                "previews": [
+                  {
+                    "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/83/fd/7c/83fd7c4e-e544-bdaa-28f6-231b3fd8435f/mzaf_13686956853918398917.plus.aac.ep.m4a"
+                  }
+                ],
+                "releaseDate": "2020-03-20",
+                "trackNumber": 11,
+                "url": "https://music.apple.com/us/album/save-your-tears/1551901062?i=1551901077"
+              },
+              "meta": {
+                "contentVersion": {
+                  "MZ_INDEXER": 1759238615647,
+                  "RTCI": 1755558578204
+                }
+              }
+            },
+            {
+              "id": "1551901080",
+              "type": "songs",
+              "href": "/v1/catalog/us/songs/1551901080",
+              "attributes": {
+                "albumName": "After Hours (Deluxe Video Album)",
+                "artistName": "The Weeknd",
+                "artwork": {
+                  "bgColor": "621a04",
+                  "hasP3": false,
+                  "height": 3000,
+                  "textColor1": "efeff1",
+                  "textColor2": "f2c6bf",
+                  "textColor3": "d3c5c2",
+                  "textColor4": "d5a39a",
+                  "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e2/dd/01/e2dd01f0-35b6-5327-1f64-dc23c282ae60/20UMGIM21166.rgb.jpg/{w}x{h}bb.jpg",
+                  "width": 3000
+                },
+                "audioLocale": "en-US",
+                "audioTraits": [
+                  "atmos",
+                  "lossless",
+                  "lossy-stereo",
+                  "spatial"
+                ],
+                "composerName": "Abel Tesfaye, Kevin Parker & Daniel Lopatin",
+                "contentRating": "explicit",
+                "discNumber": 1,
+                "durationInMillis": 195815,
+                "genreNames": [
+                  "R&B/Soul",
+                  "Music"
+                ],
+                "hasLyrics": true,
+                "hasTimeSyncedLyrics": true,
+                "isAppleDigitalMaster": true,
+                "isMasteredForItunes": true,
+                "isVocalAttenuationAllowed": true,
+                "isrc": "USUG12000659",
+                "name": "Repeat After Me (Interlude)",
+                "playParams": {
+                  "id": "1551901080",
+                  "kind": "song"
+                },
+                "previews": [
+                  {
+                    "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/10/78/03/107803b6-db89-f9b9-a89e-a0fbec053cfa/mzaf_12032426634088140828.plus.aac.ep.m4a"
+                  }
+                ],
+                "releaseDate": "2020-03-20",
+                "trackNumber": 12,
+                "url": "https://music.apple.com/us/album/repeat-after-me-interlude/1551901062?i=1551901080"
+              },
+              "meta": {
+                "contentVersion": {
+                  "MZ_INDEXER": 1759110565646,
+                  "RTCI": 1755080148594
+                }
+              }
+            },
+            {
+              "id": "1551901082",
+              "type": "songs",
+              "href": "/v1/catalog/us/songs/1551901082",
+              "attributes": {
+                "albumName": "After Hours (Deluxe Video Album)",
+                "artistName": "The Weeknd",
+                "artwork": {
+                  "bgColor": "621a04",
+                  "hasP3": false,
+                  "height": 3000,
+                  "textColor1": "efeff1",
+                  "textColor2": "f2c6bf",
+                  "textColor3": "d3c5c2",
+                  "textColor4": "d5a39a",
+                  "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e2/dd/01/e2dd01f0-35b6-5327-1f64-dc23c282ae60/20UMGIM21166.rgb.jpg/{w}x{h}bb.jpg",
+                  "width": 3000
+                },
+                "audioLocale": "en-US",
+                "audioTraits": [
+                  "atmos",
+                  "lossless",
+                  "lossy-stereo",
+                  "spatial"
+                ],
+                "composerName": "Jason 'Daheala' Quenneville, Mario Winans, Abel Tesfaye, Ahmad Balshe & Carlo \"Illangelo\" Montagnese",
+                "discNumber": 1,
+                "durationInMillis": 361025,
+                "genreNames": [
+                  "R&B/Soul",
+                  "Music"
+                ],
+                "hasLyrics": true,
+                "hasTimeSyncedLyrics": true,
+                "isAppleDigitalMaster": true,
+                "isMasteredForItunes": true,
+                "isVocalAttenuationAllowed": true,
+                "isrc": "USUG12000586",
+                "name": "After Hours",
+                "playParams": {
+                  "id": "1551901082",
+                  "kind": "song"
+                },
+                "previews": [
+                  {
+                    "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/60/3e/d1/603ed1f2-1d0d-6ac6-6265-a33d984b3cec/mzaf_13692249487487209702.plus.aac.ep.m4a"
+                  }
+                ],
+                "releaseDate": "2020-03-20",
+                "trackNumber": 13,
+                "url": "https://music.apple.com/us/album/after-hours/1551901062?i=1551901082"
+              },
+              "meta": {
+                "contentVersion": {
+                  "MZ_INDEXER": 1759107853295,
+                  "RTCI": 1756641572502
+                }
+              }
+            },
+            {
+              "id": "1551901085",
+              "type": "songs",
+              "href": "/v1/catalog/us/songs/1551901085",
+              "attributes": {
+                "albumName": "After Hours (Deluxe Video Album)",
+                "artistName": "The Weeknd",
+                "artwork": {
+                  "bgColor": "0d240e",
+                  "hasP3": false,
+                  "height": 3000,
+                  "textColor1": "fdfdfd",
+                  "textColor2": "f63000",
+                  "textColor3": "cdd1cd",
+                  "textColor4": "c72d03",
+                  "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e2/dd/01/e2dd01f0-35b6-5327-1f64-dc23c282ae60/20UMGIM21166.rgb.jpg/{w}x{h}bb.jpg",
+                  "width": 3000
+                },
+                "audioLocale": "en-US",
+                "audioTraits": [
+                  "atmos",
+                  "lossless",
+                  "lossy-stereo",
+                  "spatial"
+                ],
+                "composerName": "Abel Tesfaye, Leland Wayne, Daniel Lopatin, Prince 85 & notinbed",
+                "contentRating": "explicit",
+                "discNumber": 1,
+                "durationInMillis": 192364,
+                "genreNames": [
+                  "R&B/Soul",
+                  "Music"
+                ],
+                "hasLyrics": true,
+                "hasTimeSyncedLyrics": true,
+                "isAppleDigitalMaster": true,
+                "isMasteredForItunes": true,
+                "isVocalAttenuationAllowed": true,
+                "isrc": "USUG12000660",
+                "name": "Until I Bleed Out",
+                "playParams": {
+                  "id": "1551901085",
+                  "kind": "song"
+                },
+                "previews": [
+                  {
+                    "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f9/8d/5c/f98d5c01-2664-69cb-077c-5837355816ed/mzaf_1038129744220085382.plus.aac.ep.m4a"
+                  }
+                ],
+                "releaseDate": "2020-03-20",
+                "trackNumber": 14,
+                "url": "https://music.apple.com/us/album/until-i-bleed-out/1551901062?i=1551901085"
+              },
+              "meta": {
+                "contentVersion": {
+                  "MZ_INDEXER": 1757503275876,
+                  "RTCI": 1754180269241
+                }
+              }
+            },
+            {
+              "id": "1551901240",
+              "type": "music-videos",
+              "href": "/v1/catalog/us/music-videos/1551901240",
+              "attributes": {
+                "albumName": "After Hours (Deluxe Video Album)",
+                "artistName": "The Weeknd",
+                "artwork": {
+                  "bgColor": "401d04",
+                  "hasP3": false,
+                  "height": 952,
+                  "textColor1": "faca1b",
+                  "textColor2": "ecab21",
+                  "textColor3": "d4a817",
+                  "textColor4": "c98f1b",
+                  "url": "https://is1-ssl.mzstatic.com/image/thumb/Video114/v4/87/68/c7/8768c734-7f38-da89-dc2c-6145545c4eb2/19UM1IM06109.crop.jpg/{w}x{h}mv.jpg",
+                  "width": 1912
+                },
+                "contentRating": "explicit",
+                "discNumber": 1,
+                "durationInMillis": 249727,
+                "genreNames": [
+                  "R&B/Soul"
+                ],
+                "has4K": false,
+                "hasHDR": false,
+                "isrc": "USUMV1902062",
+                "name": "Heartless",
+                "playParams": {
+                  "id": "1551901240",
+                  "kind": "musicVideo"
+                },
+                "previews": [
+                  {
+                    "artwork": {
+                      "bgColor": "000000",
+                      "hasP3": false,
+                      "height": 1080,
+                      "textColor1": "f6c979",
+                      "textColor2": "e3af63",
+                      "textColor3": "c5a160",
+                      "textColor4": "b68c4f",
+                      "url": "https://is1-ssl.mzstatic.com/image/thumb/Video126/v4/05/ec/75/05ec7526-8ce6-a790-e754-ec86be839899/Job2552dbb6-2d3d-4930-8af2-ec1b94bb2893-127831793-PreviewImage_preview_image_45000_video_sdr-Time1642516442304.png/{w}x{h}bb.jpg",
+                      "width": 1920
+                    },
+                    "hlsUrl": "https://play.itunes.apple.com/WebObjects/MZPlay.woa/hls/playlist.m3u8?cc=US&a=1551901240&id=373971321&aec=HD&l=en",
+                    "url": "https://video-ssl.itunes.apple.com/itunes-assets/Video116/v4/f4/53/f2/f453f298-9551-bea6-d973-283411c766a1/mzvf_13786384353656497371.720w.h264lc.U.p.m4v"
+                  }
+                ],
+                "releaseDate": "2020-03-19",
+                "trackNumber": 15,
+                "url": "https://music.apple.com/us/music-video/heartless/1551901240",
+                "videoTraits": []
+              }
+            },
+            {
+              "id": "1551901241",
+              "type": "music-videos",
+              "href": "/v1/catalog/us/music-videos/1551901241",
+              "attributes": {
+                "albumName": "After Hours (Deluxe Video Album)",
+                "artistName": "The Weeknd",
+                "artwork": {
+                  "bgColor": "010a05",
+                  "hasP3": false,
+                  "height": 918,
+                  "textColor1": "f2ded7",
+                  "textColor2": "cfb289",
+                  "textColor3": "c2b4ad",
+                  "textColor4": "a6906f",
+                  "url": "https://is1-ssl.mzstatic.com/image/thumb/Video114/v4/5e/7f/b9/5e7fb90a-ffe6-6058-fe03-fe065ab21fc0/19UM1IM06103.crop.jpg/{w}x{h}mv.jpg",
+                  "width": 1776
+                },
+                "discNumber": 1,
+                "durationInMillis": 262527,
+                "genreNames": [
+                  "R&B/Soul"
+                ],
+                "has4K": false,
+                "hasHDR": false,
+                "isrc": "USUMV1902060",
+                "name": "Blinding Lights",
+                "playParams": {
+                  "id": "1551901241",
+                  "kind": "musicVideo"
+                },
+                "previews": [
+                  {
+                    "artwork": {
+                      "bgColor": "000000",
+                      "hasP3": false,
+                      "height": 1072,
+                      "textColor1": "f8ddad",
+                      "textColor2": "d0bc6c",
+                      "textColor3": "c6b18a",
+                      "textColor4": "a69656",
+                      "url": "https://is1-ssl.mzstatic.com/image/thumb/Video124/v4/e5/ff/6e/e5ff6eb8-31fe-58b6-4b3d-030881e83fd1/Job2ed7e8a3-d18c-494b-9a46-b53c23bc1c32-109162936-PreviewImage_preview_image_45000_video_sdr-Time1612404189568.png/{w}x{h}bb.jpg",
+                      "width": 1912
+                    },
+                    "hlsUrl": "https://play.itunes.apple.com/WebObjects/MZPlay.woa/hls/playlist.m3u8?cc=US&a=1551901241&id=229798405&aec=HD&l=en",
+                    "url": "https://video-ssl.itunes.apple.com/itunes-assets/Video114/v4/8c/32/80/8c328084-130a-03fa-1957-3628ddb232e2/mzvf_3078485561339611934.720w.h264lc.U.p.m4v"
+                  }
+                ],
+                "releaseDate": "2020-03-19",
+                "trackNumber": 16,
+                "url": "https://music.apple.com/us/music-video/blinding-lights/1551901241",
+                "videoTraits": []
+              }
+            },
+            {
+              "id": "1551901251",
+              "type": "music-videos",
+              "href": "/v1/catalog/us/music-videos/1551901251",
+              "attributes": {
+                "albumName": "After Hours (Deluxe Video Album)",
+                "artistName": "The Weeknd",
+                "artwork": {
+                  "bgColor": "090a0e",
+                  "hasP3": false,
+                  "height": 1072,
+                  "textColor1": "c8c0f3",
+                  "textColor2": "9bb1d2",
+                  "textColor3": "a19cc5",
+                  "textColor4": "7e8fab",
+                  "url": "https://is1-ssl.mzstatic.com/image/thumb/Video124/v4/bb/28/fa/bb28fa60-2263-0bc7-9e7f-40f4c56f27e2/21UMGIM08237.crop.jpg/{w}x{h}mv.jpg",
+                  "width": 1432
+                },
+                "discNumber": 1,
+                "durationInMillis": 200382,
+                "genreNames": [
+                  "R&B/Soul"
+                ],
+                "has4K": false,
+                "hasHDR": false,
+                "isrc": "USUMV2100325",
+                "name": "Blinding Lights (Jimmy Kimmel Live / 2021)",
+                "playParams": {
+                  "id": "1551901251",
+                  "kind": "musicVideo"
+                },
+                "previews": [
+                  {
+                    "artwork": {
+                      "bgColor": "080a0d",
+                      "hasP3": false,
+                      "height": 1072,
+                      "textColor1": "bbc6db",
+                      "textColor2": "97bbd9",
+                      "textColor3": "97a1b1",
+                      "textColor4": "7b98b0",
+                      "url": "https://is1-ssl.mzstatic.com/image/thumb/Video114/v4/21/fa/c5/21fac5ea-7803-c31e-dc27-e70e0a8ae366/Job76c11dd2-2d69-4cc1-bc90-52e91c95e704-109162928-PreviewImage_preview_image_45000_video_sdr-Time1612404782719.png/{w}x{h}bb.jpg",
+                      "width": 1436
+                    },
+                    "hlsUrl": "https://play.itunes.apple.com/WebObjects/MZPlay.woa/hls/playlist.m3u8?cc=US&a=1551901251&id=229798252&aec=HD&l=en",
+                    "url": "https://video-ssl.itunes.apple.com/itunes-assets/Video124/v4/99/19/da/9919da67-fa1c-013e-2dd3-18b8f5d98d66/mzvf_3687162410904134454.720w.h264lc.U.p.m4v"
+                  }
+                ],
+                "releaseDate": "2020-03-19",
+                "trackNumber": 17,
+                "url": "https://music.apple.com/us/music-video/blinding-lights-jimmy-kimmel-live-2021/1551901251",
+                "videoTraits": []
+              }
+            },
+            {
+              "id": "1551901253",
+              "type": "music-videos",
+              "href": "/v1/catalog/us/music-videos/1551901253",
+              "attributes": {
+                "albumName": "After Hours (Deluxe Video Album)",
+                "artistName": "The Weeknd",
+                "artwork": {
+                  "bgColor": "030e08",
+                  "hasP3": false,
+                  "height": 925,
+                  "textColor1": "f3da75",
+                  "textColor2": "a5cd76",
+                  "textColor3": "c3b15f",
+                  "textColor4": "84a660",
+                  "url": "https://is1-ssl.mzstatic.com/image/thumb/Video114/v4/1b/f0/ae/1bf0ae2a-913d-550e-5a31-5f112e6ff589/20UMGIM13213.crop.jpg/{w}x{h}mv.jpg",
+                  "width": 1911
+                },
+                "discNumber": 1,
+                "durationInMillis": 301608,
+                "genreNames": [
+                  "R&B/Soul"
+                ],
+                "has4K": false,
+                "hasHDR": false,
+                "isrc": "USUMV2000399",
+                "name": "After Hours (Short Film)",
+                "playParams": {
+                  "id": "1551901253",
+                  "kind": "musicVideo"
+                },
+                "previews": [
+                  {
+                    "artwork": {
+                      "bgColor": "2c0402",
+                      "hasP3": false,
+                      "height": 932,
+                      "textColor1": "f4be89",
+                      "textColor2": "f3b96f",
+                      "textColor3": "cc996e",
+                      "textColor4": "cb9459",
+                      "url": "https://is1-ssl.mzstatic.com/image/thumb/Video114/v4/a0/ed/20/a0ed20fd-0edc-8644-8953-3475752b771d/Jobc950156b-92fc-4ee9-a1e6-9e29e3e77ce9-109168621-PreviewImage_preview_image_45000_video_sdr-Time1612430031647.png/{w}x{h}bb.jpg",
+                      "width": 1912
+                    },
+                    "hlsUrl": "https://play.itunes.apple.com/WebObjects/MZPlay.woa/hls/playlist.m3u8?cc=US&a=1551901253&id=229833762&aec=HD&l=en",
+                    "url": "https://video-ssl.itunes.apple.com/itunes-assets/Video124/v4/08/e8/a1/08e8a1e2-6d37-33eb-11e7-e5b11d01fac1/mzvf_8776065866896631242.720w.h264lc.U.p.m4v"
+                  }
+                ],
+                "releaseDate": "2020-03-19",
+                "trackNumber": 18,
+                "url": "https://music.apple.com/us/music-video/after-hours-short-film/1551901253",
+                "videoTraits": []
+              }
+            },
+            {
+              "id": "1551901256",
+              "type": "music-videos",
+              "href": "/v1/catalog/us/music-videos/1551901256",
+              "attributes": {
+                "albumName": "After Hours (Deluxe Video Album)",
+                "artistName": "The Weeknd",
+                "artwork": {
+                  "bgColor": "2d1c0e",
+                  "hasP3": false,
+                  "height": 925,
+                  "textColor1": "f0eebd",
+                  "textColor2": "f3ad91",
+                  "textColor3": "c9c49a",
+                  "textColor4": "cb9077",
+                  "url": "https://is1-ssl.mzstatic.com/image/thumb/Video114/v4/ef/3b/c8/ef3bc824-a914-4c64-c1cb-f817a8757f31/20UMGIM20682.crop.jpg/{w}x{h}mv.jpg",
+                  "width": 1912
+                },
+                "contentRating": "explicit",
+                "discNumber": 1,
+                "durationInMillis": 341140,
+                "genreNames": [
+                  "R&B/Soul"
+                ],
+                "has4K": false,
+                "hasHDR": false,
+                "isrc": "USUMV2000585",
+                "name": "In Your Eyes",
+                "playParams": {
+                  "id": "1551901256",
+                  "kind": "musicVideo"
+                },
+                "previews": [
+                  {
+                    "artwork": {
+                      "bgColor": "070201",
+                      "hasP3": false,
+                      "height": 932,
+                      "textColor1": "ffffce",
+                      "textColor2": "d79100",
+                      "textColor3": "cdcca4",
+                      "textColor4": "ae7400",
+                      "url": "https://is1-ssl.mzstatic.com/image/thumb/Video124/v4/c7/a4/fa/c7a4fa4a-b76d-7fcb-7106-e2351b207deb/Job63d91b6d-f46b-4a4e-86bd-b068d6e33c0f-109162921-PreviewImage_preview_image_45000_video_sdr-Time1612404259810.png/{w}x{h}bb.jpg",
+                      "width": 1912
+                    },
+                    "hlsUrl": "https://play.itunes.apple.com/WebObjects/MZPlay.woa/hls/playlist.m3u8?cc=US&a=1551901256&id=229797877&aec=HD&l=en",
+                    "url": "https://video-ssl.itunes.apple.com/itunes-assets/Video124/v4/85/09/66/8509667d-2304-03d6-1c8f-ca85054106c5/mzvf_3312811879284630456.720w.h264lc.U.p.m4v"
+                  }
+                ],
+                "releaseDate": "2020-03-19",
+                "trackNumber": 19,
+                "url": "https://music.apple.com/us/music-video/in-your-eyes/1551901256",
+                "videoTraits": []
+              }
+            },
+            {
+              "id": "1551901257",
+              "type": "music-videos",
+              "href": "/v1/catalog/us/music-videos/1551901257",
+              "attributes": {
+                "albumName": "After Hours (Deluxe Video Album)",
+                "artistName": "The Weeknd",
+                "artwork": {
+                  "bgColor": "20150f",
+                  "hasP3": false,
+                  "height": 1072,
+                  "textColor1": "d7be9b",
+                  "textColor2": "d5b071",
+                  "textColor3": "b39c7f",
+                  "textColor4": "b0915d",
+                  "url": "https://is1-ssl.mzstatic.com/image/thumb/Video114/v4/d6/79/3f/d6793f44-428f-3993-95a8-b1baa8434091/20UMGIM25912.crop.jpg/{w}x{h}mv.jpg",
+                  "width": 1912
+                },
+                "contentRating": "explicit",
+                "discNumber": 1,
+                "durationInMillis": 190207,
+                "genreNames": [
+                  "R&B/Soul"
+                ],
+                "has4K": false,
+                "hasHDR": false,
+                "isrc": "USUMV2000726",
+                "name": "Until I Bleed Out",
+                "playParams": {
+                  "id": "1551901257",
+                  "kind": "musicVideo"
+                },
+                "previews": [
+                  {
+                    "artwork": {
+                      "bgColor": "1a140d",
+                      "hasP3": false,
+                      "height": 1072,
+                      "textColor1": "e8f1d0",
+                      "textColor2": "d7f1bc",
+                      "textColor3": "bfc5a9",
+                      "textColor4": "b1c599",
+                      "url": "https://is1-ssl.mzstatic.com/image/thumb/Video124/v4/e8/fc/74/e8fc7497-f27c-7f87-83db-216f66f99c7d/Joba652a52b-f339-461d-b8ca-f1fa6783dc6f-109162942-PreviewImage_preview_image_45000_video_sdr-Time1612404271633.png/{w}x{h}bb.jpg",
+                      "width": 1912
+                    },
+                    "hlsUrl": "https://play.itunes.apple.com/WebObjects/MZPlay.woa/hls/playlist.m3u8?cc=US&a=1551901257&id=229798068&aec=HD&l=en",
+                    "url": "https://video-ssl.itunes.apple.com/itunes-assets/Video124/v4/87/96/09/879609df-baf4-0a86-317c-cff58031fa72/mzvf_12426811796331701178.720w.h264lc.U.p.m4v"
+                  }
+                ],
+                "releaseDate": "2020-03-19",
+                "trackNumber": 20,
+                "url": "https://music.apple.com/us/music-video/until-i-bleed-out/1551901257",
+                "videoTraits": []
+              }
+            },
+            {
+              "id": "1551901261",
+              "type": "music-videos",
+              "href": "/v1/catalog/us/music-videos/1551901261",
+              "attributes": {
+                "albumName": "After Hours (Deluxe Video Album)",
+                "artistName": "The Weeknd",
+                "artwork": {
+                  "bgColor": "231a0b",
+                  "hasP3": false,
+                  "height": 1072,
+                  "textColor1": "e8bb2b",
+                  "textColor2": "e4aa66",
+                  "textColor3": "c09b24",
+                  "textColor4": "be8d53",
+                  "url": "https://is1-ssl.mzstatic.com/image/thumb/Video124/v4/58/06/e8/5806e8fb-b421-1414-4dcf-c003ad2df434/20UMGIM28147.crop.jpg/{w}x{h}mv.jpg",
+                  "width": 1912
+                },
+                "contentRating": "explicit",
+                "discNumber": 1,
+                "durationInMillis": 251753,
+                "genreNames": [
+                  "R&B/Soul"
+                ],
+                "has4K": false,
+                "hasHDR": false,
+                "isrc": "USUMV2000799",
+                "name": "Snowchild (Animated Video)",
+                "playParams": {
+                  "id": "1551901261",
+                  "kind": "musicVideo"
+                },
+                "previews": [
+                  {
+                    "artwork": {
+                      "bgColor": "d4d5d6",
+                      "hasP3": false,
+                      "height": 1072,
+                      "textColor1": "0e0e0e",
+                      "textColor2": "313131",
+                      "textColor3": "353636",
+                      "textColor4": "515252",
+                      "url": "https://is1-ssl.mzstatic.com/image/thumb/Video114/v4/8f/7a/ba/8f7ababa-6fb8-625b-88fc-03ca01b94b7c/Jobd6ee5eb3-6b5a-432c-ba22-5ce38ff23f05-109162892-PreviewImage_preview_image_45000_video_sdr-Time1612404511491.png/{w}x{h}bb.jpg",
+                      "width": 1912
+                    },
+                    "hlsUrl": "https://play.itunes.apple.com/WebObjects/MZPlay.woa/hls/playlist.m3u8?cc=US&a=1551901261&id=229799442&aec=HD&l=en",
+                    "url": "https://video-ssl.itunes.apple.com/itunes-assets/Video124/v4/8d/88/3d/8d883d76-5fee-2568-cc92-1e39f43cf31e/mzvf_16333359800172236227.720w.h264lc.U.p.m4v"
+                  }
+                ],
+                "releaseDate": "2020-03-19",
+                "trackNumber": 21,
+                "url": "https://music.apple.com/us/music-video/snowchild-animated-video/1551901261",
+                "videoTraits": []
+              }
+            },
+            {
+              "id": "1551901420",
+              "type": "music-videos",
+              "href": "/v1/catalog/us/music-videos/1551901420",
+              "attributes": {
+                "albumName": "After Hours (Deluxe Video Album)",
+                "artistName": "The Weeknd",
+                "artwork": {
+                  "bgColor": "080808",
+                  "hasP3": false,
+                  "height": 952,
+                  "textColor1": "cdd2c3",
+                  "textColor2": "b9c5b4",
+                  "textColor3": "a6a99d",
+                  "textColor4": "959f92",
+                  "url": "https://is1-ssl.mzstatic.com/image/thumb/Video124/v4/35/3c/8c/353c8ca3-bdbc-d6a6-7f2b-dcc88e5b15a4/20UMGIM72460.crop.jpg/{w}x{h}mv.jpg",
+                  "width": 1814
+                },
+                "contentRating": "explicit",
+                "discNumber": 1,
+                "durationInMillis": 321043,
+                "genreNames": [
+                  "R&B/Soul"
+                ],
+                "has4K": false,
+                "hasHDR": false,
+                "isrc": "USUMV2001679",
+                "name": "Too Late",
+                "playParams": {
+                  "id": "1551901420",
+                  "kind": "musicVideo"
+                },
+                "previews": [
+                  {
+                    "artwork": {
+                      "bgColor": "0c0e0e",
+                      "hasP3": false,
+                      "height": 952,
+                      "textColor1": "93c6d4",
+                      "textColor2": "a9bfd3",
+                      "textColor3": "78a1ac",
+                      "textColor4": "899cac",
+                      "url": "https://is1-ssl.mzstatic.com/image/thumb/Video114/v4/6c/23/d2/6c23d282-898c-0a66-f7c9-5020732b44f6/Jobe1cb3956-835d-438a-a2e6-167ed5b61b83-109162916-PreviewImage_preview_image_45000_video_sdr-Time1612404264742.png/{w}x{h}bb.jpg",
+                      "width": 1912
+                    },
+                    "hlsUrl": "https://play.itunes.apple.com/WebObjects/MZPlay.woa/hls/playlist.m3u8?cc=US&a=1551901420&id=229797931&aec=HD&l=en",
+                    "url": "https://video-ssl.itunes.apple.com/itunes-assets/Video114/v4/cc/7f/fd/cc7ffd2c-e5f8-edbc-c0e4-7e6c4a5b5974/mzvf_6630535744063340112.720w.h264lc.U.p.m4v"
+                  }
+                ],
+                "releaseDate": "2020-03-19",
+                "trackNumber": 22,
+                "url": "https://music.apple.com/us/music-video/too-late/1551901420",
+                "videoTraits": []
+              }
+            },
+            {
+              "id": "1551901426",
+              "type": "music-videos",
+              "href": "/v1/catalog/us/music-videos/1551901426",
+              "attributes": {
+                "albumName": "After Hours (Deluxe Video Album)",
+                "artistName": "The Weeknd",
+                "artwork": {
+                  "bgColor": "080c11",
+                  "hasP3": false,
+                  "height": 1708,
+                  "textColor1": "d5d5d2",
+                  "textColor2": "c8c2b5",
+                  "textColor3": "acadab",
+                  "textColor4": "a29e94",
+                  "url": "https://is1-ssl.mzstatic.com/image/thumb/Video114/v4/5b/a1/a0/5ba1a05d-9286-aeff-3faa-114d10df512e/20UM1IM14371.crop.jpg/{w}x{h}mv.jpg",
+                  "width": 4088
+                },
+                "contentRating": "explicit",
+                "discNumber": 1,
+                "durationInMillis": 248915,
+                "genreNames": [
+                  "R&B/Soul"
+                ],
+                "has4K": true,
+                "hasHDR": false,
+                "isrc": "USUMV2002770",
+                "name": "Save Your Tears",
+                "playParams": {
+                  "id": "1551901426",
+                  "kind": "musicVideo"
+                },
+                "previews": [
+                  {
+                    "artwork": {
+                      "bgColor": "111e29",
+                      "hasP3": false,
+                      "height": 1608,
+                      "textColor1": "dfeaf1",
+                      "textColor2": "5eabd5",
+                      "textColor3": "b6c1c9",
+                      "textColor4": "4e8fb3",
+                      "url": "https://is1-ssl.mzstatic.com/image/thumb/Video125/v4/ac/81/10/ac811029-6c76-c53b-3667-a25616e4a438/Job33f081cb-016b-481a-9ef7-ce91e4d6aa6e-115451925-PreviewImage_preview_image_45000_video_sdr-Time1623844208015.png/{w}x{h}bb.jpg",
+                      "width": 3832
+                    },
+                    "hlsUrl": "https://play.itunes.apple.com/WebObjects/MZPlay.woa/hls/playlist.m3u8?cc=US&a=1551901426&id=293485954&aec=HD&l=en",
+                    "url": "https://video-ssl.itunes.apple.com/itunes-assets/Video115/v4/10/5e/5e/105e5e24-5703-b2d8-4b09-dd36ee082920/mzvf_6902299898986931044.720w.h264lc.U.p.m4v"
+                  }
+                ],
+                "releaseDate": "2020-03-19",
+                "trackNumber": 23,
+                "url": "https://music.apple.com/us/music-video/save-your-tears/1551901426",
+                "videoTraits": [
+                  "4K"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "meta": {
+        "contentVersion": {
+          "MZ_INDEXER": 1759232205996,
+          "RTCI": 0
+        }
+      }
+    }
+  ]
+}

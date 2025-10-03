@@ -1,0 +1,35 @@
+H3 200 
+Via: 1.1 varnish
+Content-Length: 180
+Vary: Origin, Accept-Encoding, Origin
+ETag: "b4fd32b59f0b171a122e88262e1e9bd7--gzip"
+Date: Sat, 27 Sep 2025 16:36:49 GMT
+Cache-Control: max-age=60, s-maxage=0, private, no-transform
+Access-Control-Allow-Credentials: true
+Content-Encoding: gzip
+Access-Control-Expose-Headers: x-apple-jingle-correlation-key
+Content-Type: application/json;charset=utf-8
+Access-Control-Allow-Origin: https://music.apple.com
+Accept-Ranges: bytes
+x-responding-instance: MZStorePlatform:10001:::
+x-cache: MISS
+apple-originating-system: MZStorePlatform
+x-apple-application-site: SK00-RDC
+x-served-by: cache-cph2320052-CPH
+x-apple-jingle-correlation-key: NUUKTKRHI3M7IOAKMMLENKHRQE
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+x-apple-request-uuid: 6d28a9aa-2746-d9f4-380a-631646a8f181
+apple-tk: false
+x-apple-application-instance: 10001
+Server: daiquiri/5
+x-cdn: fsly
+x-b3-spanid: 162521a94bcb3db3
+x-b3-traceid: 6d28a9aa2746d9f4380a631646a8f181
+Alt-Svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+x-apple-lokamai-no-cache: true
+apple-seq: 0.0
+x-timer: S1758991010.610505,VS0,VE29
+b3: 6d28a9aa2746d9f4380a631646a8f181-162521a94bcb3db3
+apple-timing-app: 11 ms
+x-cache-hits: 0
+x-daiquiri-instance: daiquiri:10001:daiquiri-cluster-8549586866-qpr8m:7987:25RELEASE110:daiquiri-amp-kubernetes-shared-cluster-ak8s-prod-sk2-amp-core-services-music-rdc-prod, daiquiri:10001:daiquiri-all-shared-ext-7b5f8f68c8-wg2xp:7987:25RELEASE110:daiquiri-amp-kubernetes-shared-ext-ak8s-prod-sk2-amp-daiquiri-ingress-prod
