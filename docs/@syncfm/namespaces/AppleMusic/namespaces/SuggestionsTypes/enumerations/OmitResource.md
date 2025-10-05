@@ -1,0 +1,17 @@
+[**@syncfm/applemusic-api**](../../../../../../README.md)
+
+***
+
+[@syncfm/applemusic-api](../../../../../../globals.md) / [AppleMusic](../../../README.md) / [SuggestionsTypes](../README.md) / OmitResource
+
+# Enumeration: OmitResource
+
+Defined in: [endpoints/Suggestions/types.ts:36](https://github.com/sync-fm/applemusic-api/blob/9ff258d5e3837a0cb0f9914911c5614d92f344ed/src/endpoints/Suggestions/types.ts#L36)
+
+## Enumeration Members
+
+### Autos
+
+> **Autos**: `"autos"`
+
+Defined in: [endpoints/Suggestions/types.ts:37](https://github.com/sync-fm/applemusic-api/blob/9ff258d5e3837a0cb0f9914911c5614d92f344ed/src/endpoints/Suggestions/types.ts#L37)

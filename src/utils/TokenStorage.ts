@@ -49,7 +49,7 @@ export class TokenStorage {
         }
         console.log("validateToken: validating token")
         const res = await this.ax.request({
-            url: "https://amp-api.music.apple.com/v1/catalog/us/artists/1771641385",
+            url: "https://amp-api-edge.music.apple.com/v1/test",
             method: "GET",
             withCredentials: true,
             headers: {

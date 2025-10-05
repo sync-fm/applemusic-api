@@ -1,12 +1,5 @@
-import { AppleMusicSearchResponse, ExtendOption, SearchEndpointParams, SearchEndpointParamsDefaults, SearchResults } from "./types";
+import { SearchEndpointResponse, ExtendOption, SearchEndpointParams, SearchEndpointParamsDefaults, SearchResults } from "./types";
 
-type AppleMusicAPIResponse = {
-    results: Record<string, {
-        href: string;
-        next?: string;
-        data: any[];
-    }>
-};
 export type AnyObject = { [k: string]: any };
 export class Parser {
 
@@ -145,7 +138,7 @@ export class Parser {
     public parseToAppleMusicAPI(
         res: any,
         url?: string
-    ): AppleMusicSearchResponse {
+    ): SearchEndpointResponse {
         const resources = res.resources ?? {};
 
         // Flatten resource index: id -> full object

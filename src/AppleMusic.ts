@@ -8,6 +8,7 @@ import { AlbumsEndpointTypes, AlbumsEndpoint } from "./endpoints/Albums";
 import { SongsEndpointTypes, SongsEndpoint } from "./endpoints/Songs";
 import { ArtistsEndpoint, ArtistsEndpointTypes } from "./endpoints/Artists";
 import { MusicVideosEndpoint, MusicVideosEndpointTypes } from "./endpoints/MusicVideos";
+import { DestinationName, Logger, LogLevel } from "./utils/Logger";
 
 const createInitGuard = <TArgs extends unknown[], TResult>(endpoint: string) =>
     async (..._args: TArgs): Promise<TResult> => {
@@ -35,14 +36,18 @@ export const BaseURLs: Record<AuthType, string> = {
 
 export class AppleMusic {
     private client: AxiosInstance;
+    public log: Logger = new Logger({
+        destinations: [
+            DestinationName.Console
+        ],
+        level: LogLevel.Log
+    });
+
     public config: AppleMusicConfig = {
         region: Region.US,
         authType: AuthType.Scraped,
     };
 
-    public get BaseURLWithRegion() {
-
-    }
 
     public Search = {
         Get: createInitGuard<[SearchEndpointTypes.SearchEndpointParams], SearchEndpointTypes.SearchEndpointResponse>("Search"),
@@ -70,56 +75,56 @@ export class AppleMusic {
         GetRelationship: createInitGuard<[SongsEndpointTypes.SongsRelationshipParams], SongsEndpointTypes.SongsRelationshipResponse>("Songs"),
     };
 
-    public constructor(config: AppleMusicConfig) {
+    public constructor(config?: AppleMusicConfig) {
         this.config = { ...this.config, ...config };
     }
 
     public async init() {
         this.client = await getAuthenticatedAxios();
-        console.log("Base Apple Music client ready");
+        this.log.debug("Base Apple Music client ready");
 
         const searchEndpoint = new SearchEndpoint(Region.US);
         await searchEndpoint.init();
         this.Search.Get = searchEndpoint.search.bind(searchEndpoint);
-        console.log("Search endpoint ready");
+        this.log.debug("Search endpoint ready");
 
         const suggestionsEndpoint = new SuggestionsEndpoint(Region.US);
         await suggestionsEndpoint.init();
         this.Suggestions.Get = suggestionsEndpoint.suggestions.bind(suggestionsEndpoint);
-        console.log("Suggestions endpoint ready");
+        this.log.debug("Suggestions endpoint ready");
 
         const hintsEndpoint = new HintsEndpoint(Region.US);
         await hintsEndpoint.init();
         this.Hints.Get = hintsEndpoint.hints.bind(hintsEndpoint);
-        console.log("Hints endpoint ready");
+        this.log.debug("Hints endpoint ready");
 
         const albumsEndpoint = new AlbumsEndpoint(Region.US);
         await albumsEndpoint.init();
         this.Albums.Get = albumsEndpoint.get.bind(albumsEndpoint);
         this.Albums.GetView = albumsEndpoint.getView.bind(albumsEndpoint);
-        console.log("Albums endpoint ready");
+        this.log.debug("Albums endpoint ready");
 
         const songsEndpoint = new SongsEndpoint(Region.US);
         await songsEndpoint.init();
         this.Songs.Get = songsEndpoint.get.bind(songsEndpoint);
         this.Songs.GetRelationship = songsEndpoint.getRelationship.bind(songsEndpoint);
-        console.log("Songs endpoint ready");
+        this.log.debug("Songs endpoint ready");
 
 
         const artistsEndpoint = new ArtistsEndpoint(Region.US);
         await artistsEndpoint.init();
         this.Artists.Get = artistsEndpoint.get.bind(artistsEndpoint);
         this.Artists.GetView = artistsEndpoint.getView.bind(artistsEndpoint);
-        console.log("Artists endpoint ready");
+        this.log.debug("Artists endpoint ready");
 
 
         const musicVideosEndpoint = new MusicVideosEndpoint(Region.US);
         await musicVideosEndpoint.init();
         this.MusicVideos.Get = musicVideosEndpoint.get.bind(musicVideosEndpoint);
         this.MusicVideos.GetView = musicVideosEndpoint.getView.bind(musicVideosEndpoint);
-        console.log("Music Videos endpoint ready");
+        this.log.debug("Music Videos endpoint ready");
 
-        console.log("Apple Music API initialized :333");
+        this.log.debug("Apple Music API initialized :333");
     }
 
     public async verifyTokenValidity(): Promise<boolean> {
