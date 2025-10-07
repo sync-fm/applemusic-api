@@ -1,11 +1,12 @@
-import { AppleMusic } from "./AppleMusic";
-import { View } from "./types/SharedSearchParams";
-import { SearchEndpointTypes } from "./endpoints/Search";
-import fs from "fs"
+import { AppleMusic, AuthType, Region } from "./AppleMusic";
 
-const am = new AppleMusic();
+const am = new AppleMusic({
+  authType: AuthType.Scraped,
+  region: Region.US,
+});
+
 await am.init();
 
-console.log("meow", await am.Albums.Get({
-    id: "310730204"
-}));
+const album = await am.Albums.get({ id: "310730204" });
+
+console.log("Album:", album.data[0].attributes);

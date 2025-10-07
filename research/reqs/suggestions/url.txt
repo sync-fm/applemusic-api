@@ -1,7 +1,0 @@
-Original: https://amp-api-edge.music.apple.com/v1/catalog/us/search/suggestions?art%5Burl%5D=f&fields%5Balbums%5D=artistName%2Cartwork%2CcontentRating%2Cname%2CplayParams%2Curl&fields%5Bartists%5D=url%2Cname%2Cartwork&format%5Bresources%5D=map&kinds=terms%2CtopResults&l=en-US&limit%5Bresults%3Aterms%5D=5&limit%5Bresults%3AtopResults%5D=10&omit%5Bresource%5D=autos&platform=web&term=okay&types=activities%2Calbums%2Cartists%2Ceditorial-items%2Cmusic-movies%2Cmusic-videos%2Cplaylists%2Crecord-labels%2Csongs%2Cstations%2Ctv-episodes&with=naturalLanguage
-
-Decoded: https://amp-api-edge.music.apple.com/v1/catalog/us/search/suggestions?
-Search params: 
-art[url]=f&fields[albums]=artistName,artwork,contentRating,name,playParams,url&fields[artists]=url,name,artwork&format[resources]=map&kinds=terms,topResults&l=en-US&limit[results:terms]=5&limit[results:topResults]=10&omit[resource]=autos&platform=web&term=okay&types=activities,albums,artists,editorial-items,music-movies,music-videos,playlists,record-labels,songs,stations,tv-episodes&with=naturalLanguage
-
-art[url]=f&fields[albums]=artistName,artwork,contentRating,name,playParams,url&fields[artists]=url,name,artwork&format[resources]=map&kinds=terms,topResults&l=en-US&limit[results:terms]=5&limit[results:topResults]=10&omit[resource]=autos&platform=web&term=okaynico&types=activities,albums,artists,editorial-items,music-movies,music-videos,playlists,record-labels,songs,stations,tv-episodes&with=naturalLanguage

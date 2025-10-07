@@ -32,3 +32,9 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 
 # Finder (MacOS) folder config
 .DS_Store
+
+# VitePress generated assets (built locally, published output tracked in docs/)
+docs-src/.vitepress/cache
+docs-src/.vitepress/dist
+!docs/
+research/

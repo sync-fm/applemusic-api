@@ -3,13 +3,14 @@ import {
   ArtistAttributes,
   GenericAttributes,
   MusicVideoAttributes,
-  Relationship,
   RelationshipRef,
   Resource,
   SongAttributes,
   StationAttributes,
 } from "../../types/SharedResourceTypes";
 import { Platform, Locale, AllowedViews } from "../../types/SharedSearchParams";
+import { RelationshipWithRefs } from "../../types/shared/Relationships";
+export type { RelationshipWithRefs } from "../../types/shared/Relationships";
 
 // ────────────────────────────────
 // Enums
@@ -33,12 +34,6 @@ export enum IncludeOption {
 // ────────────────────────────────
 // Resource Shapes
 // ────────────────────────────────
-
-export interface RelationshipWithRefs<
-  T extends RelationshipRef = RelationshipRef
-> extends Relationship {
-  data?: T[];
-}
 
 export type SongAlbumResource = Resource<AlbumAttributes> & { type: "albums" };
 export type SongArtistResource = Resource<ArtistAttributes> & {

@@ -5,14 +5,21 @@ import {
   MusicVideoAttributes,
   PlayParams,
   PlaylistAttributes,
-  Relationship,
-  RelationshipRef,
   Resource,
   SongAttributes,
   GenericAttributes,
   ArtistAttributes,
+  RelationshipRef,
 } from "../../types/SharedResourceTypes";
 import { Platform, Locale, AllowedViews } from "../../types/SharedSearchParams";
+import {
+  RelationshipWithRefs,
+  RelationshipWithResources,
+} from "../../types/shared/Relationships";
+export type {
+  RelationshipWithRefs,
+  RelationshipWithResources,
+} from "../../types/shared/Relationships";
 
 // ────────────────────────────────
 // Enums
@@ -47,13 +54,6 @@ export type AlbumRelationshipName =
 
 export type AlbumViewName = AllowedViews<"albums">;
 
-export interface RelationshipWithResources<T extends Resource = Resource> {
-  href?: string;
-  data?: T[];
-  meta?: Record<string, unknown>;
-  next?: string;
-}
-
 export type AlbumTrackResource = Resource<
   SongAttributes | MusicVideoAttributes
 > & { type: "songs" | "music-videos" };
@@ -80,12 +80,6 @@ export type AlbumViewResourceMap = {
   "related-albums": AlbumSummaryResource;
   "related-videos": Resource<MusicVideoAttributes> & { type: "music-videos" };
 };
-
-export interface RelationshipWithRefs<
-  T extends RelationshipRef = RelationshipRef
-> extends Relationship {
-  data?: T[];
-}
 
 export interface AlbumRelationships {
   [IncludeOption.Artists]?: RelationshipWithRefs;

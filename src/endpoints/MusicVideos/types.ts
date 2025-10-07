@@ -3,12 +3,19 @@ import {
   ArtistAttributes,
   GenericAttributes,
   MusicVideoAttributes,
-  Relationship,
   RelationshipRef,
   Resource,
   SongAttributes,
 } from "../../types/SharedResourceTypes";
 import { Locale, Platform } from "../../types/SharedSearchParams";
+import {
+  RelationshipWithRefs,
+  RelationshipWithResources,
+} from "../../types/shared/Relationships";
+export type {
+  RelationshipWithRefs,
+  RelationshipWithResources,
+} from "../../types/shared/Relationships";
 
 // ────────────────────────────────
 // Enums & option sets
@@ -38,19 +45,6 @@ export enum MusicVideoViewName {
 // ────────────────────────────────
 // Relationship & View helper types
 // ────────────────────────────────
-
-export interface RelationshipWithResources<T extends Resource = Resource> {
-  href?: string;
-  data?: T[];
-  meta?: Record<string, unknown>;
-  next?: string;
-}
-
-export interface RelationshipWithRefs<
-  T extends RelationshipRef = RelationshipRef
-> extends Relationship {
-  data?: T[];
-}
 
 export type MusicVideoAlbumResource = Resource<AlbumAttributes> & {
   type: "albums";

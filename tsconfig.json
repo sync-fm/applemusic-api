@@ -12,7 +12,7 @@
     "declarationMap": true,
     "typeRoots": [
       "./node_modules/@types",
-      "src/types"
+      "src/types",
     ]
   },
   "lib": [
@@ -23,6 +23,7 @@
   ],
   "exclude": [
     "dist/",
+    "docs/",
     "examples/",
     "**/*.spec.ts",
     "**/*.test.ts",

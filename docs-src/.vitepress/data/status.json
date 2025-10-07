@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2025-10-07T19:06:37.695Z",
+  "tests": {
+    "passed": true,
+    "files": {
+      "passed": 19,
+      "total": 19
+    },
+    "cases": {
+      "passed": 137,
+      "total": 137
+    },
+    "duration": "599ms (transform 891ms, setup 0ms, collect 1.90s, tests 869ms, environment 3ms, prepare 1.96s)"
+  },
+  "coverage": {
+    "lines": {
+      "total": 2260,
+      "covered": 2170,
+      "skipped": 0,
+      "pct": 96.01
+    },
+    "statements": {
+      "total": 2260,
+      "covered": 2170,
+      "skipped": 0,
+      "pct": 96.01
+    },
+    "functions": {
+      "total": 157,
+      "covered": 152,
+      "skipped": 0,
+      "pct": 96.81
+    },
+    "branches": {
+      "total": 531,
+      "covered": 464,
+      "skipped": 0,
+      "pct": 87.38
+    }
+  }
+}

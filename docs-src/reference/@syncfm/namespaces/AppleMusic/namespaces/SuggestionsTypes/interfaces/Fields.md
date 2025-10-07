@@ -1,0 +1,12 @@
+[@syncfm/applemusic-api](../../../../../../globals.md) / [AppleMusic](../../../index.md) / [SuggestionsTypes](../index.md) / Fields
+
+# Interface: Fields
+
+Defined in: [endpoints/Suggestions/types.ts:67](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Suggestions/types.ts#L67)
+
+## Properties
+
+| Property | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="albums"></a> `albums?` | [`FieldsAlbums`](../enumerations/FieldsAlbums.md)[] | [endpoints/Suggestions/types.ts:68](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Suggestions/types.ts#L68) |
+| <a id="artists"></a> `artists?` | [`FieldsArtists`](../enumerations/FieldsArtists.md)[] | [endpoints/Suggestions/types.ts:69](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Suggestions/types.ts#L69) |

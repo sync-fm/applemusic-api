@@ -29,12 +29,87 @@ export class AppleMusic {
   private artistsEndpoint: ArtistsEndpoint | null = null;
   private musicVideosEndpoint: MusicVideosEndpoint | null = null;
 
+  public readonly Search: AppleMusic.Search;
+  public readonly Suggestions: AppleMusic.Suggestions;
+  public readonly Hints: AppleMusic.Hints;
+  public readonly Albums: AppleMusic.Albums;
+  public readonly Songs: AppleMusic.Songs;
+  public readonly Artists: AppleMusic.Artists;
+  public readonly MusicVideos: AppleMusic.MusicVideos;
+
+  /**
+   * Structured logger used across the Apple Music client.
+   */
   public log: Logger = new Logger({
     destinations: [DestinationName.Console],
     level: LogLevel.Log,
   });
 
+  /**
+   * Mutable configuration backing this client instance.
+   * @category Configuration
+   */
   public config: AppleMusicConfig = new AppleMusicConfig();
+
+  public constructor(config?: AppleMusicConfigParams) {
+    this.config = new AppleMusicConfig(config);
+    this.Search = new AppleMusic.Search(
+      () => this.assertInitialized(),
+      () =>
+        this.requireEndpoint(
+          this.searchEndpoint,
+          "Search endpoint not initialized"
+        )
+    );
+    this.Suggestions = new AppleMusic.Suggestions(
+      () => this.assertInitialized(),
+      () =>
+        this.requireEndpoint(
+          this.suggestionsEndpoint,
+          "Suggestions endpoint not initialized"
+        )
+    );
+    this.Hints = new AppleMusic.Hints(
+      () => this.assertInitialized(),
+      () =>
+        this.requireEndpoint(
+          this.hintsEndpoint,
+          "Hints endpoint not initialized"
+        )
+    );
+    this.Albums = new AppleMusic.Albums(
+      () => this.assertInitialized(),
+      () =>
+        this.requireEndpoint(
+          this.albumsEndpoint,
+          "Albums endpoint not initialized"
+        )
+    );
+    this.Songs = new AppleMusic.Songs(
+      () => this.assertInitialized(),
+      () =>
+        this.requireEndpoint(
+          this.songsEndpoint,
+          "Songs endpoint not initialized"
+        )
+    );
+    this.Artists = new AppleMusic.Artists(
+      () => this.assertInitialized(),
+      () =>
+        this.requireEndpoint(
+          this.artistsEndpoint,
+          "Artists endpoint not initialized"
+        )
+    );
+    this.MusicVideos = new AppleMusic.MusicVideos(
+      () => this.assertInitialized(),
+      () =>
+        this.requireEndpoint(
+          this.musicVideosEndpoint,
+          "Music Videos endpoint not initialized"
+        )
+    );
+  }
 
   private assertInitialized(): void {
     if (!this.initialized) {
@@ -42,123 +117,17 @@ export class AppleMusic {
     }
   }
 
-  public Search = {
-    Get: async (
-      params: SearchEndpointTypes.SearchEndpointParams
-    ): Promise<SearchEndpointTypes.SearchEndpointResponse> => {
-      this.assertInitialized();
-      return this.searchEndpoint!.search(params);
-    },
-  };
-
-  public Suggestions = {
-    Get: async (
-      params: SuggestionsEndpointTypes.SuggestionsEndpointParams
-    ): Promise<SuggestionsEndpointTypes.SearchSuggestionsResponse> => {
-      this.assertInitialized();
-      return this.suggestionsEndpoint!.suggestions(params);
-    },
-  };
-
-  public Hints = {
-    Get: async (
-      params: HintsEndpointTypes.HintsEndpointParams
-    ): Promise<HintsEndpointTypes.HintsResponse> => {
-      this.assertInitialized();
-      return this.hintsEndpoint!.hints(params);
-    },
-  };
-
-  public Albums = {
-    Get: async (
-      params: AlbumsEndpointTypes.AlbumParams
-    ): Promise<AlbumsEndpointTypes.AlbumsResponse> => {
-      this.assertInitialized();
-      return this.albumsEndpoint!.get(params);
-    },
-    GetView: async (
-      params: AlbumsEndpointTypes.AlbumViewParams
-    ): Promise<AlbumsEndpointTypes.AlbumsViewResponse> => {
-      this.assertInitialized();
-      return this.albumsEndpoint!.getView(params);
-    },
-    GetRelationship: async <
-      T extends AlbumsEndpointTypes.AlbumRelationshipName = AlbumsEndpointTypes.AlbumRelationshipName
-    >(
-      params: AlbumsEndpointTypes.AlbumRelationshipParams
-    ): Promise<AlbumsEndpointTypes.AlbumsRelationshipResponse<T>> => {
-      this.assertInitialized();
-      return this.albumsEndpoint!.getRelationship<T>(params);
-    },
-  };
-
-  public Artists = {
-    Get: async (
-      params: ArtistsEndpointTypes.ArtistParams
-    ): Promise<ArtistsEndpointTypes.ArtistsResponse> => {
-      this.assertInitialized();
-      return this.artistsEndpoint!.get(params);
-    },
-    GetView: async (
-      params: ArtistsEndpointTypes.ArtistViewParams
-    ): Promise<ArtistsEndpointTypes.ArtistsViewResponse> => {
-      this.assertInitialized();
-      return this.artistsEndpoint!.getView(params);
-    },
-    GetRelationship: async <
-      T extends ArtistsEndpointTypes.ArtistRelationshipName = ArtistsEndpointTypes.ArtistRelationshipName
-    >(
-      params: ArtistsEndpointTypes.ArtistRelationshipParams
-    ): Promise<ArtistsEndpointTypes.ArtistsRelationshipResponse<T>> => {
-      this.assertInitialized();
-      return this.artistsEndpoint!.getRelationship<T>(params);
-    },
-  };
-
-  public MusicVideos = {
-    Get: async (
-      params: MusicVideosEndpointTypes.MusicVideoParams
-    ): Promise<MusicVideosEndpointTypes.MusicVideosResponse> => {
-      this.assertInitialized();
-      return this.musicVideosEndpoint!.get(params);
-    },
-    GetView: async (
-      params: MusicVideosEndpointTypes.MusicVideoViewParams
-    ): Promise<MusicVideosEndpointTypes.MusicVideoViewResponse> => {
-      this.assertInitialized();
-      return this.musicVideosEndpoint!.getView(params);
-    },
-    GetRelationship: async <
-      T extends MusicVideosEndpointTypes.MusicVideoRelationshipName = MusicVideosEndpointTypes.MusicVideoRelationshipName
-    >(
-      params: MusicVideosEndpointTypes.MusicVideoRelationshipParams
-    ): Promise<MusicVideosEndpointTypes.MusicVideoRelationshipResponse<T>> => {
-      this.assertInitialized();
-      return this.musicVideosEndpoint!.getRelationship<T>(params);
-    },
-  };
-
-  public Songs = {
-    Get: async (
-      params: SongsEndpointTypes.SongParams
-    ): Promise<SongsEndpointTypes.SongsResponse> => {
-      this.assertInitialized();
-      return this.songsEndpoint!.get(params);
-    },
-    GetRelationship: async <
-      T extends SongsEndpointTypes.SongRelationshipName = SongsEndpointTypes.SongRelationshipName
-    >(
-      params: SongsEndpointTypes.SongsRelationshipParams
-    ): Promise<SongsEndpointTypes.SongsRelationshipResponse<T>> => {
-      this.assertInitialized();
-      return this.songsEndpoint!.getRelationship<T>(params);
-    },
-  };
-
-  public constructor(config?: AppleMusicConfigParams) {
-    this.config = new AppleMusicConfig(config);
+  private requireEndpoint<T>(endpoint: T | null, message: string): T {
+    if (!endpoint) {
+      throw new Error(message);
+    }
+    return endpoint;
   }
 
+  /**
+   * Initialize the client by acquiring an authenticated Axios instance and preparing endpoints.
+   * @category Lifecycle
+   */
   public async init(): Promise<void> {
     this.client = await getAuthenticatedAxios();
     this.log.debug("Base Apple Music client ready");
@@ -195,6 +164,10 @@ export class AppleMusic {
     this.log.debug("Apple Music API initialized :333");
   }
 
+  /**
+   * Perform a lightweight request to validate the configured developer token.
+   * @category Lifecycle
+   */
   public async verifyTokenValidity(): Promise<boolean> {
     this.assertInitialized();
     try {
@@ -210,6 +183,163 @@ export class AppleMusic {
 
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace AppleMusic {
+  type EnsureInitialized = () => void;
+
+  export class Search {
+    public constructor(
+      private readonly ensureInitialized: EnsureInitialized,
+      private readonly getEndpoint: () => SearchEndpoint
+    ) {}
+
+    public async search(
+      params: SearchEndpointTypes.SearchEndpointParams
+    ): Promise<SearchEndpointTypes.SearchEndpointResponse> {
+      this.ensureInitialized();
+      return this.getEndpoint().search(params);
+    }
+  }
+
+  export class Suggestions {
+    public constructor(
+      private readonly ensureInitialized: EnsureInitialized,
+      private readonly getEndpoint: () => SuggestionsEndpoint
+    ) {}
+
+    public async suggestions(
+      params: SuggestionsEndpointTypes.SuggestionsEndpointParams
+    ): Promise<SuggestionsEndpointTypes.SearchSuggestionsResponse> {
+      this.ensureInitialized();
+      return this.getEndpoint().suggestions(params);
+    }
+  }
+
+  export class Hints {
+    public constructor(
+      private readonly ensureInitialized: EnsureInitialized,
+      private readonly getEndpoint: () => HintsEndpoint
+    ) {}
+
+    public async hints(
+      params: HintsEndpointTypes.HintsEndpointParams
+    ): Promise<HintsEndpointTypes.HintsResponse> {
+      this.ensureInitialized();
+      return this.getEndpoint().hints(params);
+    }
+  }
+
+  export class Albums {
+    public constructor(
+      private readonly ensureInitialized: EnsureInitialized,
+      private readonly getEndpoint: () => AlbumsEndpoint
+    ) {}
+
+    public async get(
+      params: AlbumsEndpointTypes.AlbumParams
+    ): Promise<AlbumsEndpointTypes.AlbumsResponse> {
+      this.ensureInitialized();
+      return this.getEndpoint().get(params);
+    }
+
+    public async getView(
+      params: AlbumsEndpointTypes.AlbumViewParams
+    ): Promise<AlbumsEndpointTypes.AlbumsViewResponse> {
+      this.ensureInitialized();
+      return this.getEndpoint().getView(params);
+    }
+
+    public async getRelationship<
+      T extends AlbumsEndpointTypes.AlbumRelationshipName = AlbumsEndpointTypes.AlbumRelationshipName
+    >(
+      params: AlbumsEndpointTypes.AlbumRelationshipParams
+    ): Promise<AlbumsEndpointTypes.AlbumsRelationshipResponse<T>> {
+      this.ensureInitialized();
+      return this.getEndpoint().getRelationship<T>(params);
+    }
+  }
+
+  export class Artists {
+    public constructor(
+      private readonly ensureInitialized: EnsureInitialized,
+      private readonly getEndpoint: () => ArtistsEndpoint
+    ) {}
+
+    public async get(
+      params: ArtistsEndpointTypes.ArtistParams
+    ): Promise<ArtistsEndpointTypes.ArtistsResponse> {
+      this.ensureInitialized();
+      return this.getEndpoint().get(params);
+    }
+
+    public async getView(
+      params: ArtistsEndpointTypes.ArtistViewParams
+    ): Promise<ArtistsEndpointTypes.ArtistsViewResponse> {
+      this.ensureInitialized();
+      return this.getEndpoint().getView(params);
+    }
+
+    public async getRelationship<
+      T extends ArtistsEndpointTypes.ArtistRelationshipName = ArtistsEndpointTypes.ArtistRelationshipName
+    >(
+      params: ArtistsEndpointTypes.ArtistRelationshipParams
+    ): Promise<ArtistsEndpointTypes.ArtistsRelationshipResponse<T>> {
+      this.ensureInitialized();
+      return this.getEndpoint().getRelationship<T>(params);
+    }
+  }
+
+  export class Songs {
+    public constructor(
+      private readonly ensureInitialized: EnsureInitialized,
+      private readonly getEndpoint: () => SongsEndpoint
+    ) {}
+
+    public async get(
+      params: SongsEndpointTypes.SongParams
+    ): Promise<SongsEndpointTypes.SongsResponse> {
+      this.ensureInitialized();
+      return this.getEndpoint().get(params);
+    }
+
+    public async getRelationship<
+      T extends SongsEndpointTypes.SongRelationshipName = SongsEndpointTypes.SongRelationshipName
+    >(
+      params: SongsEndpointTypes.SongsRelationshipParams
+    ): Promise<SongsEndpointTypes.SongsRelationshipResponse<T>> {
+      this.ensureInitialized();
+      return this.getEndpoint().getRelationship<T>(params);
+    }
+  }
+
+  export class MusicVideos {
+    public constructor(
+      private readonly ensureInitialized: EnsureInitialized,
+      private readonly getEndpoint: () => MusicVideosEndpoint
+    ) {}
+
+    public async get(
+      params: MusicVideosEndpointTypes.MusicVideoParams
+    ): Promise<MusicVideosEndpointTypes.MusicVideosResponse> {
+      this.ensureInitialized();
+      return this.getEndpoint().get(params);
+    }
+
+    public async getView(
+      params: MusicVideosEndpointTypes.MusicVideoViewParams
+    ): Promise<MusicVideosEndpointTypes.MusicVideoViewResponse> {
+      this.ensureInitialized();
+      return this.getEndpoint().getView(params);
+    }
+
+    public async getRelationship<
+      T extends MusicVideosEndpointTypes.MusicVideoRelationshipName = MusicVideosEndpointTypes.MusicVideoRelationshipName
+    >(
+      params: MusicVideosEndpointTypes.MusicVideoRelationshipParams
+    ): Promise<MusicVideosEndpointTypes.MusicVideoRelationshipResponse<T>> {
+      this.ensureInitialized();
+      return this.getEndpoint().getRelationship<T>(params);
+    }
+  }
+
   export import SearchTypes = SearchEndpointTypes;
   export import SuggestionsTypes = SuggestionsEndpointTypes;
   export import HintsTypes = HintsEndpointTypes;
@@ -218,3 +348,8 @@ export namespace AppleMusic {
   export import MusicVideosTypes = MusicVideosEndpointTypes;
   export import SongsTypes = SongsEndpointTypes;
 }
+
+export { AppleMusicConfig } from "./utils/Config";
+export type { AppleMusicConfigParams } from "./utils/Config";
+export { AuthType } from "./utils/Config";
+export { Region } from "./types/SharedSearchParams";

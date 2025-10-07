@@ -1,0 +1,24 @@
+[@syncfm/applemusic-api](../../../../../../globals.md) / [AppleMusic](../../../index.md) / [SongsTypes](../index.md) / SongsRelationshipParams
+
+# Interface: SongsRelationshipParams
+
+Defined in: [endpoints/Songs/types.ts:133](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Songs/types.ts#L133)
+
+Query params for fetching a song relationship directly.
+GET /v1/catalog/{storefront}/songs/{id}/{relationship}
+
+## Extends
+
+- [`SongRelationshipOptions`](SongRelationshipOptions.md)
+
+## Properties
+
+| Property | Type | Inherited from | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="platform"></a> `platform?` | `Platform` | [`SongRelationshipOptions`](SongRelationshipOptions.md).[`platform`](SongRelationshipOptions.md#platform) | [endpoints/Songs/types.ts:126](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Songs/types.ts#L126) |
+| <a id="l"></a> `l?` | `Locale` | [`SongRelationshipOptions`](SongRelationshipOptions.md).[`l`](SongRelationshipOptions.md#l) | [endpoints/Songs/types.ts:127](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Songs/types.ts#L127) |
+| <a id="include"></a> `include?` | [`IncludeOption`](../enumerations/IncludeOption.md)[] | [`SongRelationshipOptions`](SongRelationshipOptions.md).[`include`](SongRelationshipOptions.md#include) | [endpoints/Songs/types.ts:128](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Songs/types.ts#L128) |
+| <a id="extend"></a> `extend?` | [`ExtendOption`](../enumerations/ExtendOption.md)[] | [`SongRelationshipOptions`](SongRelationshipOptions.md).[`extend`](SongRelationshipOptions.md#extend) | [endpoints/Songs/types.ts:129](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Songs/types.ts#L129) |
+| <a id="limit"></a> `limit?` | `number` | [`SongRelationshipOptions`](SongRelationshipOptions.md).[`limit`](SongRelationshipOptions.md#limit) | [endpoints/Songs/types.ts:130](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Songs/types.ts#L130) |
+| <a id="id"></a> `id` | `string` | - | [endpoints/Songs/types.ts:134](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Songs/types.ts#L134) |
+| <a id="relationship"></a> `relationship` | keyof [`SongRelationshipResourceMap`](../type-aliases/SongRelationshipResourceMap.md) | - | [endpoints/Songs/types.ts:135](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Songs/types.ts#L135) |

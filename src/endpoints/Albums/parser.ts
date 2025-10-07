@@ -9,6 +9,12 @@ import {
   WithOption,
   AlbumViewName,
 } from "./types";
+import {
+  buildQueryString,
+  parseDelimitedEnum,
+  parseNumber,
+  parseQuery,
+} from "../shared/query";
 
 const localeOptions = new Set<Locale>(Object.values(Locale));
 const platformOptions = new Set<Platform>(Object.values(Platform));
@@ -27,109 +33,67 @@ type AlbumQueryParams =
   | AlbumRelationshipOptions
   | AlbumParams;
 
+const parseAlbum = parseQuery<
+  Partial<AlbumParams> &
+    Partial<AlbumViewOptions> &
+    Partial<AlbumRelationshipOptions>
+>({
+  factory: () =>
+    ({} as Partial<AlbumParams> &
+      Partial<AlbumViewOptions> &
+      Partial<AlbumRelationshipOptions>),
+  handlers: {
+    id: (value, result) => {
+      result.id = value;
+    },
+    limit: (value, result) => {
+      const parsed = parseNumber(value);
+      if (parsed !== undefined) {
+        (result as AlbumViewOptions).limit = parsed;
+      }
+    },
+    l: (value, result) => {
+      if (localeOptions.has(value as Locale)) {
+        result.l = value as Locale;
+      }
+    },
+    platform: (value, result) => {
+      if (platformOptions.has(value as Platform)) {
+        result.platform = value as Platform;
+      }
+    },
+    views: (value, result) => {
+      const filtered = parseDelimitedEnum(value, viewOptions);
+      if (filtered.length > 0) {
+        result.views = filtered;
+      }
+    },
+    include: (value, result) => {
+      const filtered = parseDelimitedEnum(value, includeOptions);
+      if (filtered.length > 0) {
+        result.include = filtered;
+      }
+    },
+    extend: (value, result) => {
+      const filtered = parseDelimitedEnum(value, extendOptions);
+      if (filtered.length > 0) {
+        result.extend = filtered;
+      }
+    },
+    with: (value, result) => {
+      const filtered = parseDelimitedEnum(value, withOptions);
+      if (filtered.length > 0) {
+        result.with = filtered;
+      }
+    },
+  },
+});
+
 /**
  * Parse a query string (?l=en-US&views=appears-on,related-albums) into AlbumParams.
  */
-export const parseAlbumParams = (query: string): AlbumParams => {
-  const params = new URLSearchParams(
-    query.startsWith("?") ? query : `?${query}`
-  );
-  const result: Partial<AlbumParams> &
-    Partial<AlbumViewOptions> &
-    Partial<AlbumRelationshipOptions> = {};
-
-  for (const [key, value] of params.entries()) {
-    switch (key) {
-      case "id": {
-        result.id = value;
-        break;
-      }
-
-      case "limit": {
-        const parsed = Number.parseInt(value, 10);
-        if (Number.isFinite(parsed)) {
-          (result as AlbumViewOptions).limit = parsed;
-        }
-        break;
-      }
-
-      case "l": {
-        if (localeOptions.has(value as Locale)) {
-          result.l = value as Locale;
-        }
-        break;
-      }
-
-      case "platform": {
-        if (platformOptions.has(value as Platform)) {
-          result.platform = value as Platform;
-        }
-        break;
-      }
-
-      case "views": {
-        const values = value
-          .split(",")
-          .map((v) => v.trim())
-          .filter(Boolean);
-        const filtered = values.filter((v): v is AlbumViewName =>
-          viewOptions.has(v as AlbumViewName)
-        );
-        if (filtered.length > 0) {
-          result.views = Array.from(new Set(filtered));
-        }
-        break;
-      }
-
-      case "include": {
-        const values = value
-          .split(",")
-          .map((v) => v.trim())
-          .filter(Boolean);
-        const filtered = values.filter((v): v is IncludeOption =>
-          includeOptions.has(v as IncludeOption)
-        );
-        if (filtered.length > 0) {
-          result.include = Array.from(new Set(filtered));
-        }
-        break;
-      }
-
-      case "extend": {
-        const values = value
-          .split(",")
-          .map((v) => v.trim())
-          .filter(Boolean);
-        const filtered = values.filter((v): v is ExtendOption =>
-          extendOptions.has(v as ExtendOption)
-        );
-        if (filtered.length > 0) {
-          result.extend = Array.from(new Set(filtered));
-        }
-        break;
-      }
-
-      case "with": {
-        const values = value
-          .split(",")
-          .map((v) => v.trim())
-          .filter(Boolean);
-        const filtered = values.filter((v): v is WithOption =>
-          withOptions.has(v as WithOption)
-        );
-        if (filtered.length > 0) {
-          result.with = Array.from(new Set(filtered));
-        }
-        break;
-      }
-
-      default:
-        break;
-    }
-  }
-
-  return result as AlbumParams;
-};
+export const parseAlbumParams = (query: string): AlbumParams =>
+  parseAlbum(query) as AlbumParams;
 
 /**
  * Build a query string from AlbumParams.
@@ -140,27 +104,9 @@ export const buildAlbumQuery = (
   includeDefaults: boolean = true,
   defaults: Partial<AlbumQueryParams> = AlbumParamsDefaults
 ): string => {
-  const query = new URLSearchParams();
-
-  const baseParams = includeDefaults
-    ? { ...defaults, ...params }
-    : { ...params };
-
-  for (const [key, value] of Object.entries(baseParams)) {
-    if (value === undefined || value === null) continue;
-
-    if (Array.isArray(value)) {
-      if (value.length > 0) {
-        query.append(key, value.join(","));
-      }
-    } else if (typeof value === "number") {
-      if (Number.isFinite(value)) {
-        query.append(key, String(value));
-      }
-    } else {
-      query.append(key, String(value));
-    }
-  }
-
-  return encode ? query.toString() : decodeURIComponent(query.toString());
+  return buildQueryString<AlbumQueryParams>(params, {
+    defaults,
+    includeDefaults,
+    encode,
+  });
 };
