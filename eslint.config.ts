@@ -1,34 +1,40 @@
-import pluginJs from '@eslint/js';
-import securityPlugin from 'eslint-plugin-security';
-import unicornPlugin from 'eslint-plugin-unicorn';
-import globals from 'globals';
-import tsPlugin from 'typescript-eslint';
+import pluginJs from "@eslint/js";
+import securityPlugin from "eslint-plugin-security";
+import unicornPlugin from "eslint-plugin-unicorn";
+import globals from "globals";
+import tsPlugin from "typescript-eslint";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
-    ignores: ['.next/**', 'node_modules/**', 'dist/**', 'coverage/**', 'scripts/**'],
+    ignores: [
+      ".next/**",
+      "node_modules/**",
+      "dist/**",
+      "coverage/**",
+      "scripts/**",
+    ],
   },
   // Security
   securityPlugin.configs.recommended,
   {
-    files: ['**/*.ts'],
+    files: ["**/*.ts"],
   },
   {
     languageOptions: { globals: globals.node },
   },
   {
     rules: {
-      'func-style': ['error', 'expression'],
-      'no-restricted-syntax': ['off', 'ForOfStatement'],
-      'prefer-template': 'error',
+      "func-style": ["error", "expression"],
+      "no-restricted-syntax": ["off", "ForOfStatement"],
+      "prefer-template": "error",
     },
   },
   // TypeScript Eslint
   {
     rules: {
-      '@typescript-eslint/explicit-function-return-type': 'error',
-      '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+      "@typescript-eslint/explicit-function-return-type": "error",
+      "@typescript-eslint/consistent-type-definitions": ["off"],
     },
   },
   // Unicorn
@@ -37,8 +43,8 @@ export default [
       unicorn: unicornPlugin,
     },
     rules: {
-      'unicorn/empty-brace-spaces': 'off',
-      'unicorn/no-null': 'off',
+      "unicorn/empty-brace-spaces": "off",
+      "unicorn/no-null": "off",
     },
   },
   pluginJs.configs.recommended,

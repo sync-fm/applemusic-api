@@ -1,16 +1,18 @@
 import axios, { AxiosInstance } from "axios";
 import * as parser from "./parser";
-import { Region } from "../../types/SharedSearchParams";
 export * as AlbumsEndpointTypes from "./types";
 import * as AlbumsEndpointTypes from "./types";
 import { getAuthenticatedAxios } from "../../utils/AxiosManager";
+import { AppleMusicConfig } from "../../utils/Config";
 
 export class AlbumsEndpoint {
   private ax: AxiosInstance;
-  private apiBase = "https://amp-api-edge.music.apple.com/v1/catalog/";
+  private apiBase: string;
+  private config: AppleMusicConfig;
 
-  constructor(region: Region = Region.US) {
-    this.apiBase += `${region}/albums/`;
+  constructor(config: AppleMusicConfig) {
+    this.config = config;
+    this.apiBase = `${config.getBaseURL()}/v1/catalog/${config.region}/albums/`;
   }
 
   public async init(): Promise<void> {
@@ -85,6 +87,53 @@ export class AlbumsEndpoint {
           data: [],
           meta: {},
         };
+      }
+      throw error;
+    }
+  }
+
+  /**
+   * Fetch a relationship for an album directly.
+   * Example: /albums/{id}/{relationship}
+   */
+  public async getRelationship<
+    T extends AlbumsEndpointTypes.AlbumRelationshipName = AlbumsEndpointTypes.AlbumRelationshipName
+  >(
+    params: AlbumsEndpointTypes.AlbumRelationshipParams
+  ): Promise<AlbumsEndpointTypes.AlbumsRelationshipResponse<T>> {
+    if (!params.id) {
+      throw new Error("AlbumRelationshipParams.id is required");
+    }
+    if (!params.relationship) {
+      throw new Error(
+        "AlbumRelationshipParams.relationship is required for getRelationship()"
+      );
+    }
+
+    const { id, relationship, ...rest } = params;
+    const query = parser.buildAlbumQuery(
+      rest,
+      true,
+      true,
+      AlbumsEndpointTypes.AlbumRelationshipParamsDefaults
+    );
+
+    const url = `${this.apiBase}${id}/${relationship}${
+      query ? `?${query}` : ""
+    }`;
+    try {
+      const res = await this.ax.get(url);
+      if (!res.data) {
+        throw new Error(
+          "Got none or invalid data from album relationship request"
+        );
+      }
+      return res.data as AlbumsEndpointTypes.AlbumsRelationshipResponse<T>;
+    } catch (error) {
+      if (axios.isAxiosError(error) && error.response?.status === 404) {
+        return {
+          data: [],
+        } as AlbumsEndpointTypes.AlbumsRelationshipResponse<T>;
       }
       throw error;
     }
