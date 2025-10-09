@@ -2,7 +2,7 @@
 
 # Enumeration: WithOption
 
-Defined in: [endpoints/Search/types.ts:19](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Search/types.ts#L19)
+Defined in: [endpoints/Search/types.ts:19](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Search/types.ts#L19)
 
 ## Enumeration Members
 
@@ -10,7 +10,7 @@ Defined in: [endpoints/Search/types.ts:19](https://github.com/sync-fm/applemusic
 
 > **LyricHighlights**: `"lyricHighlights"`
 
-Defined in: [endpoints/Search/types.ts:20](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Search/types.ts#L20)
+Defined in: [endpoints/Search/types.ts:20](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Search/types.ts#L20)
 
 ***
 
@@ -18,7 +18,7 @@ Defined in: [endpoints/Search/types.ts:20](https://github.com/sync-fm/applemusic
 
 > **Lyrics**: `"lyrics"`
 
-Defined in: [endpoints/Search/types.ts:21](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Search/types.ts#L21)
+Defined in: [endpoints/Search/types.ts:21](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Search/types.ts#L21)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [endpoints/Search/types.ts:21](https://github.com/sync-fm/applemusic
 
 > **NaturalLanguage**: `"naturalLanguage"`
 
-Defined in: [endpoints/Search/types.ts:22](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Search/types.ts#L22)
+Defined in: [endpoints/Search/types.ts:22](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Search/types.ts#L22)
 
 ***
 
@@ -34,7 +34,7 @@ Defined in: [endpoints/Search/types.ts:22](https://github.com/sync-fm/applemusic
 
 > **ServerBubbles**: `"serverBubbles"`
 
-Defined in: [endpoints/Search/types.ts:23](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Search/types.ts#L23)
+Defined in: [endpoints/Search/types.ts:23](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Search/types.ts#L23)
 
 ***
 
@@ -42,4 +42,4 @@ Defined in: [endpoints/Search/types.ts:23](https://github.com/sync-fm/applemusic
 
 > **Subtitles**: `"subtitles"`
 
-Defined in: [endpoints/Search/types.ts:24](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Search/types.ts#L24)
+Defined in: [endpoints/Search/types.ts:24](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Search/types.ts#L24)

@@ -2,7 +2,7 @@
 
 # Interface: SongsRelationshipResponse\<T\>
 
-Defined in: [endpoints/Songs/types.ts:161](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Songs/types.ts#L161)
+Defined in: [endpoints/Songs/types.ts:166](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Songs/types.ts#L166)
 
 ## Type Parameters
 
@@ -14,7 +14,7 @@ Defined in: [endpoints/Songs/types.ts:161](https://github.com/sync-fm/applemusic
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="data"></a> `data` | [`SongRelationshipResourceMap`](../type-aliases/SongRelationshipResourceMap.md)\[`T`\][] | [endpoints/Songs/types.ts:164](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Songs/types.ts#L164) |
-| <a id="href"></a> `href?` | `string` | [endpoints/Songs/types.ts:165](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Songs/types.ts#L165) |
-| <a id="next"></a> `next?` | `string` | [endpoints/Songs/types.ts:166](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Songs/types.ts#L166) |
-| <a id="meta"></a> `meta?` | `Record`\<`string`, `unknown`\> | [endpoints/Songs/types.ts:167](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Songs/types.ts#L167) |
+| <a id="data"></a> `data` | [`SongRelationshipResourceMap`](../type-aliases/SongRelationshipResourceMap.md)\[`T`\][] | [endpoints/Songs/types.ts:169](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Songs/types.ts#L169) |
+| <a id="href"></a> `href?` | `string` | [endpoints/Songs/types.ts:170](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Songs/types.ts#L170) |
+| <a id="next"></a> `next?` | `string` | [endpoints/Songs/types.ts:171](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Songs/types.ts#L171) |
+| <a id="meta"></a> `meta?` | `Record`\<`string`, `unknown`\> | [endpoints/Songs/types.ts:172](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Songs/types.ts#L172) |

@@ -2,7 +2,7 @@
 
 # Class: Songs
 
-Defined in: [AppleMusic.ts:290](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L290)
+Defined in: [AppleMusic.ts:298](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L298)
 
 ## Constructors
 
@@ -10,7 +10,7 @@ Defined in: [AppleMusic.ts:290](https://github.com/sync-fm/applemusic-api/blob/a
 
 > **new Songs**(`ensureInitialized`, `getEndpoint`): `Songs`
 
-Defined in: [AppleMusic.ts:291](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L291)
+Defined in: [AppleMusic.ts:299](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L299)
 
 #### Parameters
 
@@ -29,7 +29,7 @@ Defined in: [AppleMusic.ts:291](https://github.com/sync-fm/applemusic-api/blob/a
 
 > **get**(`params`): `Promise`\<[`SongsResponse`](../namespaces/SongsTypes/interfaces/SongsResponse.md)\>
 
-Defined in: [AppleMusic.ts:296](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L296)
+Defined in: [AppleMusic.ts:304](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L304)
 
 #### Parameters
 
@@ -47,7 +47,7 @@ Defined in: [AppleMusic.ts:296](https://github.com/sync-fm/applemusic-api/blob/a
 
 > **getRelationship**\<`T`\>(`params`): `Promise`\<[`SongsRelationshipResponse`](../namespaces/SongsTypes/interfaces/SongsRelationshipResponse.md)\<`T`\>\>
 
-Defined in: [AppleMusic.ts:303](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L303)
+Defined in: [AppleMusic.ts:311](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L311)
 
 #### Type Parameters
 

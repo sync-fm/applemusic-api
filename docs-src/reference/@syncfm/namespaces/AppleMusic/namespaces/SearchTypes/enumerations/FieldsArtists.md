@@ -2,7 +2,7 @@
 
 # Enumeration: FieldsArtists
 
-Defined in: [endpoints/Search/types.ts:61](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Search/types.ts#L61)
+Defined in: [endpoints/Search/types.ts:61](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Search/types.ts#L61)
 
 ## Enumeration Members
 
@@ -10,7 +10,7 @@ Defined in: [endpoints/Search/types.ts:61](https://github.com/sync-fm/applemusic
 
 > **Name**: `"name"`
 
-Defined in: [endpoints/Search/types.ts:62](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Search/types.ts#L62)
+Defined in: [endpoints/Search/types.ts:62](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Search/types.ts#L62)
 
 ***
 
@@ -18,7 +18,7 @@ Defined in: [endpoints/Search/types.ts:62](https://github.com/sync-fm/applemusic
 
 > **URL**: `"url"`
 
-Defined in: [endpoints/Search/types.ts:63](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Search/types.ts#L63)
+Defined in: [endpoints/Search/types.ts:63](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Search/types.ts#L63)
 
 ***
 
@@ -26,4 +26,4 @@ Defined in: [endpoints/Search/types.ts:63](https://github.com/sync-fm/applemusic
 
 > **Artwork**: `"artwork"`
 
-Defined in: [endpoints/Search/types.ts:64](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Search/types.ts#L64)
+Defined in: [endpoints/Search/types.ts:64](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Search/types.ts#L64)

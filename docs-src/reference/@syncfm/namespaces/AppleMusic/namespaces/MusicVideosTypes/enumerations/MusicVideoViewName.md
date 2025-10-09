@@ -2,7 +2,7 @@
 
 # Enumeration: MusicVideoViewName
 
-Defined in: [endpoints/MusicVideos/types.ts:40](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/MusicVideos/types.ts#L40)
+Defined in: [endpoints/MusicVideos/types.ts:41](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/MusicVideos/types.ts#L41)
 
 ## Enumeration Members
 
@@ -10,7 +10,7 @@ Defined in: [endpoints/MusicVideos/types.ts:40](https://github.com/sync-fm/apple
 
 > **MoreByArtist**: `"more-by-artist"`
 
-Defined in: [endpoints/MusicVideos/types.ts:41](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/MusicVideos/types.ts#L41)
+Defined in: [endpoints/MusicVideos/types.ts:42](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/MusicVideos/types.ts#L42)
 
 ***
 
@@ -18,4 +18,4 @@ Defined in: [endpoints/MusicVideos/types.ts:41](https://github.com/sync-fm/apple
 
 > **MoreInGenre**: `"more-in-genre"`
 
-Defined in: [endpoints/MusicVideos/types.ts:42](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/MusicVideos/types.ts#L42)
+Defined in: [endpoints/MusicVideos/types.ts:43](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/MusicVideos/types.ts#L43)

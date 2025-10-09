@@ -2,7 +2,7 @@
 
 # Class: Albums
 
-Defined in: [AppleMusic.ts:230](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L230)
+Defined in: [AppleMusic.ts:236](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L236)
 
 ## Constructors
 
@@ -10,7 +10,7 @@ Defined in: [AppleMusic.ts:230](https://github.com/sync-fm/applemusic-api/blob/a
 
 > **new Albums**(`ensureInitialized`, `getEndpoint`): `Albums`
 
-Defined in: [AppleMusic.ts:231](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L231)
+Defined in: [AppleMusic.ts:237](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L237)
 
 #### Parameters
 
@@ -29,7 +29,7 @@ Defined in: [AppleMusic.ts:231](https://github.com/sync-fm/applemusic-api/blob/a
 
 > **get**(`params`): `Promise`\<[`AlbumsResponse`](../namespaces/AlbumsTypes/interfaces/AlbumsResponse.md)\>
 
-Defined in: [AppleMusic.ts:236](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L236)
+Defined in: [AppleMusic.ts:242](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L242)
 
 #### Parameters
 
@@ -47,7 +47,7 @@ Defined in: [AppleMusic.ts:236](https://github.com/sync-fm/applemusic-api/blob/a
 
 > **getView**(`params`): `Promise`\<[`AlbumsViewResponse`](../namespaces/AlbumsTypes/interfaces/AlbumsViewResponse.md)\>
 
-Defined in: [AppleMusic.ts:243](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L243)
+Defined in: [AppleMusic.ts:249](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L249)
 
 #### Parameters
 
@@ -65,7 +65,7 @@ Defined in: [AppleMusic.ts:243](https://github.com/sync-fm/applemusic-api/blob/a
 
 > **getRelationship**\<`T`\>(`params`): `Promise`\<[`AlbumsRelationshipResponse`](../namespaces/AlbumsTypes/interfaces/AlbumsRelationshipResponse.md)\<`T`\>\>
 
-Defined in: [AppleMusic.ts:250](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L250)
+Defined in: [AppleMusic.ts:256](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L256)
 
 #### Type Parameters
 

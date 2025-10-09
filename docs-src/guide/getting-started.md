@@ -13,32 +13,36 @@ bun add @syncfm/applemusic-api
 ## Configure the client
 
 ```ts
-import { AppleMusic } from "@syncfm/applemusic-api";
+import { AppleMusic, AuthType, Region } from "@syncfm/applemusic-api";
 
-const music = new AppleMusic({
-  developerToken: "YOUR_TOKEN",
-  region: "us",
+const am = new AppleMusic({
+  authType: AuthType.Scraped,
+  region: Region.US,
 });
 
-await music.init();
+await am.init();
+
+const album = await am.Albums.get({ id: "310730204" });
+
+console.log("Album:", album.data[0].attributes);
 
 // Each endpoint is available via a dedicated facade class
-const album = await music.Albums.get({ id: "310730204" });
-const latest = await music.Artists.getView({
+const album = await am.Albums.get({ id: "310730204" });
+const latest = await am.Artists.getView({
   id: "900032648",
   view: "latest-release",
 });
-const suggestions = await music.Suggestions.suggestions({
+const suggestions = await am.Suggestions.suggestions({
   term: "caroline polachek",
 });
 ```
 
-Pass in a valid Apple Music developer token and optionally set a region (defaults to `us`). Call `init()` once to authenticate and prepare the endpoint helpers.
+Create a AppleMusic class, define auth method - and optionally set a region (defaults to `us`). Call `init()` once to authenticate and prepare the endpoint helpers.
 
 ## Fetching the first pieces of data
 
 ```ts
-const album = await client.Albums.get({ id: "1469577723" });
+const album = await am.Albums.get({ id: "1469577723" });
 console.log(
   `${album.data[0]?.attributes?.name} by ${
     album.data[0]?.relationships?.artists?.data?.[0]?.attributes?.name ??

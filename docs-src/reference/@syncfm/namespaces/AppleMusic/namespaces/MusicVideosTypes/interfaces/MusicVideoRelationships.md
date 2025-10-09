@@ -2,7 +2,7 @@
 
 # Interface: MusicVideoRelationships
 
-Defined in: [endpoints/MusicVideos/types.ts:87](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/MusicVideos/types.ts#L87)
+Defined in: [endpoints/MusicVideos/types.ts:88](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/MusicVideos/types.ts#L88)
 
 ## Indexable
 
@@ -12,8 +12,8 @@ Defined in: [endpoints/MusicVideos/types.ts:87](https://github.com/sync-fm/apple
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="albums"></a> `albums?` | [`RelationshipWithRefs`](../../AlbumsTypes/interfaces/RelationshipWithRefs.md)\<`RelationshipRef` & `object`\> | [endpoints/MusicVideos/types.ts:88](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/MusicVideos/types.ts#L88) |
-| <a id="artists"></a> `artists?` | [`RelationshipWithRefs`](../../AlbumsTypes/interfaces/RelationshipWithRefs.md)\<`RelationshipRef` & `object`\> | [endpoints/MusicVideos/types.ts:91](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/MusicVideos/types.ts#L91) |
-| <a id="genres"></a> `genres?` | [`RelationshipWithRefs`](../../AlbumsTypes/interfaces/RelationshipWithRefs.md) | [endpoints/MusicVideos/types.ts:94](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/MusicVideos/types.ts#L94) |
-| <a id="library"></a> `library?` | [`RelationshipWithRefs`](../../AlbumsTypes/interfaces/RelationshipWithRefs.md)\<`RelationshipRef` & `object`\> | [endpoints/MusicVideos/types.ts:95](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/MusicVideos/types.ts#L95) |
-| <a id="songs"></a> `songs?` | [`RelationshipWithRefs`](../../AlbumsTypes/interfaces/RelationshipWithRefs.md)\<`RelationshipRef` & `object`\> | [endpoints/MusicVideos/types.ts:98](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/MusicVideos/types.ts#L98) |
+| <a id="albums"></a> `albums?` | [`RelationshipWithRefs`](../../AlbumsTypes/interfaces/RelationshipWithRefs.md)\<`RelationshipRef` & `object`\> | [endpoints/MusicVideos/types.ts:89](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/MusicVideos/types.ts#L89) |
+| <a id="artists"></a> `artists?` | [`RelationshipWithRefs`](../../AlbumsTypes/interfaces/RelationshipWithRefs.md)\<`RelationshipRef` & `object`\> | [endpoints/MusicVideos/types.ts:92](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/MusicVideos/types.ts#L92) |
+| <a id="genres"></a> `genres?` | [`RelationshipWithRefs`](../../AlbumsTypes/interfaces/RelationshipWithRefs.md) | [endpoints/MusicVideos/types.ts:95](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/MusicVideos/types.ts#L95) |
+| <a id="library"></a> `library?` | [`RelationshipWithRefs`](../../AlbumsTypes/interfaces/RelationshipWithRefs.md)\<`RelationshipRef` & `object`\> | [endpoints/MusicVideos/types.ts:96](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/MusicVideos/types.ts#L96) |
+| <a id="songs"></a> `songs?` | [`RelationshipWithRefs`](../../AlbumsTypes/interfaces/RelationshipWithRefs.md)\<`RelationshipRef` & `object`\> | [endpoints/MusicVideos/types.ts:99](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/MusicVideos/types.ts#L99) |

@@ -4,4 +4,4 @@
 
 > `const` **ArtistParamsDefaults**: [`ArtistRequestOptions`](../interfaces/ArtistRequestOptions.md)
 
-Defined in: [endpoints/Artists/types.ts:209](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Artists/types.ts#L209)
+Defined in: [endpoints/Artists/types.ts:210](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Artists/types.ts#L210)

@@ -2,7 +2,7 @@
 
 # Enumeration: ExtendOption
 
-Defined in: [endpoints/Songs/types.ts:19](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Songs/types.ts#L19)
+Defined in: [endpoints/Songs/types.ts:24](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Songs/types.ts#L24)
 
 ## Enumeration Members
 
@@ -10,7 +10,7 @@ Defined in: [endpoints/Songs/types.ts:19](https://github.com/sync-fm/applemusic-
 
 > **ArtistUrl**: `"artistUrl"`
 
-Defined in: [endpoints/Songs/types.ts:20](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Songs/types.ts#L20)
+Defined in: [endpoints/Songs/types.ts:25](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Songs/types.ts#L25)
 
 ***
 
@@ -18,4 +18,4 @@ Defined in: [endpoints/Songs/types.ts:20](https://github.com/sync-fm/applemusic-
 
 > **AudioVariants**: `"audioVariants"`
 
-Defined in: [endpoints/Songs/types.ts:21](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Songs/types.ts#L21)
+Defined in: [endpoints/Songs/types.ts:26](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Songs/types.ts#L26)

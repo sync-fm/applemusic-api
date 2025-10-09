@@ -2,7 +2,7 @@
 
 # Interface: SongRequestOptions
 
-Defined in: [endpoints/Songs/types.ts:105](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Songs/types.ts#L105)
+Defined in: [endpoints/Songs/types.ts:110](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Songs/types.ts#L110)
 
 ## Extended by
 
@@ -12,8 +12,8 @@ Defined in: [endpoints/Songs/types.ts:105](https://github.com/sync-fm/applemusic
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="platform"></a> `platform?` | `Platform` | [endpoints/Songs/types.ts:106](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Songs/types.ts#L106) |
-| <a id="l"></a> `l?` | `Locale` | [endpoints/Songs/types.ts:107](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Songs/types.ts#L107) |
-| <a id="include"></a> `include?` | [`IncludeOption`](../enumerations/IncludeOption.md)[] | [endpoints/Songs/types.ts:108](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Songs/types.ts#L108) |
-| <a id="extend"></a> `extend?` | [`ExtendOption`](../enumerations/ExtendOption.md)[] | [endpoints/Songs/types.ts:109](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Songs/types.ts#L109) |
-| <a id="views"></a> `views?` | (`Albums` \| `Artists` \| `Videos` \| `Composers` \| `Genres` \| `Library` \| `MusicVideos`)[] | [endpoints/Songs/types.ts:110](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Songs/types.ts#L110) |
+| <a id="platform"></a> `platform?` | `Platform` | [endpoints/Songs/types.ts:111](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Songs/types.ts#L111) |
+| <a id="l"></a> `l?` | `Locale` | [endpoints/Songs/types.ts:112](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Songs/types.ts#L112) |
+| <a id="include"></a> `include?` | [`IncludeOption`](../enumerations/IncludeOption.md)[] | [endpoints/Songs/types.ts:113](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Songs/types.ts#L113) |
+| <a id="extend"></a> `extend?` | [`ExtendOption`](../enumerations/ExtendOption.md)[] | [endpoints/Songs/types.ts:114](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Songs/types.ts#L114) |
+| <a id="views"></a> `views?` | (`Albums` \| `Artists` \| `Videos` \| `Composers` \| `Genres` \| `Library` \| `MusicVideos`)[] | [endpoints/Songs/types.ts:115](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Songs/types.ts#L115) |

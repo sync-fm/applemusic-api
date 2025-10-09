@@ -2,7 +2,7 @@
 
 # Class: Search
 
-Defined in: [AppleMusic.ts:188](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L188)
+Defined in: [AppleMusic.ts:194](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L194)
 
 ## Constructors
 
@@ -10,7 +10,7 @@ Defined in: [AppleMusic.ts:188](https://github.com/sync-fm/applemusic-api/blob/a
 
 > **new Search**(`ensureInitialized`, `getEndpoint`): `Search`
 
-Defined in: [AppleMusic.ts:189](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L189)
+Defined in: [AppleMusic.ts:195](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L195)
 
 #### Parameters
 
@@ -29,7 +29,7 @@ Defined in: [AppleMusic.ts:189](https://github.com/sync-fm/applemusic-api/blob/a
 
 > **search**(`params`): `Promise`\<[`SearchEndpointResponse`](../namespaces/SearchTypes/interfaces/SearchEndpointResponse.md)\>
 
-Defined in: [AppleMusic.ts:194](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L194)
+Defined in: [AppleMusic.ts:200](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L200)
 
 #### Parameters
 

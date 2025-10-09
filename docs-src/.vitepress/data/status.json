@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-10-07T19:06:37.695Z",
+  "generatedAt": "2025-10-09T01:41:49.336Z",
   "tests": {
     "passed": true,
     "files": {
@@ -7,35 +7,35 @@
       "total": 19
     },
     "cases": {
-      "passed": 137,
-      "total": 137
+      "passed": 142,
+      "total": 142
     },
-    "duration": "599ms (transform 891ms, setup 0ms, collect 1.90s, tests 869ms, environment 3ms, prepare 1.96s)"
+    "duration": "575ms (transform 835ms, setup 0ms, collect 1.79s, tests 867ms, environment 4ms, prepare 2.01s)"
   },
   "coverage": {
     "lines": {
-      "total": 2260,
-      "covered": 2170,
+      "total": 2388,
+      "covered": 2280,
       "skipped": 0,
-      "pct": 96.01
+      "pct": 95.47
     },
     "statements": {
-      "total": 2260,
-      "covered": 2170,
+      "total": 2388,
+      "covered": 2280,
       "skipped": 0,
-      "pct": 96.01
+      "pct": 95.47
     },
     "functions": {
-      "total": 157,
-      "covered": 152,
+      "total": 163,
+      "covered": 157,
       "skipped": 0,
-      "pct": 96.81
+      "pct": 96.31
     },
     "branches": {
-      "total": 531,
-      "covered": 464,
+      "total": 556,
+      "covered": 492,
       "skipped": 0,
-      "pct": 87.38
+      "pct": 88.48
     }
   }
 }

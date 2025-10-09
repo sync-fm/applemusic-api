@@ -2,7 +2,7 @@
 
 # Interface: RelationshipWithRefs\<T\>
 
-Defined in: types/shared/Relationships.ts:7
+Defined in: [types/shared/Relationships.ts:7](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/types/shared/Relationships.ts#L7)
 
 ## Extends
 
@@ -18,5 +18,5 @@ Defined in: types/shared/Relationships.ts:7
 
 | Property | Type | Overrides | Inherited from | Defined in |
 | ------ | ------ | ------ | ------ | ------ |
-| <a id="href"></a> `href?` | `string` | - | `Relationship.href` | [types/SharedResourceTypes.ts:52](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/types/SharedResourceTypes.ts#L52) |
-| <a id="data"></a> `data?` | `T`[] | `Relationship.data` | - | types/shared/Relationships.ts:10 |
+| <a id="href"></a> `href?` | `string` | - | `Relationship.href` | [types/SharedResourceTypes.ts:52](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/types/SharedResourceTypes.ts#L52) |
+| <a id="data"></a> `data?` | `T`[] | `Relationship.data` | - | [types/shared/Relationships.ts:10](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/types/shared/Relationships.ts#L10) |

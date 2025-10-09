@@ -4,12 +4,13 @@ Our Apple Music SDK stands on the shoulders of generous open-source contributors
 
 ## Core Maintainers
 
-- **sync.fm engineering** — primary maintainers of the SDK, docs pipeline, and release management.
-- **xwxfox** — originator of the project scaffolding and early endpoint implementations.
+- **sync.fm** - primary maintainers of the SDK, docs pipeline, and release management.
+- **xwxfox** - lil pawboy
 
 ## Research and Inspiration
 
-- **oxmc / apple-music-like-apis** — foundational reverse engineering work that guided our endpoint contracts.
+- **oxmc** - proffesional typescript hater
+- **Apple** - Original API documentations
 - Community discussions across Apple Music developer forums and reverse-engineering groups.
 
 ## Tooling

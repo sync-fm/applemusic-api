@@ -2,7 +2,7 @@
 
 # Enumeration: IncludeOption
 
-Defined in: [endpoints/Artists/types.ts:32](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Artists/types.ts#L32)
+Defined in: [endpoints/Artists/types.ts:33](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Artists/types.ts#L33)
 
 ## Enumeration Members
 
@@ -10,7 +10,7 @@ Defined in: [endpoints/Artists/types.ts:32](https://github.com/sync-fm/applemusi
 
 > **Albums**: `"albums"`
 
-Defined in: [endpoints/Artists/types.ts:33](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Artists/types.ts#L33)
+Defined in: [endpoints/Artists/types.ts:34](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Artists/types.ts#L34)
 
 ***
 
@@ -18,7 +18,7 @@ Defined in: [endpoints/Artists/types.ts:33](https://github.com/sync-fm/applemusi
 
 > **Genres**: `"genres"`
 
-Defined in: [endpoints/Artists/types.ts:34](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Artists/types.ts#L34)
+Defined in: [endpoints/Artists/types.ts:35](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Artists/types.ts#L35)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [endpoints/Artists/types.ts:34](https://github.com/sync-fm/applemusi
 
 > **MusicVideos**: `"music-videos"`
 
-Defined in: [endpoints/Artists/types.ts:35](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Artists/types.ts#L35)
+Defined in: [endpoints/Artists/types.ts:36](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Artists/types.ts#L36)
 
 ***
 
@@ -34,7 +34,7 @@ Defined in: [endpoints/Artists/types.ts:35](https://github.com/sync-fm/applemusi
 
 > **Playlists**: `"playlists"`
 
-Defined in: [endpoints/Artists/types.ts:36](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Artists/types.ts#L36)
+Defined in: [endpoints/Artists/types.ts:37](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Artists/types.ts#L37)
 
 ***
 
@@ -42,4 +42,4 @@ Defined in: [endpoints/Artists/types.ts:36](https://github.com/sync-fm/applemusi
 
 > **Station**: `"station"`
 
-Defined in: [endpoints/Artists/types.ts:37](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Artists/types.ts#L37)
+Defined in: [endpoints/Artists/types.ts:38](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Artists/types.ts#L38)

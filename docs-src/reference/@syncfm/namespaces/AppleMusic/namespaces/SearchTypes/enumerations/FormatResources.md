@@ -2,7 +2,7 @@
 
 # Enumeration: FormatResources
 
-Defined in: [endpoints/Search/types.ts:39](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Search/types.ts#L39)
+Defined in: [endpoints/Search/types.ts:39](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Search/types.ts#L39)
 
 ## Enumeration Members
 
@@ -10,4 +10,4 @@ Defined in: [endpoints/Search/types.ts:39](https://github.com/sync-fm/applemusic
 
 > **Map**: `"map"`
 
-Defined in: [endpoints/Search/types.ts:40](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Search/types.ts#L40)
+Defined in: [endpoints/Search/types.ts:40](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Search/types.ts#L40)

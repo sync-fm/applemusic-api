@@ -2,14 +2,14 @@
 
 # Interface: SearchSuggestionsResponse
 
-Defined in: [endpoints/Suggestions/types.ts:154](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Suggestions/types.ts#L154)
+Defined in: [endpoints/Suggestions/types.ts:163](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Suggestions/types.ts#L163)
 
 ## Properties
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="results"></a> `results` | `object` | [endpoints/Suggestions/types.ts:155](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Suggestions/types.ts#L155) |
-| `results.suggestions` | [`SearchSuggestion`](SearchSuggestion.md)[] | [endpoints/Suggestions/types.ts:156](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Suggestions/types.ts#L156) |
-| <a id="meta"></a> `meta` | `object` | [endpoints/Suggestions/types.ts:158](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Suggestions/types.ts#L158) |
-| `meta.metrics?` | `object` | [endpoints/Suggestions/types.ts:159](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Suggestions/types.ts#L159) |
-| `meta.metrics.dataSetId?` | `string` | [endpoints/Suggestions/types.ts:160](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Suggestions/types.ts#L160) |
+| <a id="results"></a> `results` | `object` | [endpoints/Suggestions/types.ts:164](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Suggestions/types.ts#L164) |
+| `results.suggestions` | [`SearchSuggestion`](SearchSuggestion.md)[] | [endpoints/Suggestions/types.ts:165](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Suggestions/types.ts#L165) |
+| <a id="meta"></a> `meta` | `object` | [endpoints/Suggestions/types.ts:167](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Suggestions/types.ts#L167) |
+| `meta.metrics?` | `object` | [endpoints/Suggestions/types.ts:168](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Suggestions/types.ts#L168) |
+| `meta.metrics.dataSetId?` | `string` | [endpoints/Suggestions/types.ts:169](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Suggestions/types.ts#L169) |

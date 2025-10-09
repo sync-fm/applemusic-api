@@ -12,14 +12,15 @@
     "build": "rm -rf ./dist && tsc --build --verbose --diagnostics && tsc-alias",
     "test": "vitest run --coverage",
     "dtest": "bun run src/test.ts",
-    "check-types": "tsc --noEmit",
-    "lint": "eslint . --ext .ts",
+    "type-check": "tsc --noEmit",
+    "lint": "biome lint . --write",
+    "format": "biome format . --write",
+    "knip": "knip",
+    "check": "bun run knip && biome check --write && bun run type-check && bun run test",
     "status:update": "bun scripts/update-status.ts",
     "docs:content": "bun scripts/generate-docs.ts",
-    "build:docs": "bun run status:update && bun run docs:content && rm -rf ./docs && bunx vitepress build docs-src --outDir docs",
-    "docs:build": "bun run build:docs",
-    "docs:serve": "bun run docs:content && bunx vitepress dev docs-src --port 4321 --host 0.0.0.0",
-    "knip": "knip"
+    "docs:build": "bun run status:update && bun run docs:content && rm -rf ./docs && bunx vitepress build docs-src --outDir docs",
+    "docs:serve": "bun run docs:content && bunx vitepress dev docs-src --port 4321 --host 0.0.0.0"
   },
   "exports": {
     ".": {
@@ -51,26 +52,17 @@
     "tough-cookie": "^6.0.0"
   },
   "devDependencies": {
-    "typedoc": "^0.28.13",
-    "typedoc-plugin-markdown": "^4.9.0",
-    "@eslint/js": "^9.26.0",
+    "@biomejs/biome": "2.2.5",
     "@types/bun": "latest",
-    "@types/eslint-plugin-security": "^3.0.0",
     "@types/node": "^24.7.0",
-    "@types/supertest": "^6.0.3",
     "@vitest/coverage-v8": "3.2.4",
-    "eslint": "^9.26.0",
-    "eslint-plugin-security": "^3.0.1",
-    "eslint-plugin-unicorn": "^61.0.2",
-    "globals": "^16.3.0",
-    "jiti": "^2.6.0",
     "knip": "^5.64.2",
     "tsc-alias": "^1.8.16",
+    "typedoc": "^0.28.13",
+    "typedoc-plugin-markdown": "^4.9.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.32.1",
     "vitepress": "^1.6.4",
-    "vitest": "^3.2.4",
-    "vitest-mock-extended": "^3.1.0"
+    "vitest": "^3.2.4"
   },
   "peerDependencies": {
     "typescript": "^5"

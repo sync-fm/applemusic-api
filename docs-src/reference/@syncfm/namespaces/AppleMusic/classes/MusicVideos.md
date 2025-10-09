@@ -2,7 +2,7 @@
 
 # Class: MusicVideos
 
-Defined in: [AppleMusic.ts:313](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L313)
+Defined in: [AppleMusic.ts:322](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L322)
 
 ## Constructors
 
@@ -10,7 +10,7 @@ Defined in: [AppleMusic.ts:313](https://github.com/sync-fm/applemusic-api/blob/a
 
 > **new MusicVideos**(`ensureInitialized`, `getEndpoint`): `MusicVideos`
 
-Defined in: [AppleMusic.ts:314](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L314)
+Defined in: [AppleMusic.ts:323](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L323)
 
 #### Parameters
 
@@ -29,7 +29,7 @@ Defined in: [AppleMusic.ts:314](https://github.com/sync-fm/applemusic-api/blob/a
 
 > **get**(`params`): `Promise`\<[`MusicVideosResponse`](../namespaces/MusicVideosTypes/interfaces/MusicVideosResponse.md)\>
 
-Defined in: [AppleMusic.ts:319](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L319)
+Defined in: [AppleMusic.ts:328](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L328)
 
 #### Parameters
 
@@ -47,7 +47,7 @@ Defined in: [AppleMusic.ts:319](https://github.com/sync-fm/applemusic-api/blob/a
 
 > **getView**(`params`): `Promise`\<[`MusicVideoViewResponse`](../namespaces/MusicVideosTypes/interfaces/MusicVideoViewResponse.md)\>
 
-Defined in: [AppleMusic.ts:326](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L326)
+Defined in: [AppleMusic.ts:335](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L335)
 
 #### Parameters
 
@@ -65,7 +65,7 @@ Defined in: [AppleMusic.ts:326](https://github.com/sync-fm/applemusic-api/blob/a
 
 > **getRelationship**\<`T`\>(`params`): `Promise`\<[`MusicVideoRelationshipResponse`](../namespaces/MusicVideosTypes/interfaces/MusicVideoRelationshipResponse.md)\<`T`\>\>
 
-Defined in: [AppleMusic.ts:333](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L333)
+Defined in: [AppleMusic.ts:342](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L342)
 
 #### Type Parameters
 

@@ -1,18 +1,18 @@
-import {
-  Relationship,
-  RelationshipRef,
-  Resource,
+import type {
+	Relationship,
+	RelationshipRef,
+	Resource,
 } from "../SharedResourceTypes";
 
 export interface RelationshipWithRefs<
-  T extends RelationshipRef = RelationshipRef
+	T extends RelationshipRef = RelationshipRef,
 > extends Relationship {
-  data?: T[];
+	data?: T[];
 }
 
 export interface RelationshipWithResources<T extends Resource = Resource> {
-  href?: string;
-  data?: T[];
-  meta?: Record<string, unknown>;
-  next?: string;
+	href?: string;
+	data?: T[];
+	meta?: Record<string, unknown>;
+	next?: string;
 }

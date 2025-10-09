@@ -2,7 +2,7 @@
 
 # Enumeration: MusicVideoArtKey
 
-Defined in: [endpoints/Suggestions/types.ts:20](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Suggestions/types.ts#L20)
+Defined in: [endpoints/Suggestions/types.ts:20](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Suggestions/types.ts#L20)
 
 ## Enumeration Members
 
@@ -10,4 +10,4 @@ Defined in: [endpoints/Suggestions/types.ts:20](https://github.com/sync-fm/apple
 
 > **URL**: `"url"`
 
-Defined in: [endpoints/Suggestions/types.ts:21](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/endpoints/Suggestions/types.ts#L21)
+Defined in: [endpoints/Suggestions/types.ts:21](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/endpoints/Suggestions/types.ts#L21)

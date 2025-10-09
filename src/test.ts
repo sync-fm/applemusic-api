@@ -1,8 +1,8 @@
 import { AppleMusic, AuthType, Region } from "./AppleMusic";
 
 const am = new AppleMusic({
-  authType: AuthType.Scraped,
-  region: Region.US,
+	authType: AuthType.Scraped,
+	region: Region.US,
 });
 
 await am.init();

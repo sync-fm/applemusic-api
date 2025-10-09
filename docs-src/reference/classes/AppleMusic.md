@@ -2,7 +2,7 @@
 
 # Class: AppleMusic
 
-Defined in: [AppleMusic.ts:19](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L19)
+Defined in: [AppleMusic.ts:19](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L19)
 
 ## Constructors
 
@@ -10,13 +10,13 @@ Defined in: [AppleMusic.ts:19](https://github.com/sync-fm/applemusic-api/blob/a6
 
 > **new AppleMusic**(`config?`): `AppleMusic`
 
-Defined in: [AppleMusic.ts:54](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L54)
+Defined in: [AppleMusic.ts:57](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L57)
 
 #### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
-| `config?` | [`AppleMusicConfigParams`](../type-aliases/AppleMusicConfigParams.md) |
+| `config?` | [`AppleMusicConfigParams`](../type-aliases/AppleMusicConfigParams.md) \| [`AppleMusicConfig`](AppleMusicConfig.md) |
 
 #### Returns
 
@@ -30,7 +30,7 @@ Defined in: [AppleMusic.ts:54](https://github.com/sync-fm/applemusic-api/blob/a6
 
 > **config**: [`AppleMusicConfig`](AppleMusicConfig.md)
 
-Defined in: [AppleMusic.ts:52](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L52)
+Defined in: [AppleMusic.ts:55](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L55)
 
 Mutable configuration backing this client instance.
 
@@ -40,7 +40,7 @@ Mutable configuration backing this client instance.
 
 > `readonly` **Search**: [`Search`](../@syncfm/namespaces/AppleMusic/classes/Search.md)
 
-Defined in: [AppleMusic.ts:32](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L32)
+Defined in: [AppleMusic.ts:32](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L32)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [AppleMusic.ts:32](https://github.com/sync-fm/applemusic-api/blob/a6
 
 > `readonly` **Suggestions**: [`Suggestions`](../@syncfm/namespaces/AppleMusic/classes/Suggestions.md)
 
-Defined in: [AppleMusic.ts:33](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L33)
+Defined in: [AppleMusic.ts:33](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L33)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: [AppleMusic.ts:33](https://github.com/sync-fm/applemusic-api/blob/a6
 
 > `readonly` **Hints**: [`Hints`](../@syncfm/namespaces/AppleMusic/classes/Hints.md)
 
-Defined in: [AppleMusic.ts:34](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L34)
+Defined in: [AppleMusic.ts:34](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L34)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: [AppleMusic.ts:34](https://github.com/sync-fm/applemusic-api/blob/a6
 
 > `readonly` **Albums**: [`Albums`](../@syncfm/namespaces/AppleMusic/classes/Albums.md)
 
-Defined in: [AppleMusic.ts:35](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L35)
+Defined in: [AppleMusic.ts:35](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L35)
 
 ***
 
@@ -72,7 +72,7 @@ Defined in: [AppleMusic.ts:35](https://github.com/sync-fm/applemusic-api/blob/a6
 
 > `readonly` **Songs**: [`Songs`](../@syncfm/namespaces/AppleMusic/classes/Songs.md)
 
-Defined in: [AppleMusic.ts:36](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L36)
+Defined in: [AppleMusic.ts:36](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L36)
 
 ***
 
@@ -80,7 +80,7 @@ Defined in: [AppleMusic.ts:36](https://github.com/sync-fm/applemusic-api/blob/a6
 
 > `readonly` **Artists**: [`Artists`](../@syncfm/namespaces/AppleMusic/classes/Artists.md)
 
-Defined in: [AppleMusic.ts:37](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L37)
+Defined in: [AppleMusic.ts:37](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L37)
 
 ***
 
@@ -88,17 +88,39 @@ Defined in: [AppleMusic.ts:37](https://github.com/sync-fm/applemusic-api/blob/a6
 
 > `readonly` **MusicVideos**: [`MusicVideos`](../@syncfm/namespaces/AppleMusic/classes/MusicVideos.md)
 
-Defined in: [AppleMusic.ts:38](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L38)
+Defined in: [AppleMusic.ts:38](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L38)
 
-***
+## Accessors
 
-#### log
+### log
 
-> **log**: `Logger`
+#### Get Signature
 
-Defined in: [AppleMusic.ts:43](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L43)
+> **get** **log**(): `Logger`
+
+Defined in: [AppleMusic.ts:43](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L43)
 
 Structured logger used across the Apple Music client.
+
+##### Returns
+
+`Logger`
+
+#### Set Signature
+
+> **set** **log**(`logger`): `void`
+
+Defined in: [AppleMusic.ts:47](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L47)
+
+##### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `logger` | `Logger` |
+
+##### Returns
+
+`void`
 
 ## Methods
 
@@ -108,7 +130,7 @@ Structured logger used across the Apple Music client.
 
 > **init**(): `Promise`\<`void`\>
 
-Defined in: [AppleMusic.ts:131](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L131)
+Defined in: [AppleMusic.ts:137](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L137)
 
 Initialize the client by acquiring an authenticated Axios instance and preparing endpoints.
 
@@ -122,7 +144,7 @@ Initialize the client by acquiring an authenticated Axios instance and preparing
 
 > **verifyTokenValidity**(): `Promise`\<`boolean`\>
 
-Defined in: [AppleMusic.ts:171](https://github.com/sync-fm/applemusic-api/blob/a6a8471d4d51a41f6bd8af9d95c8abf0126e10f4/src/AppleMusic.ts#L171)
+Defined in: [AppleMusic.ts:177](https://github.com/sync-fm/applemusic-api/blob/9471caba6a6b5bc92263ffc6e5d9c04672ec1f7f/src/AppleMusic.ts#L177)
 
 Perform a lightweight request to validate the configured developer token.
 
