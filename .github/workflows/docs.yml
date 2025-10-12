@@ -32,14 +32,14 @@ jobs:
           bun-version: latest
 
       - name: Install root dependencies
-        run: bun install --frozen-lockfile
+        run: bun install
 
       - name: Run root tests
         run: bun run test
 
       - name: Install docs dependencies
         working-directory: docs
-        run: bun install --frozen-lockfile
+        run: bun install
 
       - name: Build docs
         working-directory: docs
