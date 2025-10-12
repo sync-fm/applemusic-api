@@ -1,3 +1,9 @@
+/**
+ * Type definitions supporting the Songs endpoint.
+ *
+ * @module EndpointTypes/Songs
+ * @category Endpoint Types
+ */
 import type {
 	AlbumAttributes,
 	ArtistAttributes,
@@ -117,7 +123,11 @@ export interface SongRequestOptions {
 
 /**
  * Query params for fetching a single catalog song.
- * GET /v1/catalog/{storefront}/songs/{id}
+ * `GET /v1/catalog/{storefront}/songs/{id}`
+ */
+/**
+ * @expand
+ * Identifier and query options accepted by {@link SongsEndpoint#get}.
  */
 export interface SongParams extends SongRequestOptions {
 	id: string;
@@ -125,7 +135,7 @@ export interface SongParams extends SongRequestOptions {
 
 /**
  * Query params for fetching a song relationship directly.
- * GET /v1/catalog/{storefront}/songs/{id}/{relationship}
+ * `GET /v1/catalog/{storefront}/songs/{id}/{relationship}`
  */
 export interface SongRelationshipOptions {
 	platform?: Platform;
@@ -135,6 +145,10 @@ export interface SongRelationshipOptions {
 	limit?: number;
 }
 
+/**
+ * @expand
+ * Parameters accepted by {@link SongsEndpoint#getRelationship}.
+ */
 export interface SongsRelationshipParams extends SongRelationshipOptions {
 	id: string;
 	relationship: SongRelationshipName;

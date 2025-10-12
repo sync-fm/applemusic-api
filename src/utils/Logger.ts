@@ -1,3 +1,8 @@
+/**
+ * Structured logging utilities for the Apple Music client.
+ *
+ * @module Utilities/Logger
+ */
 const isNode =
 	typeof process !== "undefined" && process.release?.name === "node";
 
@@ -68,6 +73,11 @@ export interface LoggerOptions {
 	customDestinations?: LogDestination[];
 }
 
+/**
+ * Lightweight multi-destination logger used throughout the client.
+ *
+ * @category Utilities
+ */
 export class Logger {
 	private selectedDestinations: DestinationName[];
 	private customDestinations: LogDestination[] = [];

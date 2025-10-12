@@ -1,3 +1,9 @@
+/**
+ * Type definitions supporting the Music Videos endpoint.
+ *
+ * @module EndpointTypes/MusicVideos
+ * @category Endpoint Types
+ */
 import type {
 	AlbumAttributes,
 	ArtistAttributes,
@@ -125,6 +131,10 @@ export interface MusicVideoRequestOptions {
 	with?: WithOption[];
 }
 
+/**
+ * @expand
+ * Identifier and query options accepted by {@link MusicVideosEndpoint#get}.
+ */
 export interface MusicVideoParams extends MusicVideoRequestOptions {
 	id: string;
 }
@@ -146,11 +156,19 @@ export interface MusicVideoRelationshipOptions {
 	limit?: number;
 }
 
+/**
+ * @expand
+ * Parameters accepted by {@link MusicVideosEndpoint#getView}.
+ */
 export interface MusicVideoViewParams extends MusicVideoViewOptions {
 	id: string;
 	view: MusicVideoViewName;
 }
 
+/**
+ * @expand
+ * Parameters accepted by {@link MusicVideosEndpoint#getRelationship}.
+ */
 export interface MusicVideoRelationshipParams
 	extends MusicVideoRelationshipOptions {
 	id: string;

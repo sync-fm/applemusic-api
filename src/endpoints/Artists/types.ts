@@ -1,3 +1,9 @@
+/**
+ * Type definitions supporting the Artists endpoint.
+ *
+ * @module EndpointTypes/Artists
+ * @category Endpoint Types
+ */
 import type {
 	AlbumAttributes,
 	ArtistAttributes,
@@ -176,6 +182,10 @@ export interface ArtistRequestOptions {
 	with?: WithOption[];
 }
 
+/**
+ * @expand
+ * Identifier and query options accepted by {@link ArtistsEndpoint#get}.
+ */
 export interface ArtistParams extends ArtistRequestOptions {
 	id: string;
 }
@@ -189,6 +199,10 @@ export interface ArtistViewOptions {
 	limit?: number;
 }
 
+/**
+ * @expand
+ * Parameters accepted by {@link ArtistsEndpoint#getView}.
+ */
 export interface ArtistViewParams extends ArtistViewOptions {
 	id: string;
 	view: ArtistViewName;
@@ -202,6 +216,10 @@ export interface ArtistRelationshipOptions {
 	limit?: number;
 }
 
+/**
+ * @expand
+ * Parameters accepted by {@link ArtistsEndpoint#getRelationship}.
+ */
 export interface ArtistRelationshipParams extends ArtistRelationshipOptions {
 	id: string;
 	relationship: ArtistRelationshipName;

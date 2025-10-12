@@ -1,3 +1,9 @@
+/**
+ * Type definitions supporting the Hints endpoint.
+ *
+ * @module EndpointTypes/Hints
+ * @category Endpoint Types
+ */
 import { Locale, Platform } from "../../types/SharedSearchParams";
 
 // Enums
@@ -85,7 +91,14 @@ export interface LimitParams {
 	"results:topResults"?: number;
 }
 
+/**
+ * @expand
+ * Parameters accepted by {@link HintsEndpoint#get}.
+ */
 export interface HintsEndpointParams {
+	/**
+	 * Search term to fetch hints for.
+	 */
 	term: string;
 	platform?: Platform;
 	l?: Locale;

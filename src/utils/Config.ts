@@ -1,3 +1,8 @@
+/**
+ * Configuration primitives for the Apple Music API client.
+ *
+ * @module Utilities/Config
+ */
 import { Region } from "../types/SharedSearchParams";
 import { Logger, type LoggerOptions } from "./Logger";
 

@@ -1,7 +1,13 @@
+/**
+ * Internal token acquisition and caching helpers.
+ *
+ * @module Utilities/TokenStorage
+ */
 import type { AxiosInstance } from "axios";
 import type { AppleMusicConfig } from "./Config";
 import type { Logger } from "./Logger";
 
+/** @internal */
 export class TokenStorage {
 	private token: string;
 	private expiresAt: number; // Unix timestamp in milliseconds

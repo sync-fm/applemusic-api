@@ -1,0 +1,71 @@
+.overview {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-items: start;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid rgba(255, 119, 0, 0.35);
+  position: relative;
+}
+
+.column::before {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(255, 153, 68, 0.45), rgba(255, 119, 0, 0));
+}
+
+.columnTitle {
+  margin: 0;
+  font-size: 1.35rem;
+  letter-spacing: -0.015em;
+  color: rgba(247, 248, 252, 0.92);
+}
+
+.columnSummary {
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: rgba(208, 213, 220, 0.78);
+}
+
+.columnList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin: 0;
+}
+
+.listRow {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.listRow dt {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(196, 201, 212, 0.6);
+}
+
+.listRow dd {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: rgba(230, 233, 239, 0.9);
+}
+
+@media screen and (max-width: 720px) {
+  .column {
+    padding-left: 1rem;
+  }
+}

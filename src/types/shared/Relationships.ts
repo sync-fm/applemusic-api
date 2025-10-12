@@ -1,3 +1,9 @@
+/**
+ * Relationship helper interfaces shared across multiple endpoints.
+ *
+ * @module SharedTypes/Relationships
+ * @category Shared Types
+ */
 import type {
 	Relationship,
 	RelationshipRef,

@@ -1,3 +1,8 @@
+/**
+ * Apple Music catalog album endpoint.
+ *
+ * @module Endpoints/Albums
+ */
 import axios, { type AxiosInstance } from "axios";
 import * as parser from "./parser";
 
@@ -7,20 +12,43 @@ import { getAuthenticatedAxios } from "../../utils/AxiosManager";
 import type { AppleMusicConfig } from "../../utils/Config";
 import * as AlbumsEndpointTypes from "./types";
 
+const NOT_INITIALIZED_ERROR =
+	"AlbumsEndpoint.init() must be called before performing requests.";
+
+/**
+ * Strongly-typed helper for the Apple Music albums endpoint.
+ *
+ * @category Endpoints
+ */
 export class AlbumsEndpoint {
-	private ax: AxiosInstance;
+	private ax: AxiosInstance | null = null;
 	private apiBase: string;
 
+	/** @internal */
 	constructor(config: AppleMusicConfig) {
 		this.apiBase = `${config.getBaseURL()}/v1/catalog/${config.region}/albums/`;
 	}
 
+	/** @internal */
 	public async init(): Promise<void> {
 		this.ax = await getAuthenticatedAxios();
 	}
 
 	/**
-	 * Fetch a catalog album by ID with optional query params (include, extend, views).
+	 * Fetch a catalog album by identifier.
+	 *
+	 * @expandType AlbumsEndpointTypes.AlbumParams
+	 * @param params - {@link AlbumsEndpointTypes.AlbumParams | AlbumParams} containing the album identifier and optional query filters.
+	 * @returns Complete album resource payload returned by Apple Music.
+	 *
+	 * @throws {@link Error} When the endpoint has not been initialized.
+	 * @throws {@link Error} When Apple Music returns an unexpected response.
+	 *
+	 * @example
+	 * ```ts
+	 * const album = await appleMusic.Albums.get({ id: "310730204" });
+	 * console.log(album.data[0].attributes?.name);
+	 * ```
 	 */
 	public async get(
 		params: AlbumsEndpointTypes.AlbumParams,
@@ -32,9 +60,10 @@ export class AlbumsEndpoint {
 		const { id, ...rest } = params;
 		const query = parser.buildAlbumQuery(rest);
 		const url = `${this.apiBase}${id}${query ? `?${query}` : ""}`;
+		const client = this.requireClient();
 
 		try {
-			const res = await this.ax.get(url);
+			const res = await client.get(url);
 			if (!res.data) {
 				throw new Error("Got none or invalid data from album request");
 			}
@@ -53,8 +82,25 @@ export class AlbumsEndpoint {
 	}
 
 	/**
-	 * Fetch a specific relationship view on an album.
-	 * Example: /albums/{id}/view/appears-on
+	 * Fetch a curated relationship view on an album.
+	 *
+	 * @remarks
+	 * Wraps `GET /v1/catalog/{storefront}/albums/{id}/view/{view}`.
+	 *
+	 * @expandType AlbumsEndpointTypes.AlbumViewParams
+	 * @param params - {@link AlbumsEndpointTypes.AlbumViewParams | AlbumViewParams} describing the album identifier, view name, and optional query options.
+	 * @returns A collection representing the requested view.
+	 *
+	 * @throws {@link Error} When the endpoint has not been initialized.
+	 * @throws {@link Error} When Apple Music returns an unexpected response.
+	 *
+	 * @example
+	 * ```ts
+	 * const livePerformances = await appleMusic.Albums.getView({
+	 *   id: "310730204",
+	 *   view: "related-videos",
+	 * });
+	 * ```
 	 */
 	public async getView(
 		params: AlbumsEndpointTypes.AlbumViewParams,
@@ -75,8 +121,9 @@ export class AlbumsEndpoint {
 		);
 
 		const url = `${this.apiBase}${id}/view/${view}${query ? `?${query}` : ""}`;
+		const client = this.requireClient();
 		try {
-			const res = await this.ax.get(url);
+			const res = await client.get(url);
 			if (!res.data) {
 				throw new Error("Got none or invalid data from album view request");
 			}
@@ -93,8 +140,25 @@ export class AlbumsEndpoint {
 	}
 
 	/**
-	 * Fetch a relationship for an album directly.
-	 * Example: /albums/{id}/{relationship}
+	 * Fetch a direct relationship collection for an album.
+	 *
+	 * @remarks
+	 * Wraps `GET /v1/catalog/{storefront}/albums/{id}/{relationship}`.
+	 *
+	 * @expandType AlbumsEndpointTypes.AlbumRelationshipParams
+	 * @param params - {@link AlbumsEndpointTypes.AlbumRelationshipParams | AlbumRelationshipParams} describing the album identifier, relationship name, and optional query options.
+	 * @returns The requested relationship data.
+	 *
+	 * @throws {@link Error} When the endpoint has not been initialized.
+	 * @throws {@link Error} When Apple Music returns an unexpected response.
+	 *
+	 * @example
+	 * ```ts
+	 * const tracks = await appleMusic.Albums.getRelationship({
+	 *   id: "310730204",
+	 *   relationship: AlbumsEndpointTypes.IncludeOption.Tracks,
+	 * });
+	 * ```
 	 */
 	public async getRelationship<
 		T extends
@@ -122,8 +186,9 @@ export class AlbumsEndpoint {
 		const url = `${this.apiBase}${id}/${relationship}${
 			query ? `?${query}` : ""
 		}`;
+		const client = this.requireClient();
 		try {
-			const res = await this.ax.get(url);
+			const res = await client.get(url);
 			if (!res.data) {
 				throw new Error(
 					"Got none or invalid data from album relationship request",
@@ -138,5 +203,13 @@ export class AlbumsEndpoint {
 			}
 			throw error;
 		}
+	}
+
+	/** @internal */
+	private requireClient(): AxiosInstance {
+		if (!this.ax) {
+			throw new Error(NOT_INITIALIZED_ERROR);
+		}
+		return this.ax;
 	}
 }

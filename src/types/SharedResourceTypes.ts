@@ -1,3 +1,9 @@
+/**
+ * Fundamental resource attribute shapes shared across Apple Music endpoints.
+ *
+ * @module SharedTypes/Resources
+ * @category Shared Types
+ */
 export type JSONObject = { [k: string]: any };
 
 export interface Artwork {

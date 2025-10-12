@@ -1,3 +1,9 @@
+/**
+ * Type definitions supporting the Albums endpoint.
+ *
+ * @module EndpointTypes/Albums
+ * @category Endpoint Types
+ */
 import type {
 	ArtistAttributes,
 	Artwork,
@@ -117,7 +123,7 @@ export interface AlbumViews {
 
 /**
  * Query params for fetching a single catalog album.
- * GET /v1/catalog/{storefront}/albums/{id}
+ * `GET /v1/catalog/{storefront}/albums/{id}`
  */
 export interface AlbumRequestOptions {
 	platform?: Platform;
@@ -128,6 +134,10 @@ export interface AlbumRequestOptions {
 	with?: WithOption[]; // e.g. ["attributes"]
 }
 
+/**
+ * @expand
+ * Identifier and query options accepted by {@link AlbumsEndpoint#get}.
+ */
 export interface AlbumParams extends AlbumRequestOptions {
 	id: string;
 }
@@ -141,6 +151,10 @@ export interface AlbumViewOptions {
 	limit?: number;
 }
 
+/**
+ * @expand
+ * Parameters accepted by {@link AlbumsEndpoint#getView}.
+ */
 export interface AlbumViewParams extends AlbumViewOptions {
 	id: string;
 	view: AlbumViewName;
@@ -154,6 +168,10 @@ export interface AlbumRelationshipOptions {
 	limit?: number;
 }
 
+/**
+ * @expand
+ * Parameters accepted by {@link AlbumsEndpoint#getRelationship}.
+ */
 export interface AlbumRelationshipParams extends AlbumRelationshipOptions {
 	id: string;
 	relationship: AlbumRelationshipName;

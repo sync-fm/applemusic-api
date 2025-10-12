@@ -1,3 +1,9 @@
+/**
+ * Shared query parameter enums and helpers.
+ *
+ * @module SharedTypes/SearchParams
+ * @category Shared Types
+ */
 export enum Region {
 	US = "us",
 	GB = "gb",

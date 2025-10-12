@@ -1,6 +1,6 @@
 import type { AxiosInstance } from "axios";
 import { beforeEach, describe, expect, test, vi } from "vitest";
-import { AppleMusic } from "./AppleMusic";
+import { AppleMusic } from "./index";
 import { AppleMusicConfig } from "./utils/Config";
 import { Logger, LogLevel } from "./utils/Logger";
 
@@ -149,7 +149,7 @@ describe("AppleMusic", () => {
 	test("endpoint methods throw before initialization", async () => {
 		const appleMusic = new AppleMusic();
 
-		await expect(appleMusic.Search.search({} as never)).rejects.toThrow(
+		expect(() => appleMusic.Search.search({} as never)).toThrowError(
 			"Apple Music client not initialized. Call init() first.",
 		);
 	});

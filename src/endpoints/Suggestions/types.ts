@@ -1,5 +1,11 @@
 // art[music-videos:url]=c&art[url]=f&extend=artistUrl&fields[albums]=artistName,artistUrl,artwork,contentRating,editorialArtwork,editorialNotes,name,playParams,releaseDate,url,trackCount&fields[artists]=url,name,artwork&format[resources]=map&include[albums]=artists&include[music-videos]=artists&include[songs]=artists&include[stations]=radio-show&l=en-US&limit=21&omit[resource]=autos&platform=web&relate[albums]=artists&relate[songs]=albums&term=okaynico&types=activities,albums,apple-curators,artists,curators,editorial-items,music-movies,music-videos,playlists,record-labels,songs,stations,tv-episodes,uploaded-videos&with=lyricHighlights,lyrics,naturalLanguage,serverBubbles,subtitles
 
+/**
+ * Type definitions supporting the Suggestions endpoint.
+ *
+ * @module EndpointTypes/Suggestions
+ * @category Endpoint Types
+ */
 import { Locale, Platform, ResourceType } from "../../types/SharedSearchParams";
 
 // Enums
@@ -87,6 +93,10 @@ export interface LimitParams {
 	"results:topResults"?: number;
 }
 
+/**
+ * @expand
+ * Parameters accepted by {@link SuggestionsEndpoint#get}.
+ */
 export interface SuggestionsEndpointParams {
 	term?: string;
 	types?: ResourceType[];

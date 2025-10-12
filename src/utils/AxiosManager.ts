@@ -1,8 +1,18 @@
+/**
+ * Shared Axios clients and authentication token lifecycle management.
+ *
+ * @module Utilities/AxiosManager
+ */
 import axios, { type AxiosInstance } from "axios";
 import { Cookie, CookieJar } from "tough-cookie";
 import { AppleMusicConfig } from "./Config";
 import { TokenStorage } from "./TokenStorage";
 
+/**
+ * Internal coordinator that authenticates requests against Apple Music services.
+ *
+ * @category Utilities
+ */
 class AxiosManager {
 	private cookiejar: CookieJar;
 	private tokenAxios: AxiosInstance;
@@ -20,6 +30,7 @@ class AxiosManager {
 		this.addAuthInterceptor();
 	}
 
+	/** @internal */
 	private createAxiosInstance(): AxiosInstance {
 		const instance = axios.create({
 			baseURL: "https://music.apple.com/",
@@ -62,6 +73,7 @@ class AxiosManager {
 		return instance;
 	}
 
+	/** @internal */
 	private addAuthInterceptor(): void {
 		this.apiAxios?.interceptors.request.use(async (req) => {
 			// Only add auth for API requests to amp-api, not for token fetching on music.apple.com
@@ -76,6 +88,9 @@ class AxiosManager {
 		});
 	}
 
+	/**
+	 * Swap the configuration used for subsequent authenticated requests.
+	 */
 	public setConfig(config: AppleMusicConfig): void {
 		if (this.config === config) {
 			return;
@@ -85,6 +100,9 @@ class AxiosManager {
 		this.lastToken = "";
 	}
 
+	/**
+	 * Retrieve (and lazily refresh) the authenticated Axios instance.
+	 */
 	public async getInstance(): Promise<AxiosInstance> {
 		const currentToken = await this.tokenStorage.getToken();
 		if (currentToken !== this.lastToken) {
@@ -100,11 +118,18 @@ class AxiosManager {
 	}
 }
 
+/** @internal */
 const axiosManager = new AxiosManager();
 
 export default axiosManager;
 export { AxiosManager };
 
+/**
+ * Get an Axios instance that automatically authenticates against Apple Music.
+ *
+ * @param config - Optional configuration overrides for the shared client.
+ * @returns A ready-to-use Axios instance with token storage wired up.
+ */
 export const getAuthenticatedAxios = async (
 	config?: AppleMusicConfig,
 ): Promise<AxiosInstance> => {
