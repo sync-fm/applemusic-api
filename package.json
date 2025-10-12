@@ -4,6 +4,9 @@
   "type": "module",
   "types": "dist/index.d.ts",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.0.1",
   "author": "xwxfox",
   "license": "MIT",
