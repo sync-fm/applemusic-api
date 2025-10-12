@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const SITE_DESCRIPTION = 'Unofficial Apple Music API client with typed helpers around their endpoints with shared configuration, logging, and token management.';
 const SITE_SCOPE = '@syncfm/applemusic-api';
-const BASE_URL = '/applemusic-api/';
+const BASE_URL = '/';
 const OG_IMAGE_WIDE = `${BASE_URL}img/og-wide.png`;
 // const OG_IMAGE_SQUARE = `${BASE_URL}img/og-square.png`;
 const OG_IMAGE_ALT = '@syncfm/applemusic-api image asset';
@@ -36,7 +36,7 @@ const config: Config = {
     },
     {
       tagName: 'meta',
-      attributes: {property: 'og:url', content: 'https://docs.syncfm.dev/applemusic-api/'},
+      attributes: {property: 'og:url', content: 'https://am-docs.syncfm.dev/'},
     },
     {
       tagName: 'meta',
@@ -62,7 +62,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://docs.syncfm.dev',
+  url: 'https://am-docs.syncfm.dev',
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: BASE_URL,
 

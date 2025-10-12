@@ -42,7 +42,7 @@
   "bugs": {
     "url": "https://github.com/sync-fm/applemusic-api/issues"
   },
-  "homepage": "https://docs.syncfm.net/applemusic-api/",
+  "homepage": "https://am-docs.syncfm.dev/",
   "keywords": [
     "music",
     "typescript",

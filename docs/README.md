@@ -1,6 +1,6 @@
 # Documentation site
 
-This folder hosts the Docusaurus project that publishes https://docs.syncfm.dev/applemusic-api.
+This folder hosts the Docusaurus project that publishes https://am-docs.syncfm.dev.
 
 ## Key pieces
 - `docusaurus.config.ts` defines site metadata, navbar links, the Pagefind search theme, and the Typedoc plugin settings.
@@ -15,4 +15,4 @@ This folder hosts the Docusaurus project that publishes https://docs.syncfm.dev/
 - Regenerate the typed API reference by running `bun run build`, which executes the Typedoc powered plugin.
 
 ## Learn more
-Head to https://docs.syncfm.dev/applemusic-api for the published guides and reference material.
+Head to https://am-docs.syncfm.dev for the published guides and reference material.

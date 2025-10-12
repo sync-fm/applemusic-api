@@ -15,7 +15,7 @@ Typed helpers around Apple Music catalog endpoints with shared configuration, lo
 - Optional developer or user tokens if you want to override the default scraped authentication flow
 
 
-Guides, endpoint details, and configuration notes live at https://docs.syncfm.dev/applemusic-api .
+Guides, endpoint details, and configuration notes live at https://am-docs.syncfm.dev .
 
 ## Installation
 
@@ -89,7 +89,7 @@ await music.Suggestions.suggestions({
 
 ## Documentation
 
-Guides, endpoint details, and configuration notes live at https://docs.syncfm.dev/applemusic-api .
+Guides, endpoint details, and configuration notes live at https://am-docs.syncfm.dev .
 
 ## Contributing
 
