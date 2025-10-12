@@ -34,6 +34,7 @@ async function main() {
 main();
 `;
 
+const pageTitle = '@syncfm/applemusic-api';
 const pageDescription = 'Typed helpers around Apple Music catalog endpoints with shared configuration, logging, and token management. The client is still in active development, so expect method signatures to move as we close gaps.';
 
 function HeroCodeSnippet(): ReactNode {
@@ -86,7 +87,7 @@ function HeroCodeSnippet(): ReactNode {
 
 function HeroSection(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
-  const [scope = siteConfig.title, name] = siteConfig.title.split('/');
+  const [scope = pageTitle, name] = pageTitle.split('/');
   const scopeLabel = scope?.trim().length ? `${scope.trim()}/` : '';
   const packageName = name?.trim().length ? name.trim() : scope.trim();
 
@@ -133,10 +134,9 @@ function HeroSection(): ReactNode {
 }
 
 export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={siteConfig.title}
+      title={pageTitle}
       description={pageDescription}>
       <main className={styles.page}>
         <HeroSection />

@@ -4,6 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const SITE_DESCRIPTION = 'Unofficial Apple Music API client with typed helpers around their endpoints with shared configuration, logging, and token management.';
 const SITE_SCOPE = '@syncfm/applemusic-api';
+const SITE_TITLE = `Developer Documentation`;
 const URL = 'https://am-docs.syncfm.dev';
 const BASE_URL = '/';
 const OG_IMAGE_WIDE = `${URL}${BASE_URL}img/og-wide.png`;
@@ -11,7 +12,7 @@ const OG_IMAGE_WIDE = `${URL}${BASE_URL}img/og-wide.png`;
 const OG_IMAGE_ALT = '@syncfm/applemusic-api image asset';
 
 const config: Config = {
-  title: SITE_SCOPE,
+  title: SITE_TITLE,
   tagline: 'A lil unofficial Type-Safe Apple Music client',
   favicon: 'img/logo.png',
   headTags: [
@@ -29,7 +30,7 @@ const config: Config = {
     },
     {
       tagName: 'meta',
-      attributes: {property: 'og:title', content: SITE_SCOPE},
+      attributes: {property: 'og:title', content: SITE_TITLE},
     },
     {
       tagName: 'meta',
@@ -197,7 +198,7 @@ const config: Config = {
     metadata: [
       {name: 'description', content: SITE_DESCRIPTION},
       {name: 'twitter:card', content: 'summary_large_image'},
-      {name: 'twitter:title', content: SITE_SCOPE},
+      {name: 'twitter:title', content: SITE_TITLE},
       {name: 'twitter:description', content: SITE_DESCRIPTION},
       {name: 'twitter:image', content: OG_IMAGE_WIDE},
       {name: 'twitter:image:alt', content: OG_IMAGE_ALT},
@@ -212,7 +213,7 @@ const config: Config = {
     navbar: {
       title: '@syncfm/applemusic-api',
       logo: {
-        alt: 'Apple Music API Logo',
+        alt: 'syncfm logo',
         src: 'img/logo.png',
       },
       items: [
