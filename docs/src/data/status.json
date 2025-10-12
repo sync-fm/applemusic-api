@@ -1,0 +1,51 @@
+{
+  "generatedAt": "2025-10-12T02:30:49.027Z",
+  "version": {
+    "raw": "0.0.1",
+    "tag": "v0.0.1",
+    "major": 0,
+    "minor": 0,
+    "patch": 1,
+    "preRelease": null,
+    "buildMetadata": null,
+    "source": "package.json"
+  },
+  "tests": {
+    "passed": true,
+    "files": {
+      "passed": 19,
+      "total": 19
+    },
+    "cases": {
+      "passed": 142,
+      "total": 142
+    },
+    "duration": "Test data not available"
+  },
+  "coverage": {
+    "lines": {
+      "total": 2292,
+      "covered": 2162,
+      "skipped": 0,
+      "pct": 94.32
+    },
+    "statements": {
+      "total": 2292,
+      "covered": 2162,
+      "skipped": 0,
+      "pct": 94.32
+    },
+    "functions": {
+      "total": 151,
+      "covered": 144,
+      "skipped": 0,
+      "pct": 95.36
+    },
+    "branches": {
+      "total": 534,
+      "covered": 463,
+      "skipped": 0,
+      "pct": 86.7
+    }
+  }
+}

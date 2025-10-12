@@ -1,0 +1,89 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #ff7700;
+  --ifm-color-primary-dark: #e06800;
+  --ifm-color-primary-darker: #c55b00;
+  --ifm-color-primary-darkest: #8f4100;
+  --ifm-color-primary-light: #ff881a;
+  --ifm-color-primary-lighter: #ff9f47;
+  --ifm-color-primary-lightest: #ffb870;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 119, 0, 0.08);
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --ifm-heading-font-weight: 600;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #ff9f47;
+  --ifm-color-primary-dark: #ff881a;
+  --ifm-color-primary-darker: #ff7700;
+  --ifm-color-primary-darkest: #e06800;
+  --ifm-color-primary-light: #ffb870;
+  --ifm-color-primary-lighter: #ffd0a0;
+  --ifm-color-primary-lightest: #ffe3c6;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 153, 68, 0.25);
+  --ifm-background-color: #080a0d;
+  --ifm-background-surface-color: #0c1015;
+  --ifm-card-background-color: rgba(12, 16, 23, 0.92);
+  --ifm-footer-background-color: #05070b;
+  --ifm-footer-link-color: rgba(224, 227, 233, 0.78);
+  --ifm-footer-link-hover-color: rgba(255, 196, 143, 0.9);
+  --ifm-footer-title-color: rgba(244, 246, 250, 0.94);
+}
+
+html[data-theme='dark'] body {
+  background: radial-gradient(140% 160% at 120% -10%, rgba(255, 119, 0, 0.12), transparent 60%),
+    #080a0d;
+  color: rgba(229, 232, 237, 0.92);
+}
+
+html[data-theme='dark'] .hero--primary {
+  background: transparent;
+  color: inherit;
+}
+
+html[data-theme='dark'] .button.button--secondary.button--outline {
+  border-color: rgba(255, 153, 68, 0.4);
+}
+
+html[data-theme='dark'] footer.footer {
+  background: rgba(10, 12, 16, 0.95);
+  border-top: 1px solid rgba(255, 119, 0, 0.12);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+html[data-theme='dark'] footer.footer .footer__title,
+html[data-theme='dark'] footer.footer .footer__item {
+  color: rgba(215, 218, 225, 0.82);
+}
+
+html[data-theme='dark'] .footer {
+  background: linear-gradient(180deg, rgba(7, 9, 13, 0.95), rgba(5, 7, 11, 0.98));
+  border-top: 1px solid rgba(255, 119, 0, 0.18);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+html[data-theme='dark'] .footer__title {
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+html[data-theme='dark'] .footer__link-item {
+  font-size: 0.95rem;
+}
+
+html[data-theme='dark'] .footer__bottom {
+  margin-top: 2.5rem;
+  border-top: 1px solid rgba(255, 119, 0, 0.12);
+  padding-top: 1.5rem;
+  color: rgba(164, 169, 180, 0.7);
+}

@@ -1,146 +1,202 @@
-import { AxiosInstance } from "axios";
-import { Region } from "./types/SharedSearchParams";
+import type { AxiosInstance } from "axios";
+import { AlbumsEndpoint } from "./endpoints/Albums";
+import { ArtistsEndpoint } from "./endpoints/Artists";
+import { HintsEndpoint } from "./endpoints/Hints";
+import { MusicVideosEndpoint } from "./endpoints/MusicVideos";
+import { SearchEndpoint } from "./endpoints/Search";
+import { SongsEndpoint } from "./endpoints/Songs";
+import { SuggestionsEndpoint } from "./endpoints/Suggestions";
 import { getAuthenticatedAxios } from "./utils/AxiosManager";
-import { SearchEndpointTypes, SearchEndpoint } from "./endpoints/Search";
-import { SuggestionsEndpointTypes, SuggestionsEndpoint } from "./endpoints/Suggestions";
-import { HintsEndpointTypes, HintsEndpoint } from "./endpoints/Hints";
-import { AlbumsEndpointTypes, AlbumsEndpoint } from "./endpoints/Albums";
-import { SongsEndpointTypes, SongsEndpoint } from "./endpoints/Songs";
-import { ArtistsEndpoint, ArtistsEndpointTypes } from "./endpoints/Artists";
-import { MusicVideosEndpoint, MusicVideosEndpointTypes } from "./endpoints/MusicVideos";
+import { AppleMusicConfig, type AppleMusicConfigParams } from "./utils/Config";
+import { ERROR } from "./utils/Constants";
+import type { Logger } from "./utils/Logger";
 
-const createInitGuard = <TArgs extends unknown[], TResult>(endpoint: string) =>
-    async (..._args: TArgs): Promise<TResult> => {
-        throw new Error(`${endpoint} endpoint not initialized. Call init() before using this client.`);
-    };
-
-enum AuthType {
-    Scraped,
-    DeveloperToken,
-    UserTokenViaDevToken,
-    UserTokenUnofficial
-}
-
-export interface AppleMusicConfig {
-    region?: Region;
-    authType?: AuthType;
-}
-
-export const BaseURLs: Record<AuthType, string> = {
-    [AuthType.Scraped]: "https://amp-api-edge.music.apple.com",
-    [AuthType.DeveloperToken]: "https://api.music.apple.com",
-    [AuthType.UserTokenViaDevToken]: "https://api.music.apple.com",
-    [AuthType.UserTokenUnofficial]: "https://amp-api-edge.music.apple.com",
-};
-
+/**
+ * High-level Apple Music API client composed of typed endpoint helpers.
+ *
+ * @category Apple Music Client
+ * @remarks
+ * The client lazily instantiates every endpoint and shares a common configuration
+ * and authenticated Axios instance. You must call {@link AppleMusic.init | init()}
+ * before accessing any endpoint methods.
+ *
+ * @example
+ * ```ts
+ * const client = new AppleMusic({ region: Region.US });
+ * await client.init();
+ *
+ * const album = await client.Albums.get({ id: "310730204" });
+ * console.log(album.data[0].attributes?.name);
+ * ```
+ */
 export class AppleMusic {
-    private client: AxiosInstance;
-    public config: AppleMusicConfig = {
-        region: Region.US,
-        authType: AuthType.Scraped,
-    };
+	private client: AxiosInstance | null = null;
+	private initialized = false;
 
-    public get BaseURLWithRegion() {
+	/**
+	 * Search endpoint for performing search queries across the Apple Music catalog.
+	 * @group Endpoints
+	 */
+	public readonly Search!: SearchEndpoint;
 
-    }
+	/**
+	 * Suggestions endpoint for retrieving search term suggestions.
+	 * @group Endpoints
+	 */
+	public readonly Suggestions!: SuggestionsEndpoint;
 
-    public Search = {
-        Get: createInitGuard<[SearchEndpointTypes.SearchEndpointParams], SearchEndpointTypes.SearchEndpointResponse>("Search"),
-    };
-    public Suggestions = {
-        Get: createInitGuard<[SuggestionsEndpointTypes.SuggestionsEndpointParams], SuggestionsEndpointTypes.SearchSuggestionsResponse>("Suggestions"),
-    };
-    public Hints = {
-        Get: createInitGuard<[HintsEndpointTypes.HintsEndpointParams], HintsEndpointTypes.HintsResponse>("Hints"),
-    };
-    public Albums = {
-        Get: createInitGuard<[AlbumsEndpointTypes.AlbumParams], AlbumsEndpointTypes.AlbumsResponse>("Albums"),
-        GetView: createInitGuard<[AlbumsEndpointTypes.AlbumViewParams], AlbumsEndpointTypes.AlbumsViewResponse>("Albums"),
-    };
-    public Artists = {
-        Get: createInitGuard<[ArtistsEndpointTypes.ArtistParams], ArtistsEndpointTypes.ArtistsResponse>("Artists"),
-        GetView: createInitGuard<[ArtistsEndpointTypes.ArtistViewParams], ArtistsEndpointTypes.ArtistsViewResponse>("Artists"),
-    };
-    public MusicVideos = {
-        Get: createInitGuard<[MusicVideosEndpointTypes.MusicVideoParams], MusicVideosEndpointTypes.MusicVideosResponse>("Music Videos"),
-        GetView: createInitGuard<[MusicVideosEndpointTypes.MusicVideoViewParams], MusicVideosEndpointTypes.MusicVideoViewResponse>("Music Videos"),
-    };
-    public Songs = {
-        Get: createInitGuard<[SongsEndpointTypes.SongParams], SongsEndpointTypes.SongsResponse>("Songs"),
-        GetRelationship: createInitGuard<[SongsEndpointTypes.SongsRelationshipParams], SongsEndpointTypes.SongsRelationshipResponse>("Songs"),
-    };
+	/**
+	 * Hints endpoint for retrieving search hints.
+	 * @group Endpoints
+	 */
+	public readonly Hints!: HintsEndpoint;
 
-    public constructor(config: AppleMusicConfig) {
-        this.config = { ...this.config, ...config };
-    }
+	/**
+	 * Albums endpoint for album-related operations.
+	 * @group Endpoints
+	 */
+	public readonly Albums!: AlbumsEndpoint;
 
-    public async init() {
-        this.client = await getAuthenticatedAxios();
-        console.log("Base Apple Music client ready");
+	/**
+	 * Songs endpoint for song-related operations.
+	 * @group Endpoints
+	 */
+	public readonly Songs!: SongsEndpoint;
 
-        const searchEndpoint = new SearchEndpoint(Region.US);
-        await searchEndpoint.init();
-        this.Search.Get = searchEndpoint.search.bind(searchEndpoint);
-        console.log("Search endpoint ready");
+	/**
+	 * Artists endpoint for artist-related operations.
+	 * @group Endpoints
+	 */
+	public readonly Artists!: ArtistsEndpoint;
 
-        const suggestionsEndpoint = new SuggestionsEndpoint(Region.US);
-        await suggestionsEndpoint.init();
-        this.Suggestions.Get = suggestionsEndpoint.suggestions.bind(suggestionsEndpoint);
-        console.log("Suggestions endpoint ready");
+	/**
+	 * Music Videos endpoint for music video operations.
+	 * @group Endpoints
+	 */
+	public readonly MusicVideos!: MusicVideosEndpoint;
 
-        const hintsEndpoint = new HintsEndpoint(Region.US);
-        await hintsEndpoint.init();
-        this.Hints.Get = hintsEndpoint.hints.bind(hintsEndpoint);
-        console.log("Hints endpoint ready");
+	/**
+	 * Structured logger propagated to every endpoint.
+	 */
+	public get log(): Logger {
+		return this.config.logger;
+	}
 
-        const albumsEndpoint = new AlbumsEndpoint(Region.US);
-        await albumsEndpoint.init();
-        this.Albums.Get = albumsEndpoint.get.bind(albumsEndpoint);
-        this.Albums.GetView = albumsEndpoint.getView.bind(albumsEndpoint);
-        console.log("Albums endpoint ready");
+	/**
+	 * Replace the underlying logger at runtime.
+	 */
+	public set log(logger: Logger) {
+		this.config.setLogger(logger);
+	}
 
-        const songsEndpoint = new SongsEndpoint(Region.US);
-        await songsEndpoint.init();
-        this.Songs.Get = songsEndpoint.get.bind(songsEndpoint);
-        this.Songs.GetRelationship = songsEndpoint.getRelationship.bind(songsEndpoint);
-        console.log("Songs endpoint ready");
+	/**
+	 * Mutable configuration backing this client instance.
+	 */
+	public config: AppleMusicConfig;
 
+	/**
+	 * Create a new Apple Music client.
+	 *
+	 * @param config - Optional configuration object or instance to seed the client.
+	 */
+	public constructor(config?: AppleMusicConfig | AppleMusicConfigParams) {
+		this.config =
+			config instanceof AppleMusicConfig
+				? config
+				: new AppleMusicConfig(config);
 
-        const artistsEndpoint = new ArtistsEndpoint(Region.US);
-        await artistsEndpoint.init();
-        this.Artists.Get = artistsEndpoint.get.bind(artistsEndpoint);
-        this.Artists.GetView = artistsEndpoint.getView.bind(artistsEndpoint);
-        console.log("Artists endpoint ready");
+		// Create proxies for endpoints that throw helpful errors before initialization
+		/** @internal */
+		const createUninitializedProxy = <T extends object>(): T => {
+			return new Proxy({} as T, {
+				get: () => {
+					throw new Error(ERROR.CLIENT_NOT_INITIALIZED);
+				},
+			});
+		};
 
+		this.Search = createUninitializedProxy<SearchEndpoint>();
+		this.Suggestions = createUninitializedProxy<SuggestionsEndpoint>();
+		this.Hints = createUninitializedProxy<HintsEndpoint>();
+		this.Albums = createUninitializedProxy<AlbumsEndpoint>();
+		this.Songs = createUninitializedProxy<SongsEndpoint>();
+		this.Artists = createUninitializedProxy<ArtistsEndpoint>();
+		this.MusicVideos = createUninitializedProxy<MusicVideosEndpoint>();
+	}
 
-        const musicVideosEndpoint = new MusicVideosEndpoint(Region.US);
-        await musicVideosEndpoint.init();
-        this.MusicVideos.Get = musicVideosEndpoint.get.bind(musicVideosEndpoint);
-        this.MusicVideos.GetView = musicVideosEndpoint.getView.bind(musicVideosEndpoint);
-        console.log("Music Videos endpoint ready");
+	/** @internal */
+	private requireInitialized(): void {
+		if (!this.initialized) {
+			throw new Error(ERROR.CLIENT_NOT_INITIALIZED);
+		}
+	}
 
-        console.log("Apple Music API initialized :333");
-    }
+	/**
+	 * Authenticate with Apple Music and prepare every endpoint for use.
+	 *
+	 * @remarks
+	 * This method is idempotent. Repeated calls reuse the same configuration and reinitialize
+	 * each endpoint. All endpoint accessors throw until initialization succeeds.
+	 *
+	 * @throws {@link Error} If authentication fails.
+	 */
+	public async init(): Promise<void> {
+		this.client = await getAuthenticatedAxios(this.config);
+		this.log.debug("Base Apple Music client ready");
 
-    public async verifyTokenValidity(): Promise<boolean> {
-        try {
-            const res = await this.client.get("https://amp-api-edge.music.apple.com/v1/test");
-            if (res.status === 200) {
-                return true;
-            }
-            return false;
-        } catch (error) {
-            return false;
-        }
-    }
-}
+		// @ts-expect-error - We're initializing readonly properties
+		this.Search = new SearchEndpoint(this.config);
+		await this.Search.init();
+		this.log.debug("Search endpoint ready");
 
-export namespace AppleMusic {
-    export import SearchTypes = SearchEndpointTypes;
-    export import SuggestionsTypes = SuggestionsEndpointTypes;
-    export import HintsTypes = HintsEndpointTypes;
-    export import AlbumsTypes = AlbumsEndpointTypes;
-    export import ArtistsTypes = ArtistsEndpointTypes;
-    export import MusicVideosTypes = MusicVideosEndpointTypes;
-    export import SongsTypes = SongsEndpointTypes;
+		// @ts-expect-error - We're initializing readonly properties
+		this.Suggestions = new SuggestionsEndpoint(this.config);
+		await this.Suggestions.init();
+		this.log.debug("Suggestions endpoint ready");
+
+		// @ts-expect-error - We're initializing readonly properties
+		this.Hints = new HintsEndpoint(this.config);
+		await this.Hints.init();
+		this.log.debug("Hints endpoint ready");
+
+		// @ts-expect-error - We're initializing readonly properties
+		this.Albums = new AlbumsEndpoint(this.config);
+		await this.Albums.init();
+		this.log.debug("Albums endpoint ready");
+
+		// @ts-expect-error - We're initializing readonly properties
+		this.Songs = new SongsEndpoint(this.config);
+		await this.Songs.init();
+		this.log.debug("Songs endpoint ready");
+
+		// @ts-expect-error - We're initializing readonly properties
+		this.Artists = new ArtistsEndpoint(this.config);
+		await this.Artists.init();
+		this.log.debug("Artists endpoint ready");
+
+		// @ts-expect-error - We're initializing readonly properties
+		this.MusicVideos = new MusicVideosEndpoint(this.config);
+		await this.MusicVideos.init();
+		this.log.debug("Music Videos endpoint ready");
+
+		this.initialized = true;
+		this.log.debug("Apple Music API initialized :333");
+	}
+
+	/**
+	 * Perform a lightweight request to validate the configured developer token.
+	 *
+	 * @returns Whether the token is currently accepted by Apple Music.
+	 */
+	public async verifyTokenValidity(): Promise<boolean> {
+		this.requireInitialized();
+		try {
+			const res = await this.client.get(
+				"https://amp-api-edge.music.apple.com/v1/test",
+			);
+			return res.status === 200;
+		} catch {
+			return false;
+		}
+	}
 }

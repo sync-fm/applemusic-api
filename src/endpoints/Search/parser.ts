@@ -1,190 +1,201 @@
-import { AppleMusicSearchResponse, ExtendOption, SearchEndpointParams, SearchEndpointParamsDefaults, SearchResults } from "./types";
+import {
+	type ExtendOption,
+	type SearchEndpointParams,
+	SearchEndpointParamsDefaults,
+	type SearchEndpointResponse,
+	type SearchResults,
+} from "./types";
 
-type AppleMusicAPIResponse = {
-    results: Record<string, {
-        href: string;
-        next?: string;
-        data: any[];
-    }>
-};
 export type AnyObject = { [k: string]: any };
 export class Parser {
+	public parseSearchParams(query: string): SearchEndpointParams {
+		const params = new URLSearchParams(
+			query.startsWith("?") ? query : `?${query}`,
+		);
+		const result: SearchEndpointParams = {};
 
-    public parseSearchParams(query: string): SearchEndpointParams {
-        const params = new URLSearchParams(query.startsWith("?") ? query : "?" + query);
-        const result: SearchEndpointParams = {};
+		for (const [key, value] of params.entries()) {
+			// Handle nested keys like "fields[albums]" or "art[music-videos:url]"
+			const match = key.match(/^([^[\]]+)\[([^[\]]+)\]$/);
 
-        for (const [key, value] of params.entries()) {
-            // Handle nested keys like "fields[albums]" or "art[music-videos:url]"
-            const match = key.match(/^([^\[\]]+)\[([^\[\]]+)\]$/);
+			if (match) {
+				const mainKey = match[1] as keyof SearchEndpointParams;
+				const subKey = match[2];
 
-            if (match) {
-                const mainKey = match[1] as keyof SearchEndpointParams;
-                const subKey = match[2];
+				switch (mainKey) {
+					case "fields":
+					case "include":
+					case "relate":
+						result[mainKey] ??= {};
+						result[mainKey][subKey] = value.split(",") as any;
+						break;
 
-                switch (mainKey) {
-                    case "fields":
-                    case "include":
-                    case "relate":
-                        result[mainKey] ??= {};
-                        result[mainKey]![subKey] = value.split(",") as any;
-                        break;
+					case "art": {
+						if (!result.art) result.art = {};
+						const subMatch = subKey.match(/^(.+):(.+)$/);
+						if (subMatch) {
+							const [_, resource, artKey] = subMatch;
+							result.art[resource] ??= {};
+							(result.art[resource] as any)[artKey] = value;
+						} else {
+							(result.art as any)[subKey] = value;
+						}
+						break;
+					}
 
-                    case "art":
-                        if (!result.art) result.art = {};
-                        const subMatch = subKey.match(/^(.+):(.+)$/);
-                        if (subMatch) {
-                            const [_, resource, artKey] = subMatch;
-                            result.art[resource] ??= {};
-                            (result.art[resource] as any)[artKey] = value;
-                        } else {
-                            (result.art as any)[subKey] = value;
-                        }
-                        break;
+					case "omit":
+					case "format":
+						result[mainKey] ??= {};
+						(result[mainKey] as any)[subKey] = value;
+						break;
 
-                    case "omit":
-                    case "format":
-                        result[mainKey] ??= {};
-                        (result[mainKey] as any)[subKey] = value;
-                        break;
+					default:
+						(result as any)[mainKey] ??= {};
+						(result as any)[mainKey][subKey] = value;
+						break;
+				}
+			} else {
+				// Handle top-level keys
+				switch (key) {
+					case "term":
+						result.term = value;
+						break;
 
-                    default:
-                        (result as any)[mainKey] ??= {};
-                        (result as any)[mainKey][subKey] = value;
-                        break;
-                }
+					case "limit":
+						result.limit = parseInt(value, 10);
+						break;
 
-            } else {
-                // Handle top-level keys
-                switch (key) {
-                    case "term":
-                        result.term = value;
-                        break;
+					case "l":
+						result.l = value as any;
+						break;
 
-                    case "limit":
-                        result.limit = parseInt(value, 10);
-                        break;
+					case "platform":
+						result.platform = value as any;
+						break;
 
-                    case "l":
-                        result.l = value as any;
-                        break;
+					case "extend":
+						result.extend = value.includes(",")
+							? (value.split(",") as ExtendOption[])
+							: (value as ExtendOption);
+						break;
 
-                    case "platform":
-                        result.platform = value as any;
-                        break;
+					case "types":
+						result.types = value.split(",") as any;
+						break;
 
-                    case "extend":
-                        result.extend = value.includes(",") ? value.split(",") as ExtendOption[] : (value as ExtendOption);
-                        break;
+					case "with":
+						result.with = value.split(",") as any;
+						break;
 
-                    case "types":
-                        result.types = value.split(",") as any;
-                        break;
+					default:
+						(result as any)[key] = value;
+						break;
+				}
+			}
+		}
 
-                    case "with":
-                        result.with = value.split(",") as any;
-                        break;
+		return result;
+	}
 
-                    default:
-                        (result as any)[key] = value;
-                        break;
-                }
-            }
-        }
+	public buildSearchQuery(
+		params: SearchEndpointParams,
+		encode: boolean = true,
+		includeDefaults: boolean = true,
+	): string {
+		const query = new URLSearchParams();
 
-        return result;
-    }
+		// Test if input is urlencoded already
+		if (
+			params.term &&
+			(params.term.includes("%") || params.term.includes("+"))
+		) {
+			try {
+				params.term = decodeURIComponent(params.term);
+			} catch {}
+		}
 
+		// Append defaults
+		if (includeDefaults) {
+			params = { ...SearchEndpointParamsDefaults, ...params };
+		}
 
-    public buildSearchQuery(params: SearchEndpointParams, encode: boolean = true, includeDefaults: boolean = true): string {
-        const query = new URLSearchParams();
+		// Build query
+		for (const [key, value] of Object.entries(params)) {
+			if (value === undefined) continue;
 
-        // Test if input is urlencoded already
-        if (params.term && (params.term.includes("%") || params.term.includes("+"))) {
-            try {
-                params.term = decodeURIComponent(params.term);
-            } catch { }
-        }
+			if (typeof value === "object" && !Array.isArray(value)) {
+				// Handle nested objects
+				for (const [subKey, subValue] of Object.entries(value)) {
+					if (subValue === undefined) continue;
 
-        // Append defaults
-        if (includeDefaults) {
-            params = { ...SearchEndpointParamsDefaults, ...params };
-        }
+					if (typeof subValue === "object" && !Array.isArray(subValue)) {
+						// Handle deeper nested objects like art[music-videos:url]
+						for (const [deepKey, deepValue] of Object.entries(subValue)) {
+							if (deepValue === undefined) continue;
+							query.append(`${key}[${subKey}:${deepKey}]`, String(deepValue));
+						}
+					} else {
+						query.append(
+							`${key}[${subKey}]`,
+							Array.isArray(subValue) ? subValue.join(",") : String(subValue),
+						);
+					}
+				}
+			} else {
+				// Handle top-level keys
+				query.append(
+					key,
+					Array.isArray(value) ? value.join(",") : String(value),
+				);
+			}
+		}
 
-        // Build query
-        for (const [key, value] of Object.entries(params)) {
-            if (value === undefined) continue;
+		if (encode) {
+			return query.toString();
+		}
+		return decodeURIComponent(query.toString());
+	}
 
-            if (typeof value === "object" && !Array.isArray(value)) {
-                // Handle nested objects
-                for (const [subKey, subValue] of Object.entries(value)) {
-                    if (subValue === undefined) continue;
+	public parseToAppleMusicAPI(res: any, _url?: string): SearchEndpointResponse {
+		const resources = res.resources ?? {};
 
-                    if (typeof subValue === "object" && !Array.isArray(subValue)) {
-                        // Handle deeper nested objects like art[music-videos:url]
-                        for (const [deepKey, deepValue] of Object.entries(subValue)) {
-                            if (deepValue === undefined) continue;
-                            query.append(`${key}[${subKey}:${deepKey}]`, String(deepValue));
-                        }
-                    } else {
-                        query.append(`${key}[${subKey}]`, Array.isArray(subValue) ? subValue.join(",") : String(subValue));
-                    }
-                }
-            } else {
-                // Handle top-level keys
-                query.append(key, Array.isArray(value) ? value.join(",") : String(value));
-            }
-        }
+		// Flatten resource index: id -> full object
+		const resourceIndex: Record<string, any> = {};
+		for (const coll of Object.values(resources) as any[]) {
+			for (const [id, obj] of Object.entries(coll)) {
+				resourceIndex[id] = obj;
+			}
+		}
 
-        if (encode) {
-            return query.toString();
-        }
-        return decodeURIComponent(query.toString());
-    }
+		const results: Partial<SearchResults> = {};
 
-    public parseToAppleMusicAPI(
-        res: any,
-        url?: string
-    ): AppleMusicSearchResponse {
-        const resources = res.resources ?? {};
+		for (const [groupKey, groupVal] of Object.entries<any>(res.results)) {
+			const pluralKey = this.normalizeGroupKey(groupKey);
 
-        // Flatten resource index: id -> full object
-        const resourceIndex: Record<string, any> = {};
-        for (const coll of Object.values(resources) as any[]) {
-            for (const [id, obj] of Object.entries(coll)) {
-                resourceIndex[id] = obj;
-            }
-        }
+			results[pluralKey as keyof SearchResults] = {
+				href: groupVal.href,
+				next: groupVal.next,
+				name: groupVal.name,
+				groupId: groupVal.groupId,
+				data: (groupVal.data ?? []).map((item: any) => {
+					const full = resourceIndex[item.id];
+					return full ? full : item;
+				}),
+			};
+		}
 
-        const results: Partial<SearchResults> = {};
+		return { results: results as SearchResults, meta: res.meta };
+	}
 
-        for (const [groupKey, groupVal] of Object.entries<any>(res.results)) {
-            const pluralKey = this.normalizeGroupKey(groupKey);
-
-            results[pluralKey as keyof SearchResults] = {
-                href: groupVal.href,
-                next: groupVal.next,
-                name: groupVal.name,
-                groupId: groupVal.groupId,
-                data: (groupVal.data ?? []).map((item: any) => {
-                    const full = resourceIndex[item.id];
-                    return full ? full : item;
-                }),
-            };
-        }
-
-        return { results: results as SearchResults, meta: res.meta };
-    }
-
-    private normalizeGroupKey(key: string): string {
-        const map: Record<string, string> = {
-            album: "albums",
-            artist: "artists",
-            curator: "curators",
-            "music-video": "music-videos",
-        };
-        if (map[key]) return map[key];
-        if (key.endsWith("s")) return key;
-        return key + "s";
-    }
+	private normalizeGroupKey(key: string): string {
+		const map: Record<string, string> = {
+			album: "albums",
+			artist: "artists",
+			curator: "curators",
+			"music-video": "music-videos",
+		};
+		if (map[key]) return map[key];
+		if (key.endsWith("s")) return key;
+		return `${key}s`;
+	}
 }

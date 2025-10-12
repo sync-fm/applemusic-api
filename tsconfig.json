@@ -9,20 +9,18 @@
     "outDir": "dist",
     "skipLibCheck": true,
     "declaration": true,
-    "declarationMap": true,
-    "typeRoots": [
-      "./node_modules/@types",
-      "src/types"
-    ]
+    "declarationMap": true
   },
   "lib": [
     "ES2022"
   ],
   "include": [
     "src/**/*.ts",
+    "src/**/*.d.ts"
   ],
   "exclude": [
     "dist/",
+    "docs/",
     "examples/",
     "**/*.spec.ts",
     "**/*.test.ts",
