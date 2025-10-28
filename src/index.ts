@@ -18,7 +18,7 @@ export {
 	SuggestionsEndpoint,
 	SuggestionsEndpointTypes,
 } from "./endpoints/Suggestions";
-export { Region } from "./types/SharedSearchParams";
+export { Region, ResourceType } from "./types/SharedSearchParams";
 export { getAuthenticatedAxios } from "./utils/AxiosManager";
 export type { AppleMusicConfigParams } from "./utils/Config";
 export { AppleMusicConfig, AuthType } from "./utils/Config";

@@ -114,6 +114,7 @@ export interface SongAttributes {
 	composerName?: string;
 	contentRating?: SongContentRating;
 	discNumber?: number;
+	/** @deprecated You're probably looking for durationInMilliseconds! - Dont use this unless you are absoloutely sure. */
 	durationInMillis?: number;
 	// some uploaded-video variants use durationInMilliseconds
 	durationInMilliseconds?: number;
