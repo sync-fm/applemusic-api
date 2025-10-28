@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2025-10-28T14:47:47.068Z",
+  "generatedAt": "2025-10-28T15:58:36.060Z",
   "version": {
-    "raw": "0.0.3",
-    "tag": "v0.0.3",
+    "raw": "0.0.4",
+    "tag": "v0.0.4",
     "major": 0,
     "minor": 0,
-    "patch": 3,
+    "patch": 4,
     "preRelease": null,
     "buildMetadata": null,
     "source": "package.json"
