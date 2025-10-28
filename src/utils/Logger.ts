@@ -3,21 +3,17 @@
  *
  * @module Utilities/Logger
  */
-const isNode =
-	typeof process !== "undefined" && process.release?.name === "node";
 
 export interface LogDestination {
 	log: (message?: any, ...optionalParams: any[]) => void;
 	error: (message?: any, ...optionalParams: any[]) => void;
 	debug: (message?: any, ...optionalParams: any[]) => void;
-	supportsBrowser?: boolean;
 	name: string;
 	enabled: boolean;
 }
 
 export enum DestinationName {
 	Console = "console",
-	File = "file",
 }
 
 export enum LogLevel {
@@ -34,38 +30,9 @@ avaibleDestinations[DestinationName.Console] = {
 	log: console.log,
 	error: console.error,
 	debug: console.debug,
-	supportsBrowser: true,
 	name: "console",
 	enabled: true,
 };
-
-// for non-browser environments - ie node, deno - or bun my beloved
-if (isNode) {
-	const fs = await import("node:fs");
-	avaibleDestinations[DestinationName.File] = {
-		log: (message?: any, ...optionalParams: any[]) => {
-			fs.appendFileSync(
-				"app.log",
-				`[LOG] ${new Date().toISOString()} - ${message} ${optionalParams.join(" ")}\n`,
-			);
-		},
-		error: (message?: any, ...optionalParams: any[]) => {
-			fs.appendFileSync(
-				"app.log",
-				`[ERROR] ${new Date().toISOString()} - ${message} ${optionalParams.join(" ")}\n`,
-			);
-		},
-		debug: (message?: any, ...optionalParams: any[]) => {
-			fs.appendFileSync(
-				"app.log",
-				`[DEBUG] ${new Date().toISOString()} - ${message} ${optionalParams.join(" ")}\n`,
-			);
-		},
-		supportsBrowser: false,
-		name: "file",
-		enabled: false,
-	};
-}
 
 export interface LoggerOptions {
 	destinations?: DestinationName[];
@@ -101,13 +68,7 @@ export class Logger {
 			this.selectedDestinations.forEach((destName) => {
 				const dest = avaibleDestinations[destName];
 				if (dest) {
-					if (isNode || dest.supportsBrowser) {
-						this.enabledDestinations.push(dest);
-					} else {
-						console.warn(
-							`Destination ${destName} is not supported in this environment and will be ignored.`,
-						);
-					}
+					this.enabledDestinations.push(dest);
 				} else {
 					console.warn(
 						`Destination ${destName} is not recognized and will be ignored.`,
@@ -154,13 +115,7 @@ export class Logger {
 	public enableDestination(name: DestinationName) {
 		const dest = avaibleDestinations[name];
 		if (dest && !this.enabledDestinations.includes(dest)) {
-			if (isNode || dest.supportsBrowser) {
-				this.enabledDestinations.push(dest);
-			} else {
-				console.warn(
-					`Destination ${name} is not supported in this environment and cannot be enabled.`,
-				);
-			}
+			this.enabledDestinations.push(dest);
 		}
 	}
 

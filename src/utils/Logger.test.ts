@@ -110,7 +110,6 @@ describe("Logger", () => {
 			debug: customDebug,
 			name: "custom",
 			enabled: true,
-			supportsBrowser: true,
 		};
 
 		const logger = new Logger({
@@ -144,7 +143,6 @@ describe("Logger", () => {
 			debug: customDebug,
 			name: "disabled",
 			enabled: false,
-			supportsBrowser: true,
 		};
 
 		const logger = new Logger({
@@ -161,71 +159,5 @@ describe("Logger", () => {
 		logger.setLevel(LogLevel.Debug);
 		logger.debug("still skipped");
 		expect(customDebug).not.toHaveBeenCalled();
-	});
-
-	test("warns when destination is not recognized in non-node environments", async () => {
-		const originalProcess = globalThis.process;
-		(globalThis as any).process = { release: { name: "browser" } };
-		const warnSpy = vi.spyOn(console, "warn").mockImplementation(() => {});
-
-		try {
-			const { Logger, DestinationName } = await loadLoggerModule();
-			const logger = new Logger({
-				destinations: [DestinationName.File],
-			});
-
-			expect(warnSpy).toHaveBeenCalledWith(
-				`Destination ${DestinationName.File} is not recognized and will be ignored.`,
-			);
-			expect(logger.getEnabledDestinations()).not.toContain("file");
-		} finally {
-			warnSpy.mockRestore();
-			if (originalProcess) {
-				(globalThis as any).process = originalProcess;
-			} else {
-				delete (globalThis as any).process;
-			}
-		}
-	});
-
-	test("enableDestination warns when destination unsupported in environment", async () => {
-		const originalProcess = globalThis.process;
-		(globalThis as any).process = { release: { name: "browser" } };
-		const warnSpy = vi.spyOn(console, "warn").mockImplementation(() => {});
-
-		try {
-			const { Logger, LogLevel } = await loadLoggerModule();
-			const customDestination: LogDestination = {
-				log: vi.fn(),
-				error: vi.fn(),
-				debug: vi.fn(),
-				name: "server-only",
-				enabled: true,
-				supportsBrowser: false,
-			};
-
-			const logger = new Logger({
-				level: LogLevel.Log,
-				customDestinations: [customDestination],
-			});
-
-			const customName = customDestination.name as any;
-			logger.disableDestination(customName);
-			expect(logger.getEnabledDestinations()).not.toContain("server-only");
-
-			logger.enableDestination(customName);
-
-			expect(warnSpy).toHaveBeenCalledWith(
-				"Destination server-only is not supported in this environment and cannot be enabled.",
-			);
-			expect(logger.getEnabledDestinations()).not.toContain("server-only");
-		} finally {
-			warnSpy.mockRestore();
-			if (originalProcess) {
-				(globalThis as any).process = originalProcess;
-			} else {
-				delete (globalThis as any).process;
-			}
-		}
 	});
 });

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2025-10-28T13:05:22.089Z",
+  "generatedAt": "2025-10-28T14:47:47.068Z",
   "version": {
-    "raw": "0.0.2",
-    "tag": "v0.0.2",
+    "raw": "0.0.3",
+    "tag": "v0.0.3",
     "major": 0,
     "minor": 0,
-    "patch": 2,
+    "patch": 3,
     "preRelease": null,
     "buildMetadata": null,
     "source": "package.json"
@@ -24,28 +24,28 @@
   },
   "coverage": {
     "lines": {
-      "total": 2284,
-      "covered": 2162,
+      "total": 2242,
+      "covered": 2135,
       "skipped": 0,
-      "pct": 94.65
+      "pct": 95.22
     },
     "statements": {
-      "total": 2284,
-      "covered": 2162,
+      "total": 2242,
+      "covered": 2135,
       "skipped": 0,
-      "pct": 94.65
+      "pct": 95.22
     },
     "functions": {
-      "total": 150,
+      "total": 147,
       "covered": 144,
       "skipped": 0,
-      "pct": 96
+      "pct": 97.95
     },
     "branches": {
-      "total": 533,
-      "covered": 463,
+      "total": 527,
+      "covered": 458,
       "skipped": 0,
-      "pct": 86.86
+      "pct": 86.9
     }
   }
 }

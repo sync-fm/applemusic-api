@@ -7,7 +7,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "xwxfox",
   "license": "MIT",
   "description": "Unofficial Apple Music API client with typed helpers around their endpoints with shared configuration, logging, and token management.",
